@@ -613,12 +613,15 @@ async function handleCommitToGitHub(assetId, assetName) {
     const filename = `${sanitizeFilename(assetName)}-${assetId}.json`;
     const message = `Commit ${assetName} (${assetId}) - ${new Date().toISOString()}`;
     
-    await pushToGithub(filename, definition, message);
+    const pushResult = await pushToGithub(filename, definition, message);
+    console.log('Push to GitHub result:', pushResult);
     
-    // Build GitHub URL for the committed file
+    // Use URL from GitHub API if available, otherwise construct it
     const { githubRepo, githubBranch, githubPath } = state.settings;
     const fullPath = `${githubPath}${filename}`.replace(/\/\//g, '/');
-    const githubUrl = `https://github.com/${githubRepo}/blob/${githubBranch}/${fullPath}`;
+    const githubUrl = pushResult?.url || pushResult?.result?.url || `https://github.com/${githubRepo}/blob/${githubBranch}/${fullPath}`;
+    
+    console.log('GitHub URL:', githubUrl);
     
     // Show success modal with GitHub link
     showCommitSuccessModal(assetName, githubUrl, filename);
