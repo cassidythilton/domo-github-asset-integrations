@@ -233,51 +233,48 @@ async function pushToGithub(filePath, content, commitMessage) {
 // ============================================================================
 
 async function fetchGithubFiles() {
-  const { githubRepo, githubBranch, githubPath } = state.settings;
+  const { githubRepo, githubBranch, githubPath, githubToken } = state.settings;
   
   if (!githubRepo) {
     return [];
   }
   
+  if (!githubToken) {
+    console.log('No GitHub token configured - cannot fetch files');
+    return [];
+  }
+  
   try {
-    const path = githubPath.replace(/^\/|\/$/g, ''); // Remove leading/trailing slashes
-    const url = `/domo/github/repos/${githubRepo}/contents/${path}?ref=${githubBranch}`;
+    const response = await callCodeEngine('/domo/codeengine/v2/packages/listGithubFiles', {
+      githubToken,
+      repo: githubRepo,
+      branch: githubBranch,
+      path: githubPath
+    });
     
-    const response = await domo.get(url);
-    
-    // Filter to only JSON files
-    const files = response.filter(file => 
-      file.type === 'file' && file.name.endsWith('.json')
-    );
-    
-    return files.map(file => ({
-      name: file.name,
-      path: file.path,
-      sha: file.sha,
-      size: file.size,
-      downloadUrl: file.download_url
-    }));
+    return response || [];
   } catch (error) {
-    // 404 means the directory doesn't exist yet - that's OK
-    if (error.status === 404 || (error.message && error.message.includes('404'))) {
-      console.log('GitHub directory not found - no files yet');
-      return [];
-    }
     console.error('Error fetching GitHub files:', error);
     return [];
   }
 }
 
 async function fetchGithubFileContent(filePath) {
-  const { githubRepo, githubBranch } = state.settings;
+  const { githubRepo, githubBranch, githubToken } = state.settings;
+  
+  if (!githubToken) {
+    throw new Error('No GitHub token configured');
+  }
   
   try {
-    const url = `/domo/github/repos/${githubRepo}/contents/${filePath}?ref=${githubBranch}`;
-    const response = await domo.get(url);
+    const response = await callCodeEngine('/domo/codeengine/v2/packages/getGithubFileContent', {
+      githubToken,
+      repo: githubRepo,
+      branch: githubBranch,
+      filePath
+    });
     
-    // Decode base64 content
-    const content = atob(response.content);
-    return JSON.parse(content);
+    return response.content;
   } catch (error) {
     console.error('Error fetching GitHub file content:', error);
     throw error;

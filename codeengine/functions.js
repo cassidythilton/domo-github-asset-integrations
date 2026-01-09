@@ -246,6 +246,120 @@ async function pushToGithub(githubToken, repo, branch, filePath, content, commit
   }
 }
 
+/**
+ * List files in a GitHub repository directory
+ * @param {string} githubToken - GitHub personal access token
+ * @param {string} repo - Repository in format "owner/repo"
+ * @param {string} branch - Branch name (e.g., "main")
+ * @param {string} path - Directory path within the repo
+ * @returns {Array} List of files in the directory
+ */
+async function listGithubFiles(githubToken, repo, branch, path) {
+  const https = require('https');
+  
+  const cleanPath = path.replace(/^\/|\/$/g, '');
+  const apiPath = `/repos/${repo}/contents/${cleanPath}?ref=${branch}`;
+  
+  return new Promise((resolve, reject) => {
+    const options = {
+      hostname: 'api.github.com',
+      path: apiPath,
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${githubToken}`,
+        'Accept': 'application/vnd.github.v3+json',
+        'User-Agent': 'Domo-AppStudio-GitHub-Sync'
+      }
+    };
+    
+    const req = https.request(options, (res) => {
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => {
+        try {
+          const parsed = JSON.parse(data);
+          if (res.statusCode >= 200 && res.statusCode < 300) {
+            // Filter to only JSON files
+            const files = Array.isArray(parsed) ? parsed.filter(f => 
+              f.type === 'file' && f.name.endsWith('.json')
+            ) : [];
+            resolve(files.map(f => ({
+              name: f.name,
+              path: f.path,
+              sha: f.sha,
+              size: f.size,
+              downloadUrl: f.download_url
+            })));
+          } else if (res.statusCode === 404) {
+            resolve([]); // Directory doesn't exist yet
+          } else {
+            reject({ status: res.statusCode, message: parsed.message || 'GitHub API error' });
+          }
+        } catch (e) {
+          reject({ message: 'Failed to parse GitHub response' });
+        }
+      });
+    });
+    
+    req.on('error', reject);
+    req.end();
+  });
+}
+
+/**
+ * Get content of a file from GitHub
+ * @param {string} githubToken - GitHub personal access token
+ * @param {string} repo - Repository in format "owner/repo"
+ * @param {string} branch - Branch name (e.g., "main")
+ * @param {string} filePath - File path within the repo
+ * @returns {Object} File content (decoded from base64)
+ */
+async function getGithubFileContent(githubToken, repo, branch, filePath) {
+  const https = require('https');
+  
+  const apiPath = `/repos/${repo}/contents/${filePath}?ref=${branch}`;
+  
+  return new Promise((resolve, reject) => {
+    const options = {
+      hostname: 'api.github.com',
+      path: apiPath,
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${githubToken}`,
+        'Accept': 'application/vnd.github.v3+json',
+        'User-Agent': 'Domo-AppStudio-GitHub-Sync'
+      }
+    };
+    
+    const req = https.request(options, (res) => {
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => {
+        try {
+          const parsed = JSON.parse(data);
+          if (res.statusCode >= 200 && res.statusCode < 300) {
+            // Decode base64 content
+            const content = Buffer.from(parsed.content, 'base64').toString('utf8');
+            resolve({
+              name: parsed.name,
+              path: parsed.path,
+              sha: parsed.sha,
+              content: JSON.parse(content)
+            });
+          } else {
+            reject({ status: res.statusCode, message: parsed.message || 'GitHub API error' });
+          }
+        } catch (e) {
+          reject({ message: 'Failed to parse GitHub response' });
+        }
+      });
+    });
+    
+    req.on('error', reject);
+    req.end();
+  });
+}
+
 // ============================================================================
 // Module Exports
 // ============================================================================
@@ -255,5 +369,7 @@ module.exports = {
   getAppDefinition,
   updateAppDefinition,
   duplicateApp,
-  pushToGithub
+  pushToGithub,
+  listGithubFiles,
+  getGithubFileContent
 };

@@ -1,0 +1,238 @@
+{
+  "id": "10444062-223b-47fa-b8f3-f41d7fc64680",
+  "name": "Asset Versioning",
+  "version": "2.0.0",
+  "size": {
+    "width": 12,
+    "height": 5
+  },
+  "fullPage": true,
+  "fullPageForceStandalone": true,
+  "fileName": "manifest.json",
+  "proxyId": "app-studio-github-sync",
+  "datasetsMapping": [],
+  "proxies": [
+    {
+      "name": "github",
+      "url": "https://api.github.com"
+    }
+  ],
+  "packageMapping": [
+    {
+      "alias": "listApps",
+      "parameters": [],
+      "output": {
+        "alias": "apps",
+        "type": "object",
+        "isList": true,
+        "children": null
+      }
+    },
+    {
+      "alias": "getAppDefinition",
+      "parameters": [
+        {
+          "alias": "appId",
+          "type": "string",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        }
+      ],
+      "output": {
+        "alias": "definition",
+        "type": "object",
+        "isList": false,
+        "children": null
+      }
+    },
+    {
+      "alias": "updateAppDefinition",
+      "parameters": [
+        {
+          "alias": "appId",
+          "type": "string",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        },
+        {
+          "alias": "definition",
+          "type": "object",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        }
+      ],
+      "output": {
+        "alias": "result",
+        "type": "object",
+        "isList": false,
+        "children": null
+      }
+    },
+    {
+      "alias": "duplicateApp",
+      "parameters": [
+        {
+          "alias": "appId",
+          "type": "string",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        },
+        {
+          "alias": "title",
+          "type": "string",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        },
+        {
+          "alias": "duplicateCards",
+          "type": "boolean",
+          "nullable": true,
+          "isList": false,
+          "children": null
+        }
+      ],
+      "output": {
+        "alias": "result",
+        "type": "object",
+        "isList": false,
+        "children": null
+      }
+    },
+    {
+      "alias": "pushToGithub",
+      "parameters": [
+        {
+          "alias": "githubToken",
+          "type": "string",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        },
+        {
+          "alias": "repo",
+          "type": "string",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        },
+        {
+          "alias": "branch",
+          "type": "string",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        },
+        {
+          "alias": "filePath",
+          "type": "string",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        },
+        {
+          "alias": "content",
+          "type": "object",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        },
+        {
+          "alias": "commitMessage",
+          "type": "string",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        }
+      ],
+      "output": {
+        "alias": "result",
+        "type": "object",
+        "isList": false,
+        "children": null
+      }
+    },
+    {
+      "alias": "listGithubFiles",
+      "parameters": [
+        {
+          "alias": "githubToken",
+          "type": "string",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        },
+        {
+          "alias": "repo",
+          "type": "string",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        },
+        {
+          "alias": "branch",
+          "type": "string",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        },
+        {
+          "alias": "path",
+          "type": "string",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        }
+      ],
+      "output": {
+        "alias": "files",
+        "type": "object",
+        "isList": true,
+        "children": null
+      }
+    },
+    {
+      "alias": "getGithubFileContent",
+      "parameters": [
+        {
+          "alias": "githubToken",
+          "type": "string",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        },
+        {
+          "alias": "repo",
+          "type": "string",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        },
+        {
+          "alias": "branch",
+          "type": "string",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        },
+        {
+          "alias": "filePath",
+          "type": "string",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        }
+      ],
+      "output": {
+        "alias": "file",
+        "type": "object",
+        "isList": false,
+        "children": null
+      }
+    }
+  ]
+}
