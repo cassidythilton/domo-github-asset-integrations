@@ -183,7 +183,7 @@
         {
           "alias": "path",
           "type": "string",
-          "nullable": false,
+          "nullable": true,
           "isList": false,
           "children": null
         }

@@ -245,18 +245,46 @@ async function fetchGithubFiles() {
   }
   
   try {
-    const response = await callCodeEngine('/domo/codeengine/v2/packages/listGithubFiles', {
-      githubToken,
-      repo: githubRepo,
-      branch: githubBranch,
-      path: githubPath
+    const path = (githubPath || '').replace(/^\/|\/$/g, '');
+    const url = `/domo/proxies/github/repos/${githubRepo}/contents/${path}?ref=${githubBranch}`;
+    
+    console.log('Fetching GitHub files from:', url);
+    
+    const response = await fetch(url, {
+      headers: {
+        'Authorization': `token ${githubToken}`,
+        'Accept': 'application/vnd.github.v3+json'
+      }
     });
     
-    console.log('listGithubFiles raw response:', response);
+    console.log('GitHub API response status:', response.status);
     
-    // Handle both wrapped {files: [...]} and direct array responses
-    const files = response?.files || response || [];
-    return Array.isArray(files) ? files : [];
+    if (response.status === 404) {
+      console.log('GitHub directory not found - no files yet');
+      return [];
+    }
+    
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error('GitHub API error:', response.status, errorText);
+      return [];
+    }
+    
+    const data = await response.json();
+    console.log('GitHub API data:', data);
+    
+    // Filter to only JSON files
+    const files = Array.isArray(data) ? data.filter(f => 
+      f.type === 'file' && f.name.endsWith('.json')
+    ) : [];
+    
+    return files.map(f => ({
+      name: f.name,
+      path: f.path,
+      sha: f.sha,
+      size: f.size,
+      downloadUrl: f.download_url
+    }));
   } catch (error) {
     console.error('Error fetching GitHub files:', error);
     return [];
@@ -271,14 +299,24 @@ async function fetchGithubFileContent(filePath) {
   }
   
   try {
-    const response = await callCodeEngine('/domo/codeengine/v2/packages/getGithubFileContent', {
-      githubToken,
-      repo: githubRepo,
-      branch: githubBranch,
-      filePath
+    const url = `/domo/proxies/github/repos/${githubRepo}/contents/${filePath}?ref=${githubBranch}`;
+    
+    const response = await fetch(url, {
+      headers: {
+        'Authorization': `token ${githubToken}`,
+        'Accept': 'application/vnd.github.v3+json'
+      }
     });
     
-    return response.content;
+    if (!response.ok) {
+      throw new Error(`GitHub API returned ${response.status}`);
+    }
+    
+    const data = await response.json();
+    
+    // Decode base64 content
+    const content = atob(data.content.replace(/\n/g, ''));
+    return JSON.parse(content);
   } catch (error) {
     console.error('Error fetching GitHub file content:', error);
     throw error;
