@@ -1,0 +1,3910 @@
+{
+  "definition": {
+    "dataAppId": 1508249624,
+    "title": "Deployed - Modo Retail Eval - 1/9/2026",
+    "description": null,
+    "iconDataFileId": 134,
+    "navIconDataFileId": 135,
+    "landingViewId": 708643848,
+    "enabled": true,
+    "isVirtualized": false,
+    "locked": false,
+    "lastUpdated": 1767971561612,
+    "owners": [
+      {
+        "id": 1433178023,
+        "type": "USER",
+        "displayName": "Cassidy Hilton"
+      }
+    ],
+    "isOwner": true,
+    "isFavorite": false,
+    "canEdit": true,
+    "showNavigation": true,
+    "showDomoNavigation": false,
+    "showTitle": false,
+    "showLogo": true,
+    "navOrientation": "LEFT",
+    "views": [
+      {
+        "viewId": 163411075,
+        "title": "Product Performance",
+        "parentViewId": 0,
+        "viewOrder": 1,
+        "visible": true,
+        "view": null,
+        "layout": null,
+        "children": []
+      },
+      {
+        "viewId": 1796215973,
+        "title": "Customer Insights",
+        "parentViewId": 0,
+        "viewOrder": 2,
+        "visible": true,
+        "view": null,
+        "layout": null,
+        "children": []
+      },
+      {
+        "viewId": 1912142929,
+        "title": "Inventory Management",
+        "parentViewId": 0,
+        "viewOrder": 3,
+        "visible": true,
+        "view": null,
+        "layout": null,
+        "children": []
+      },
+      {
+        "viewId": 708643848,
+        "title": "Sales Performance",
+        "parentViewId": 0,
+        "viewOrder": 4,
+        "visible": true,
+        "view": null,
+        "layout": null,
+        "children": []
+      }
+    ],
+    "userAccess": {
+      "users": [
+        {
+          "id": 1433178023,
+          "displayName": "Cassidy Hilton",
+          "avatarKey": null,
+          "role": "Admin"
+        }
+      ],
+      "totalCount": 1
+    },
+    "theme": {
+      "name": "Custom Theme - BC UX - Custom2",
+      "chartColorPalette": {
+        "id": "23",
+        "type": "APP"
+      },
+      "cards": [
+        {
+          "id": "ca1",
+          "fontColor": {
+            "value": "c22",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "titleFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "chartFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "backgroundColor": {
+            "value": "c7",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 4,
+          "borderWidth": 0,
+          "borderColor": null,
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
+          "elementSpacing": {
+            "isCustom": true,
+            "title": null,
+            "summaryNumber": null,
+            "timeframeLabel": null,
+            "description": null,
+            "header": {
+              "bottomMargin": 0
+            }
+          },
+          "padding": {
+            "left": 1,
+            "right": 1,
+            "top": 1,
+            "bottom": 1
+          },
+          "timeFrameFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberFont": {
+            "value": "f3",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberLabelFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "accentColor": {
+            "value": "c8",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        },
+        {
+          "id": "ca2",
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "titleFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "chartFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "backgroundColor": {
+            "value": "c55",
+            "opacity": "20",
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 4,
+          "borderWidth": 0,
+          "borderColor": null,
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
+          "elementSpacing": {
+            "isCustom": null,
+            "title": null,
+            "summaryNumber": null,
+            "timeframeLabel": null,
+            "description": null,
+            "header": {
+              "bottomMargin": 8
+            }
+          },
+          "padding": {
+            "left": 16,
+            "right": 16,
+            "top": 16,
+            "bottom": 16
+          },
+          "timeFrameFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberFont": {
+            "value": "f3",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberLabelFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "accentColor": {
+            "value": "c37",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        },
+        {
+          "id": "ca3",
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "titleFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "chartFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "backgroundColor": {
+            "value": "c56",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 4,
+          "borderWidth": 0,
+          "borderColor": null,
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
+          "elementSpacing": {
+            "isCustom": true,
+            "title": {
+              "bottomMargin": 2
+            },
+            "summaryNumber": {
+              "bottomMargin": 0
+            },
+            "timeframeLabel": {
+              "bottomMargin": 0
+            },
+            "description": {
+              "bottomMargin": 0
+            },
+            "header": {
+              "bottomMargin": 8
+            }
+          },
+          "padding": {
+            "left": 4,
+            "right": 4,
+            "top": 4,
+            "bottom": 4
+          },
+          "timeFrameFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberFont": {
+            "value": "f3",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberLabelFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "accentColor": {
+            "value": "c8",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        },
+        {
+          "id": "ca4",
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "titleFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "chartFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "backgroundColor": {
+            "value": "c56",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 4,
+          "borderWidth": 2,
+          "borderColor": {
+            "value": "c55",
+            "opacity": "00",
+            "type": "COLOR_REFERENCE"
+          },
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
+          "elementSpacing": {
+            "isCustom": false,
+            "title": null,
+            "summaryNumber": null,
+            "timeframeLabel": null,
+            "description": null,
+            "header": {
+              "bottomMargin": 16
+            }
+          },
+          "padding": {
+            "left": 16,
+            "right": 16,
+            "top": 16,
+            "bottom": 16
+          },
+          "timeFrameFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberFont": {
+            "value": "f3",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberLabelFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "accentColor": {
+            "value": "c8",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        },
+        {
+          "id": "ca5",
+          "fontColor": {
+            "value": "c58",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "titleFont": {
+            "value": "f2",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "chartFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "backgroundColor": {
+            "value": "c56",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 12,
+          "borderWidth": 0,
+          "borderColor": null,
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
+          "elementSpacing": {
+            "isCustom": true,
+            "title": null,
+            "summaryNumber": null,
+            "timeframeLabel": null,
+            "description": null,
+            "header": {
+              "bottomMargin": 19
+            }
+          },
+          "padding": {
+            "left": 4,
+            "right": 4,
+            "top": 4,
+            "bottom": 4
+          },
+          "timeFrameFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberFont": {
+            "value": "f2",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberLabelFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "accentColor": {
+            "value": "c8",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        },
+        {
+          "id": "ca6",
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "titleFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "chartFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "backgroundColor": {
+            "value": "c2",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 4,
+          "borderWidth": 0,
+          "borderColor": null,
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
+          "elementSpacing": {
+            "isCustom": null,
+            "title": null,
+            "summaryNumber": null,
+            "timeframeLabel": null,
+            "description": null,
+            "header": {
+              "bottomMargin": 8
+            }
+          },
+          "padding": {
+            "left": 16,
+            "right": 16,
+            "top": 16,
+            "bottom": 16
+          },
+          "timeFrameFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberFont": {
+            "value": "f3",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberLabelFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "accentColor": {
+            "value": "c8",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        },
+        {
+          "id": "ca7",
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "titleFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "chartFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "backgroundColor": {
+            "value": "c14",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 4,
+          "borderWidth": 0,
+          "borderColor": null,
+          "dropShadow": "RAISED",
+          "dropShadowColor": {
+            "value": "c5",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "elementSpacing": {
+            "isCustom": null,
+            "title": null,
+            "summaryNumber": null,
+            "timeframeLabel": null,
+            "description": null,
+            "header": {
+              "bottomMargin": 8
+            }
+          },
+          "padding": {
+            "left": 16,
+            "right": 16,
+            "top": 16,
+            "bottom": 16
+          },
+          "timeFrameFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberFont": {
+            "value": "f3",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberLabelFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "accentColor": {
+            "value": "c8",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        },
+        {
+          "id": "ca8",
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "titleFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "chartFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "backgroundColor": {
+            "value": "c20",
+            "opacity": "00",
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 4,
+          "borderWidth": 0,
+          "borderColor": null,
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
+          "elementSpacing": {
+            "isCustom": false,
+            "title": null,
+            "summaryNumber": null,
+            "timeframeLabel": null,
+            "description": null,
+            "header": {
+              "bottomMargin": 8
+            }
+          },
+          "padding": {
+            "left": 8,
+            "right": 8,
+            "top": 8,
+            "bottom": 8
+          },
+          "timeFrameFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberFont": {
+            "value": "f3",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberLabelFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "accentColor": {
+            "value": "c8",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "id": "t1",
+          "fontColor": {
+            "value": "c10",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "titleFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "chartFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "backgroundColor": {
+            "value": "c56",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 4,
+          "borderWidth": 0,
+          "borderColor": null,
+          "dropShadow": "RAISED",
+          "dropShadowColor": {
+            "value": "c5",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "elementSpacing": {
+            "isCustom": null,
+            "title": null,
+            "summaryNumber": null,
+            "timeframeLabel": null,
+            "description": null,
+            "header": {
+              "bottomMargin": 8
+            }
+          },
+          "padding": {
+            "left": 16,
+            "right": 16,
+            "top": 16,
+            "bottom": 16
+          },
+          "timeFrameFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberFont": {
+            "value": "f3",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberLabelFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "accentColor": null,
+          "tableBorderType": "ALL",
+          "tableBorderWeight": 0,
+          "tableBorderColor": {
+            "value": "c55",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "rowHeight": "COMFORTABLE",
+          "rowColor": {
+            "value": "c55",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "alternatingRowColorEnabled": false,
+          "alternatingRowColor": {
+            "value": "c7",
+            "opacity": "50",
+            "type": "COLOR_REFERENCE"
+          },
+          "headerFont": {
+            "value": "f5",
+            "type": "FONT_REFERENCE"
+          },
+          "headerFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "headerBackgroundColor": {
+            "value": "c37",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "totalRowFont": {
+            "value": "f5",
+            "type": "FONT_REFERENCE"
+          },
+          "totalRowFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "totalRowBackgroundColor": {
+            "value": "c6",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "subtotalRowFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "subtotalRowFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "subtotalRowBackgroundColor": {
+            "value": "c7",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "urlFontColor": {
+            "value": "c19",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        },
+        {
+          "id": "t2",
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "titleFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "chartFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "backgroundColor": {
+            "value": "c56",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 4,
+          "borderWidth": 0,
+          "borderColor": null,
+          "dropShadow": "LIFTED",
+          "dropShadowColor": {
+            "value": "c43",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "elementSpacing": {
+            "isCustom": null,
+            "title": null,
+            "summaryNumber": null,
+            "timeframeLabel": null,
+            "description": null,
+            "header": {
+              "bottomMargin": 8
+            }
+          },
+          "padding": {
+            "left": 16,
+            "right": 16,
+            "top": 16,
+            "bottom": 16
+          },
+          "timeFrameFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberFont": {
+            "value": "f3",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberLabelFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "accentColor": null,
+          "tableBorderType": "NONE",
+          "tableBorderWeight": 0,
+          "tableBorderColor": null,
+          "rowHeight": "COMFORTABLE",
+          "rowColor": {
+            "value": "c56",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "alternatingRowColorEnabled": true,
+          "alternatingRowColor": {
+            "value": "c55",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "headerFont": {
+            "value": "f5",
+            "type": "FONT_REFERENCE"
+          },
+          "headerFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "headerBackgroundColor": {
+            "value": "c22",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "totalRowFont": {
+            "value": "f5",
+            "type": "FONT_REFERENCE"
+          },
+          "totalRowFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "totalRowBackgroundColor": {
+            "value": "c16",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "subtotalRowFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "subtotalRowFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "subtotalRowBackgroundColor": {
+            "value": "c11",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "urlFontColor": {
+            "value": "c19",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        },
+        {
+          "id": "t3",
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "titleFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "chartFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "backgroundColor": {
+            "value": "c14",
+            "opacity": "00",
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 4,
+          "borderWidth": 0,
+          "borderColor": null,
+          "dropShadow": "LIFTED",
+          "dropShadowColor": {
+            "value": "c43",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "elementSpacing": {
+            "isCustom": null,
+            "title": null,
+            "summaryNumber": null,
+            "timeframeLabel": null,
+            "description": null,
+            "header": {
+              "bottomMargin": 8
+            }
+          },
+          "padding": {
+            "left": 16,
+            "right": 16,
+            "top": 16,
+            "bottom": 16
+          },
+          "timeFrameFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberFont": {
+            "value": "f3",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberLabelFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "accentColor": null,
+          "tableBorderType": "NONE",
+          "tableBorderWeight": 0,
+          "tableBorderColor": {
+            "value": "c43",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "rowHeight": "COMFORTABLE",
+          "rowColor": {
+            "value": "c55",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "alternatingRowColorEnabled": false,
+          "alternatingRowColor": {
+            "value": "c7",
+            "opacity": "50",
+            "type": "COLOR_REFERENCE"
+          },
+          "headerFont": {
+            "value": "f5",
+            "type": "FONT_REFERENCE"
+          },
+          "headerFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "headerBackgroundColor": {
+            "value": "c29",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "totalRowFont": {
+            "value": "f5",
+            "type": "FONT_REFERENCE"
+          },
+          "totalRowFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "totalRowBackgroundColor": {
+            "value": "c6",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "subtotalRowFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "subtotalRowFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "subtotalRowBackgroundColor": {
+            "value": "c7",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "urlFontColor": {
+            "value": "c19",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        }
+      ],
+      "mappings": {
+        "button": "b1",
+        "singleValue": "ca5",
+        "chart": "ca1",
+        "table": "t1",
+        "control": "ca2",
+        "form": "fo1",
+        "image": "ca3",
+        "document": "ca3",
+        "brick": "ca3",
+        "notebook": "no3",
+        "header": "h2",
+        "tab": "ta1",
+        "component": "co1",
+        "pill": "p1",
+        "ai": null
+      },
+      "colors": [
+        {
+          "id": "c1",
+          "value": {
+            "value": "#121714",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "PRIMARY",
+            "TINTED_GRAY"
+          ]
+        },
+        {
+          "id": "c2",
+          "value": {
+            "value": "#2E3430",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "PRIMARY",
+            "TINTED_GRAY"
+          ]
+        },
+        {
+          "id": "c3",
+          "value": {
+            "value": "#4C524F",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "PRIMARY",
+            "TINTED_GRAY"
+          ]
+        },
+        {
+          "id": "c4",
+          "value": {
+            "value": "#6D736F",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "PRIMARY",
+            "TINTED_GRAY"
+          ]
+        },
+        {
+          "id": "c5",
+          "value": {
+            "value": "#8F9692",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "PRIMARY",
+            "TINTED_GRAY"
+          ]
+        },
+        {
+          "id": "c6",
+          "value": {
+            "value": "#B3BAB6",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "PRIMARY",
+            "TINTED_GRAY"
+          ]
+        },
+        {
+          "id": "c7",
+          "value": {
+            "value": "#AFEFD3",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "PRIMARY",
+            "TINTED_GRAY"
+          ]
+        },
+        {
+          "id": "c8",
+          "value": {
+            "value": "#146240",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "PRIMARY",
+            "ORDER_SOURCE"
+          ]
+        },
+        {
+          "id": "c9",
+          "value": {
+            "value": "#368460",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "PRIMARY"
+          ]
+        },
+        {
+          "id": "c10",
+          "value": {
+            "value": "#4D9A75",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "PRIMARY"
+          ]
+        },
+        {
+          "id": "c11",
+          "value": {
+            "value": "#64B18A",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "PRIMARY"
+          ]
+        },
+        {
+          "id": "c12",
+          "value": {
+            "value": "#7BC79F",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "PRIMARY"
+          ]
+        },
+        {
+          "id": "c13",
+          "value": {
+            "value": "#92DEB5",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "PRIMARY"
+          ]
+        },
+        {
+          "id": "c14",
+          "value": {
+            "value": "#A8F4CA",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "PRIMARY"
+          ]
+        },
+        {
+          "id": "c15",
+          "value": {
+            "value": "#125A3B",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "PRIMARY"
+          ]
+        },
+        {
+          "id": "c16",
+          "value": {
+            "value": "#0F4B31",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "PRIMARY"
+          ]
+        },
+        {
+          "id": "c17",
+          "value": {
+            "value": "#0C3C27",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "PRIMARY"
+          ]
+        },
+        {
+          "id": "c18",
+          "value": {
+            "value": "#092D1E",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "PRIMARY"
+          ]
+        },
+        {
+          "id": "c19",
+          "value": {
+            "value": "#061E14",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "PRIMARY"
+          ]
+        },
+        {
+          "id": "c20",
+          "value": {
+            "value": "#030F0A",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "PRIMARY"
+          ]
+        },
+        {
+          "id": "c21",
+          "value": {
+            "value": "#000000",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "PRIMARY"
+          ]
+        },
+        {
+          "id": "c22",
+          "value": {
+            "value": "#0B150F",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "SECONDARY",
+            "ORDER_SOURCE"
+          ]
+        },
+        {
+          "id": "c23",
+          "value": {
+            "value": "#202A24",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "SECONDARY"
+          ]
+        },
+        {
+          "id": "c24",
+          "value": {
+            "value": "#353F39",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "SECONDARY"
+          ]
+        },
+        {
+          "id": "c25",
+          "value": {
+            "value": "#4A544E",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "SECONDARY"
+          ]
+        },
+        {
+          "id": "c26",
+          "value": {
+            "value": "#5F6962",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "SECONDARY"
+          ]
+        },
+        {
+          "id": "c27",
+          "value": {
+            "value": "#747E77",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "SECONDARY"
+          ]
+        },
+        {
+          "id": "c28",
+          "value": {
+            "value": "#89938C",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "SECONDARY"
+          ]
+        },
+        {
+          "id": "c29",
+          "value": {
+            "value": "#71B798",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "TERTIARY",
+            "ORDER_SOURCE"
+          ]
+        },
+        {
+          "id": "c30",
+          "value": {
+            "value": "#89C3A9",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "TERTIARY"
+          ]
+        },
+        {
+          "id": "c31",
+          "value": {
+            "value": "#A0CFBA",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "TERTIARY"
+          ]
+        },
+        {
+          "id": "c32",
+          "value": {
+            "value": "#B8DBCB",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "TERTIARY"
+          ]
+        },
+        {
+          "id": "c33",
+          "value": {
+            "value": "#D0E7DD",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "TERTIARY"
+          ]
+        },
+        {
+          "id": "c34",
+          "value": {
+            "value": "#E7F3EE",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "TERTIARY"
+          ]
+        },
+        {
+          "id": "c35",
+          "value": {
+            "value": "#FFFFFF",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "TERTIARY"
+          ]
+        },
+        {
+          "id": "c36",
+          "value": {
+            "value": "#08271A",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "QUATERNARY",
+            "ORDER_SOURCE"
+          ]
+        },
+        {
+          "id": "c37",
+          "value": {
+            "value": "#1D3D2F",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "QUATERNARY"
+          ]
+        },
+        {
+          "id": "c38",
+          "value": {
+            "value": "#335344",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "QUATERNARY"
+          ]
+        },
+        {
+          "id": "c39",
+          "value": {
+            "value": "#48695A",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "QUATERNARY"
+          ]
+        },
+        {
+          "id": "c40",
+          "value": {
+            "value": "#5E7F6F",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "QUATERNARY"
+          ]
+        },
+        {
+          "id": "c41",
+          "value": {
+            "value": "#739584",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "QUATERNARY"
+          ]
+        },
+        {
+          "id": "c42",
+          "value": {
+            "value": "#89AB99",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "QUATERNARY"
+          ]
+        },
+        {
+          "id": "c43",
+          "value": {
+            "value": "#000000",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "GRAYSCALE"
+          ]
+        },
+        {
+          "id": "c44",
+          "value": {
+            "value": "#141414",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "GRAYSCALE"
+          ]
+        },
+        {
+          "id": "c45",
+          "value": {
+            "value": "#272727",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "GRAYSCALE"
+          ]
+        },
+        {
+          "id": "c46",
+          "value": {
+            "value": "#3B3B3B",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "GRAYSCALE"
+          ]
+        },
+        {
+          "id": "c47",
+          "value": {
+            "value": "#4E4E4E",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "GRAYSCALE"
+          ]
+        },
+        {
+          "id": "c48",
+          "value": {
+            "value": "#626262",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "GRAYSCALE"
+          ]
+        },
+        {
+          "id": "c49",
+          "value": {
+            "value": "#767676",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "GRAYSCALE"
+          ]
+        },
+        {
+          "id": "c50",
+          "value": {
+            "value": "#898989",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "GRAYSCALE"
+          ]
+        },
+        {
+          "id": "c51",
+          "value": {
+            "value": "#9D9D9D",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "GRAYSCALE"
+          ]
+        },
+        {
+          "id": "c52",
+          "value": {
+            "value": "#B1B1B1",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "GRAYSCALE"
+          ]
+        },
+        {
+          "id": "c53",
+          "value": {
+            "value": "#C4C4C4",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "GRAYSCALE"
+          ]
+        },
+        {
+          "id": "c54",
+          "value": {
+            "value": "#D8D8D8",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "GRAYSCALE"
+          ]
+        },
+        {
+          "id": "c55",
+          "value": {
+            "value": "#EBEBEB",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "GRAYSCALE"
+          ]
+        },
+        {
+          "id": "c56",
+          "value": {
+            "value": "#FFFFFF",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "GRAYSCALE"
+          ]
+        },
+        {
+          "id": "c57",
+          "value": {
+            "value": "#FFFFFF",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "THEME",
+            "GRAYSCALE"
+          ]
+        },
+        {
+          "id": "c58",
+          "value": {
+            "value": "#000000",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "FONT"
+          ]
+        },
+        {
+          "id": "c59",
+          "value": {
+            "value": "#FFFFFF",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "FONT"
+          ]
+        },
+        {
+          "id": "c60",
+          "value": {
+            "dark": {
+              "value": "c58",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "light": {
+              "value": "c59",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "type": "AUTOMATIC_COLOR"
+          },
+          "tags": [
+            "FONT"
+          ]
+        },
+        {
+          "id": "c61",
+          "value": {
+            "value": "#337E5D",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "CUSTOM"
+          ]
+        },
+        {
+          "id": "c62",
+          "value": {
+            "value": "#F7F7F7",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "CUSTOM"
+          ]
+        },
+        {
+          "id": "c63",
+          "value": {
+            "value": "#81A0AA",
+            "type": "RGB_HEX"
+          },
+          "tags": [
+            "CUSTOM"
+          ]
+        }
+      ],
+      "fonts": [
+        {
+          "id": "f1",
+          "family": "Sans",
+          "style": "Regular",
+          "weight": 600,
+          "size": 48
+        },
+        {
+          "id": "f2",
+          "family": "Sans",
+          "style": "Regular",
+          "weight": 700,
+          "size": 32
+        },
+        {
+          "id": "f3",
+          "family": "Sans",
+          "style": "Regular",
+          "weight": 600,
+          "size": 24
+        },
+        {
+          "id": "f4",
+          "family": "Sans",
+          "style": "Regular",
+          "weight": 600,
+          "size": 16
+        },
+        {
+          "id": "f5",
+          "family": "Sans",
+          "style": "Regular",
+          "weight": 700,
+          "size": 20
+        },
+        {
+          "id": "f6",
+          "family": "Sans",
+          "style": "Regular",
+          "weight": 300,
+          "size": 14
+        },
+        {
+          "id": "f7",
+          "family": "Sans",
+          "style": "Regular",
+          "weight": 400,
+          "size": 12
+        },
+        {
+          "id": "f8",
+          "family": "Sans",
+          "style": "Regular",
+          "weight": 600,
+          "size": 16
+        },
+        {
+          "id": "f9",
+          "family": "Sans",
+          "style": "Regular",
+          "weight": 600,
+          "size": 12
+        }
+      ],
+      "buttons": [
+        {
+          "id": "b1",
+          "font": {
+            "value": "f8",
+            "type": "FONT_REFERENCE"
+          },
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "backgroundColor": {
+            "value": "c32",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 4,
+          "borderWidth": 0,
+          "borderColor": null,
+          "contentAlignment": "LEFT",
+          "hoverColor": {
+            "value": "c14",
+            "opacity": "12",
+            "type": "COLOR_REFERENCE"
+          },
+          "dropShadow": "NONE",
+          "dropShadowColor": null
+        },
+        {
+          "id": "b2",
+          "font": {
+            "value": "f8",
+            "type": "FONT_REFERENCE"
+          },
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "backgroundColor": {
+            "value": "c8",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 4,
+          "borderWidth": 0,
+          "borderColor": null,
+          "contentAlignment": "CENTER",
+          "hoverColor": {
+            "value": "c43",
+            "opacity": "12",
+            "type": "COLOR_REFERENCE"
+          },
+          "dropShadow": "NONE",
+          "dropShadowColor": null
+        },
+        {
+          "id": "b3",
+          "font": {
+            "value": "f8",
+            "type": "FONT_REFERENCE"
+          },
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "backgroundColor": {
+            "value": "c40",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 4,
+          "borderWidth": 0,
+          "borderColor": null,
+          "contentAlignment": "CENTER",
+          "hoverColor": {
+            "value": "c43",
+            "opacity": "12",
+            "type": "COLOR_REFERENCE"
+          },
+          "dropShadow": "LIFTED",
+          "dropShadowColor": {
+            "value": "c43",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        },
+        {
+          "id": "b4",
+          "font": {
+            "value": "f8",
+            "type": "FONT_REFERENCE"
+          },
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "backgroundColor": {
+            "value": "c14",
+            "opacity": "00",
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 4,
+          "borderWidth": 1,
+          "borderColor": {
+            "value": "c1",
+            "opacity": "90",
+            "type": "COLOR_REFERENCE"
+          },
+          "contentAlignment": "CENTER",
+          "hoverColor": {
+            "value": "c43",
+            "opacity": "12",
+            "type": "COLOR_REFERENCE"
+          },
+          "dropShadow": "NONE",
+          "dropShadowColor": null
+        },
+        {
+          "id": "b5",
+          "font": {
+            "value": "f8",
+            "type": "FONT_REFERENCE"
+          },
+          "fontColor": {
+            "value": "c19",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "backgroundColor": {
+            "value": "c55",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 8,
+          "borderWidth": 0,
+          "borderColor": null,
+          "contentAlignment": "CENTER",
+          "hoverColor": {
+            "value": "c43",
+            "opacity": "12",
+            "type": "COLOR_REFERENCE"
+          },
+          "dropShadow": "NONE",
+          "dropShadowColor": null
+        }
+      ],
+      "navigation": [
+        {
+          "id": "n0",
+          "background": {
+            "value": "c22",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "activeBackground": {
+            "value": "c9",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "hoverBackground": {
+            "value": "c8",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "showShadow": true,
+          "titleFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "linkFontColor": {
+            "value": "c56",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "titleFontStyle": {
+            "value": "f1",
+            "type": "FONT_REFERENCE"
+          },
+          "linkFontStyle": {
+            "value": "f8",
+            "type": "FONT_REFERENCE"
+          },
+          "textHoverColor": null,
+          "buttonStyle": "PILL",
+          "buttonFit": "HUG",
+          "buttonAlignment": "CENTER",
+          "showBorder": false,
+          "showDividers": false
+        }
+      ],
+      "images": [],
+      "pages": [
+        {
+          "id": "p0",
+          "background": {
+            "value": "c56",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "isDynamic": false,
+          "density": {
+            "compact": 8,
+            "standard": 8
+          },
+          "height": "DYNAMIC",
+          "margin": {
+            "compact": {
+              "top": 0,
+              "bottom": 0,
+              "left": 16,
+              "right": 16
+            },
+            "standard": {
+              "top": 0,
+              "bottom": 0,
+              "left": 16,
+              "right": 16
+            }
+          }
+        }
+      ],
+      "headers": [
+        {
+          "id": "h1",
+          "font": {
+            "value": "f2",
+            "type": "FONT_REFERENCE"
+          },
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        },
+        {
+          "id": "h2",
+          "font": {
+            "value": "f3",
+            "type": "FONT_REFERENCE"
+          },
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        }
+      ],
+      "notebooks": [
+        {
+          "id": "no1",
+          "backgroundColor": {
+            "value": "c14",
+            "opacity": "00",
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 4,
+          "borderWidth": 0,
+          "borderColor": null,
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
+          "padding": {
+            "left": 16,
+            "right": 16,
+            "top": 16,
+            "bottom": 16
+          },
+          "elementSpacing": {
+            "isCustom": null,
+            "title": null,
+            "summaryNumber": null,
+            "timeframeLabel": null,
+            "description": null,
+            "header": {
+              "bottomMargin": 8
+            }
+          },
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "titleFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "contentHeaderFont": {
+            "value": "f2",
+            "type": "FONT_REFERENCE"
+          },
+          "contentTitleFont": {
+            "value": "f3",
+            "type": "FONT_REFERENCE"
+          },
+          "contentSubtitleFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "contentTextFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "smartTextFontColor": {
+            "value": "c19",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "urlFontColor": {
+            "value": "c19",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        },
+        {
+          "id": "no2",
+          "backgroundColor": {
+            "value": "c55",
+            "opacity": "20",
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 4,
+          "borderWidth": 2,
+          "borderColor": {
+            "value": "c55",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
+          "padding": {
+            "left": 16,
+            "right": 16,
+            "top": 16,
+            "bottom": 16
+          },
+          "elementSpacing": {
+            "isCustom": null,
+            "title": null,
+            "summaryNumber": null,
+            "timeframeLabel": null,
+            "description": null,
+            "header": {
+              "bottomMargin": 8
+            }
+          },
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "titleFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "contentHeaderFont": {
+            "value": "f3",
+            "type": "FONT_REFERENCE"
+          },
+          "contentTitleFont": {
+            "value": "f3",
+            "type": "FONT_REFERENCE"
+          },
+          "contentSubtitleFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "contentTextFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "smartTextFontColor": {
+            "value": "c19",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "urlFontColor": {
+            "value": "c19",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        },
+        {
+          "id": "no3",
+          "backgroundColor": {
+            "value": "c21",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 4,
+          "borderWidth": 0,
+          "borderColor": null,
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
+          "padding": {
+            "left": 16,
+            "right": 16,
+            "top": 16,
+            "bottom": 16
+          },
+          "elementSpacing": {
+            "isCustom": null,
+            "title": null,
+            "summaryNumber": null,
+            "timeframeLabel": null,
+            "description": null,
+            "header": {
+              "bottomMargin": 8
+            }
+          },
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "titleFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "contentHeaderFont": {
+            "value": "f2",
+            "type": "FONT_REFERENCE"
+          },
+          "contentTitleFont": {
+            "value": "f3",
+            "type": "FONT_REFERENCE"
+          },
+          "contentSubtitleFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "contentTextFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "smartTextFontColor": {
+            "value": "c8",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "urlFontColor": {
+            "value": "c8",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        }
+      ],
+      "forms": [
+        {
+          "id": "fo1",
+          "backgroundColor": {
+            "value": "c14",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 8,
+          "borderWidth": 0,
+          "borderColor": null,
+          "dropShadow": "RAISED",
+          "dropShadowColor": {
+            "value": "c5",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "padding": {
+            "left": 16,
+            "right": 16,
+            "top": 16,
+            "bottom": 16
+          },
+          "elementSpacing": {
+            "isCustom": null,
+            "title": null,
+            "summaryNumber": null,
+            "timeframeLabel": null,
+            "description": null,
+            "header": {
+              "bottomMargin": 8
+            }
+          },
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "formTitleFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "formSectionNumberFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "formSectionHeaderFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "formSectionDescriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "formInputTextFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "formPrimaryButton": {
+            "value": "b1",
+            "type": "BUTTON_REFERENCE"
+          },
+          "formSecondaryButton": {
+            "value": "b5",
+            "type": "BUTTON_REFERENCE"
+          },
+          "formControlColor": {
+            "value": "c8",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        },
+        {
+          "id": "fo2",
+          "backgroundColor": {
+            "value": "c7",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 8,
+          "borderWidth": 2,
+          "borderColor": {
+            "value": "c55",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
+          "padding": {
+            "left": 16,
+            "right": 16,
+            "top": 16,
+            "bottom": 16
+          },
+          "elementSpacing": {
+            "isCustom": null,
+            "title": null,
+            "summaryNumber": null,
+            "timeframeLabel": null,
+            "description": null,
+            "header": {
+              "bottomMargin": 8
+            }
+          },
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "formTitleFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "formSectionNumberFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "formSectionHeaderFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "formSectionDescriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "formInputTextFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "formPrimaryButton": {
+            "value": "b2",
+            "type": "BUTTON_REFERENCE"
+          },
+          "formSecondaryButton": {
+            "value": "b5",
+            "type": "BUTTON_REFERENCE"
+          },
+          "formControlColor": {
+            "value": "c8",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        },
+        {
+          "id": "fo3",
+          "backgroundColor": {
+            "value": "c55",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 4,
+          "borderWidth": 0,
+          "borderColor": null,
+          "dropShadow": "LIFTED",
+          "dropShadowColor": {
+            "value": "c43",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "padding": {
+            "left": 16,
+            "right": 16,
+            "top": 16,
+            "bottom": 16
+          },
+          "elementSpacing": {
+            "isCustom": null,
+            "title": null,
+            "summaryNumber": null,
+            "timeframeLabel": null,
+            "description": null,
+            "header": {
+              "bottomMargin": 8
+            }
+          },
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "formTitleFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "formSectionNumberFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "formSectionHeaderFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "formSectionDescriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "formInputTextFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "formPrimaryButton": {
+            "value": "b3",
+            "type": "BUTTON_REFERENCE"
+          },
+          "formSecondaryButton": {
+            "value": "b5",
+            "type": "BUTTON_REFERENCE"
+          },
+          "formControlColor": {
+            "value": "c55",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        }
+      ],
+      "tabs": [
+        {
+          "id": "ta1",
+          "background": {
+            "value": "c14",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "tabBarBackground": {
+            "value": "c14",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderColor": {
+            "value": "c43",
+            "opacity": "15",
+            "type": "COLOR_REFERENCE"
+          },
+          "borderWeight": 1,
+          "borderRadius": 4,
+          "activeColor": {
+            "value": "c20",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "hoverColor": {
+            "value": "c9",
+            "opacity": "50",
+            "type": "COLOR_REFERENCE"
+          },
+          "linkFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "linkFontStyle": {
+            "value": "f8",
+            "type": "FONT_REFERENCE"
+          },
+          "tabVariant": "UNDERLINE",
+          "tabFit": "FILL",
+          "contentAlignment": "CENTER"
+        },
+        {
+          "id": "ta2",
+          "background": {
+            "value": "c55",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "tabBarBackground": {
+            "value": "c55",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderColor": {
+            "value": "c43",
+            "opacity": "15",
+            "type": "COLOR_REFERENCE"
+          },
+          "borderWeight": 1,
+          "borderRadius": 4,
+          "activeColor": {
+            "value": "c1",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "hoverColor": {
+            "value": "c6",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "linkFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "linkFontStyle": {
+            "value": "f8",
+            "type": "FONT_REFERENCE"
+          },
+          "tabVariant": "UNDERLINE",
+          "tabFit": "FILL",
+          "contentAlignment": "CENTER"
+        }
+      ],
+      "components": [
+        {
+          "id": "co1",
+          "button": {
+            "value": "b1",
+            "type": "BUTTON_REFERENCE"
+          },
+          "secondaryButton": {
+            "value": "b3",
+            "type": "BUTTON_REFERENCE"
+          },
+          "itemBackgroundColor": {
+            "value": "c35",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "itemBorderRadius": 8,
+          "itemBorderWidth": 2,
+          "itemBorderColor": {
+            "value": "c12",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "itemDropShadow": "NONE",
+          "itemDropShadowColor": null,
+          "backgroundColor": {
+            "value": "c12",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 8,
+          "borderWidth": 0,
+          "borderColor": {
+            "value": "c12",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
+          "padding": {
+            "left": 16,
+            "right": 16,
+            "top": 16,
+            "bottom": 16
+          },
+          "spacing": {
+            "bottomMargin": 12
+          },
+          "gap": 4,
+          "titleFont": {
+            "value": "f5",
+            "type": "FONT_REFERENCE"
+          },
+          "titleFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "title1Font": {
+            "value": "f5",
+            "type": "FONT_REFERENCE"
+          },
+          "title1FontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "title2Font": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "title2FontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "labelDescriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "labelDescriptionFontColor": {
+            "value": "c60",
+            "opacity": "70",
+            "type": "COLOR_REFERENCE"
+          },
+          "contentFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "contentFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "urlFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "urlFontColor": {
+            "value": "c15",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "hover": {
+            "colorFill": {
+              "value": "c17",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "border": 2,
+            "borderColor": {
+              "value": "c15",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "dropShadow": "NONE",
+            "dropShadowColor": null
+          },
+          "active": {
+            "colorFill": {
+              "value": "c18",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "border": 3,
+            "borderColor": {
+              "value": "c15",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "dropShadow": "NONE",
+            "dropShadowColor": null
+          }
+        },
+        {
+          "id": "co2",
+          "button": {
+            "value": "b2",
+            "type": "BUTTON_REFERENCE"
+          },
+          "secondaryButton": {
+            "value": "b4",
+            "type": "BUTTON_REFERENCE"
+          },
+          "itemBackgroundColor": {
+            "value": "c12",
+            "opacity": "10",
+            "type": "COLOR_REFERENCE"
+          },
+          "itemBorderRadius": 8,
+          "itemBorderWidth": 0,
+          "itemBorderColor": null,
+          "itemDropShadow": "NONE",
+          "itemDropShadowColor": null,
+          "backgroundColor": {
+            "value": "c35",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 8,
+          "borderWidth": 0,
+          "borderColor": {
+            "value": "c35",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
+          "padding": {
+            "left": 16,
+            "right": 16,
+            "top": 16,
+            "bottom": 16
+          },
+          "spacing": {
+            "bottomMargin": 12
+          },
+          "gap": 4,
+          "titleFont": {
+            "value": "f5",
+            "type": "FONT_REFERENCE"
+          },
+          "titleFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "title1Font": {
+            "value": "f5",
+            "type": "FONT_REFERENCE"
+          },
+          "title1FontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "title2Font": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "title2FontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "labelDescriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "labelDescriptionFontColor": {
+            "value": "c60",
+            "opacity": "70",
+            "type": "COLOR_REFERENCE"
+          },
+          "contentFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "contentFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "urlFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "urlFontColor": {
+            "value": "c15",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "hover": {
+            "colorFill": {
+              "value": "c17",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "border": 2,
+            "borderColor": {
+              "value": "c15",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "dropShadow": "NONE",
+            "dropShadowColor": null
+          },
+          "active": {
+            "colorFill": {
+              "value": "c18",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "border": 3,
+            "borderColor": {
+              "value": "c15",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "dropShadow": "NONE",
+            "dropShadowColor": null
+          }
+        },
+        {
+          "id": "co3",
+          "button": {
+            "value": "b3",
+            "type": "BUTTON_REFERENCE"
+          },
+          "secondaryButton": {
+            "value": "b5",
+            "type": "BUTTON_REFERENCE"
+          },
+          "itemBackgroundColor": {
+            "value": "c35",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "itemBorderRadius": 8,
+          "itemBorderWidth": 0,
+          "itemBorderColor": {
+            "value": "c12",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "itemDropShadow": "LIFTED",
+          "itemDropShadowColor": {
+            "value": "c21",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "backgroundColor": {
+            "value": "c12",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 8,
+          "borderWidth": 0,
+          "borderColor": null,
+          "dropShadow": "LIFTED",
+          "dropShadowColor": {
+            "value": "c21",
+            "opacity": "40",
+            "type": "COLOR_REFERENCE"
+          },
+          "padding": {
+            "left": 16,
+            "right": 16,
+            "top": 16,
+            "bottom": 16
+          },
+          "spacing": {
+            "bottomMargin": 12
+          },
+          "gap": 4,
+          "titleFont": {
+            "value": "f5",
+            "type": "FONT_REFERENCE"
+          },
+          "titleFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "title1Font": {
+            "value": "f5",
+            "type": "FONT_REFERENCE"
+          },
+          "title1FontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "title2Font": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "title2FontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "labelDescriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "labelDescriptionFontColor": {
+            "value": "c60",
+            "opacity": "70",
+            "type": "COLOR_REFERENCE"
+          },
+          "contentFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "contentFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "urlFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "urlFontColor": {
+            "value": "c15",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "hover": {
+            "colorFill": {
+              "value": "c15",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "border": 2,
+            "borderColor": {
+              "value": "c35",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "dropShadow": "FLOATING",
+            "dropShadowColor": {
+              "value": "c21",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            }
+          },
+          "active": {
+            "colorFill": {
+              "value": "c16",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "border": 2,
+            "borderColor": {
+              "value": "c35",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "dropShadow": "FLOATING",
+            "dropShadowColor": {
+              "value": "c21",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            }
+          }
+        },
+        {
+          "id": "co4",
+          "button": {
+            "value": "b2",
+            "type": "BUTTON_REFERENCE"
+          },
+          "secondaryButton": {
+            "value": "b4",
+            "type": "BUTTON_REFERENCE"
+          },
+          "itemBackgroundColor": {
+            "value": "c12",
+            "opacity": "10",
+            "type": "COLOR_REFERENCE"
+          },
+          "itemBorderRadius": 8,
+          "itemBorderWidth": 0,
+          "itemBorderColor": null,
+          "itemDropShadow": "NONE",
+          "itemDropShadowColor": null,
+          "backgroundColor": {
+            "value": "c35",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 8,
+          "borderWidth": 0,
+          "borderColor": {
+            "value": "c35",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
+          "padding": {
+            "left": 16,
+            "right": 16,
+            "top": 16,
+            "bottom": 16
+          },
+          "spacing": {
+            "bottomMargin": 12
+          },
+          "gap": 4,
+          "titleFont": {
+            "value": "f5",
+            "type": "FONT_REFERENCE"
+          },
+          "titleFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "title1Font": {
+            "value": "f5",
+            "type": "FONT_REFERENCE"
+          },
+          "title1FontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "title2Font": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "title2FontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "labelDescriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "labelDescriptionFontColor": {
+            "value": "c60",
+            "opacity": "70",
+            "type": "COLOR_REFERENCE"
+          },
+          "contentFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "contentFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "urlFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "urlFontColor": {
+            "value": "c15",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "hover": {
+            "colorFill": null,
+            "border": 0,
+            "borderColor": null,
+            "dropShadow": "NONE",
+            "dropShadowColor": null
+          },
+          "active": {
+            "colorFill": null,
+            "border": 0,
+            "borderColor": null,
+            "dropShadow": "NONE",
+            "dropShadowColor": null
+          }
+        },
+        {
+          "id": "co5",
+          "button": {
+            "value": "b1",
+            "type": "BUTTON_REFERENCE"
+          },
+          "secondaryButton": {
+            "value": "b3",
+            "type": "BUTTON_REFERENCE"
+          },
+          "itemBackgroundColor": {
+            "value": "c35",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "itemBorderRadius": 8,
+          "itemBorderWidth": 2,
+          "itemBorderColor": {
+            "value": "c12",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "itemDropShadow": "NONE",
+          "itemDropShadowColor": null,
+          "backgroundColor": {
+            "value": "c12",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 8,
+          "borderWidth": 0,
+          "borderColor": {
+            "value": "c12",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
+          "padding": {
+            "left": 16,
+            "right": 16,
+            "top": 16,
+            "bottom": 16
+          },
+          "spacing": {
+            "bottomMargin": 12
+          },
+          "gap": 4,
+          "titleFont": {
+            "value": "f5",
+            "type": "FONT_REFERENCE"
+          },
+          "titleFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "title1Font": {
+            "value": "f5",
+            "type": "FONT_REFERENCE"
+          },
+          "title1FontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "title2Font": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "title2FontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "labelDescriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "labelDescriptionFontColor": {
+            "value": "c60",
+            "opacity": "70",
+            "type": "COLOR_REFERENCE"
+          },
+          "contentFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "contentFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "urlFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "urlFontColor": {
+            "value": "c15",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "hover": {
+            "colorFill": null,
+            "border": 2,
+            "borderColor": null,
+            "dropShadow": "NONE",
+            "dropShadowColor": null
+          },
+          "active": {
+            "colorFill": null,
+            "border": 2,
+            "borderColor": null,
+            "dropShadow": "NONE",
+            "dropShadowColor": null
+          }
+        },
+        {
+          "id": "co6",
+          "button": {
+            "value": "b3",
+            "type": "BUTTON_REFERENCE"
+          },
+          "secondaryButton": {
+            "value": "b5",
+            "type": "BUTTON_REFERENCE"
+          },
+          "itemBackgroundColor": {
+            "value": "c35",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "itemBorderRadius": 8,
+          "itemBorderWidth": 0,
+          "itemBorderColor": {
+            "value": "c12",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "itemDropShadow": "LIFTED",
+          "itemDropShadowColor": {
+            "value": "c21",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "backgroundColor": {
+            "value": "c12",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 8,
+          "borderWidth": 0,
+          "borderColor": null,
+          "dropShadow": "LIFTED",
+          "dropShadowColor": {
+            "value": "c21",
+            "opacity": "40",
+            "type": "COLOR_REFERENCE"
+          },
+          "padding": {
+            "left": 16,
+            "right": 16,
+            "top": 16,
+            "bottom": 16
+          },
+          "spacing": {
+            "bottomMargin": 12
+          },
+          "gap": 4,
+          "titleFont": {
+            "value": "f5",
+            "type": "FONT_REFERENCE"
+          },
+          "titleFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "title1Font": {
+            "value": "f5",
+            "type": "FONT_REFERENCE"
+          },
+          "title1FontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "title2Font": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "title2FontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "labelDescriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "labelDescriptionFontColor": {
+            "value": "c60",
+            "opacity": "70",
+            "type": "COLOR_REFERENCE"
+          },
+          "contentFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "contentFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "urlFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "urlFontColor": {
+            "value": "c15",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "hover": {
+            "colorFill": {
+              "value": "c15",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "border": 2,
+            "borderColor": {
+              "value": "c35",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "dropShadow": "FLOATING",
+            "dropShadowColor": {
+              "value": "c21",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            }
+          },
+          "active": {
+            "colorFill": {
+              "value": "c16",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "border": 2,
+            "borderColor": {
+              "value": "c35",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "dropShadow": "FLOATING",
+            "dropShadowColor": {
+              "value": "c21",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            }
+          }
+        },
+        {
+          "id": "co7",
+          "button": {
+            "value": "b1",
+            "type": "BUTTON_REFERENCE"
+          },
+          "secondaryButton": {
+            "value": "b3",
+            "type": "BUTTON_REFERENCE"
+          },
+          "itemBackgroundColor": {
+            "value": "c35",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "itemBorderRadius": 8,
+          "itemBorderWidth": 2,
+          "itemBorderColor": {
+            "value": "c12",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "itemDropShadow": "NONE",
+          "itemDropShadowColor": null,
+          "backgroundColor": {
+            "value": "c12",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 8,
+          "borderWidth": 0,
+          "borderColor": {
+            "value": "c12",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
+          "padding": {
+            "left": 16,
+            "right": 16,
+            "top": 16,
+            "bottom": 16
+          },
+          "spacing": {
+            "bottomMargin": 12
+          },
+          "gap": 4,
+          "titleFont": {
+            "value": "f5",
+            "type": "FONT_REFERENCE"
+          },
+          "titleFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "title1Font": {
+            "value": "f5",
+            "type": "FONT_REFERENCE"
+          },
+          "title1FontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "title2Font": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "title2FontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "labelDescriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "labelDescriptionFontColor": {
+            "value": "c60",
+            "opacity": "70",
+            "type": "COLOR_REFERENCE"
+          },
+          "contentFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "contentFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "urlFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "urlFontColor": {
+            "value": "c15",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "hover": {
+            "colorFill": {
+              "value": "c17",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "border": 2,
+            "borderColor": {
+              "value": "c15",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "dropShadow": "NONE",
+            "dropShadowColor": null
+          },
+          "active": {
+            "colorFill": {
+              "value": "c18",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "border": 3,
+            "borderColor": {
+              "value": "c15",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "dropShadow": "NONE",
+            "dropShadowColor": null
+          }
+        },
+        {
+          "id": "co8",
+          "button": {
+            "value": "b1",
+            "type": "BUTTON_REFERENCE"
+          },
+          "secondaryButton": {
+            "value": "b3",
+            "type": "BUTTON_REFERENCE"
+          },
+          "itemBackgroundColor": {
+            "value": "c35",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "itemBorderRadius": 8,
+          "itemBorderWidth": 2,
+          "itemBorderColor": {
+            "value": "c12",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "itemDropShadow": "NONE",
+          "itemDropShadowColor": null,
+          "backgroundColor": {
+            "value": "c12",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 8,
+          "borderWidth": 0,
+          "borderColor": {
+            "value": "c12",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
+          "padding": {
+            "left": 16,
+            "right": 16,
+            "top": 16,
+            "bottom": 16
+          },
+          "spacing": {
+            "bottomMargin": 12
+          },
+          "gap": 4,
+          "titleFont": {
+            "value": "f5",
+            "type": "FONT_REFERENCE"
+          },
+          "titleFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "title1Font": {
+            "value": "f5",
+            "type": "FONT_REFERENCE"
+          },
+          "title1FontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "title2Font": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "title2FontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "labelDescriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "labelDescriptionFontColor": {
+            "value": "c60",
+            "opacity": "70",
+            "type": "COLOR_REFERENCE"
+          },
+          "contentFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "contentFontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "urlFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "urlFontColor": {
+            "value": "c15",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "hover": {
+            "colorFill": {
+              "value": "c17",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "border": 2,
+            "borderColor": {
+              "value": "c15",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "dropShadow": "NONE",
+            "dropShadowColor": null
+          },
+          "active": {
+            "colorFill": {
+              "value": "c18",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "border": 3,
+            "borderColor": {
+              "value": "c15",
+              "opacity": null,
+              "type": "COLOR_REFERENCE"
+            },
+            "dropShadow": "NONE",
+            "dropShadowColor": null
+          }
+        }
+      ],
+      "pills": [
+        {
+          "id": "p1",
+          "backgroundColor": {
+            "value": "c8",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderColor": null,
+          "radius": 24,
+          "font": {
+            "value": "f9",
+            "type": "FONT_REFERENCE"
+          },
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        },
+        {
+          "id": "p2",
+          "backgroundColor": {
+            "value": "c35",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderColor": {
+            "value": "c53",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "radius": 24,
+          "font": {
+            "value": "f9",
+            "type": "FONT_REFERENCE"
+          },
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        },
+        {
+          "id": "p3",
+          "backgroundColor": {
+            "value": "c8",
+            "opacity": "50",
+            "type": "COLOR_REFERENCE"
+          },
+          "borderColor": {
+            "value": "c8",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "radius": 24,
+          "font": {
+            "value": "f9",
+            "type": "FONT_REFERENCE"
+          },
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        }
+      ],
+      "app": {
+        "backgroundColor": {
+          "value": "c14",
+          "opacity": null,
+          "type": "COLOR_REFERENCE"
+        },
+        "resizeMode": "AUTO"
+      }
+    },
+    "navigations": [
+      {
+        "dataAppId": 1508249624,
+        "entity": "HOME",
+        "entityId": "home",
+        "title": "Home",
+        "description": "All Domo apps",
+        "navOrder": 1,
+        "visible": true,
+        "interaction": null,
+        "icon": {
+          "value": "home",
+          "size": "DEFAULT"
+        },
+        "iconPosition": "LEFT",
+        "style": null
+      },
+      {
+        "dataAppId": 1508249624,
+        "entity": "VIEW",
+        "entityId": "708643848",
+        "title": "Sales Performance",
+        "description": null,
+        "navOrder": 2,
+        "visible": true,
+        "interaction": null,
+        "icon": {
+          "value": "chart-line",
+          "size": "DEFAULT",
+          "phosphor": "Line"
+        },
+        "iconPosition": "LEFT",
+        "style": null
+      },
+      {
+        "dataAppId": 1508249624,
+        "entity": "VIEW",
+        "entityId": "1796215973",
+        "title": "Customer Insights",
+        "description": null,
+        "navOrder": 3,
+        "visible": true,
+        "interaction": null,
+        "icon": {
+          "value": "lightbulb",
+          "size": "DEFAULT",
+          "phosphor": "Lightbulb"
+        },
+        "iconPosition": "LEFT",
+        "style": null
+      },
+      {
+        "dataAppId": 1508249624,
+        "entity": "VIEW",
+        "entityId": "163411075",
+        "title": "Product Performance",
+        "description": null,
+        "navOrder": 4,
+        "visible": true,
+        "interaction": null,
+        "icon": {
+          "value": "badge-layout-small",
+          "size": "DEFAULT",
+          "phosphor": "SquaresNine"
+        },
+        "iconPosition": "LEFT",
+        "style": null
+      },
+      {
+        "dataAppId": 1508249624,
+        "entity": "VIEW",
+        "entityId": "1912142929",
+        "title": "Inventory Management",
+        "description": null,
+        "navOrder": 5,
+        "visible": true,
+        "interaction": null,
+        "icon": {
+          "value": "cube-filled",
+          "size": "DEFAULT",
+          "phosphor": "Cube"
+        },
+        "iconPosition": "LEFT",
+        "style": null
+      },
+      {
+        "dataAppId": 1508249624,
+        "entity": "AI_ASSISTANT",
+        "entityId": "ai_assistant",
+        "title": "Domo.AI",
+        "description": null,
+        "navOrder": 6,
+        "visible": true,
+        "interaction": null,
+        "icon": {
+          "value": "ai-chat",
+          "size": "DEFAULT"
+        },
+        "iconPosition": "LEFT",
+        "style": null
+      },
+      {
+        "dataAppId": 1508249624,
+        "entity": "CONTROLS",
+        "entityId": "controls",
+        "title": "Controls",
+        "description": "Filters, segments & variables",
+        "navOrder": 7,
+        "visible": true,
+        "interaction": null,
+        "icon": {
+          "value": "controls",
+          "size": "DEFAULT"
+        },
+        "iconPosition": "LEFT",
+        "style": null
+      },
+      {
+        "dataAppId": 1508249624,
+        "entity": "DISTRIBUTE",
+        "entityId": "distribute",
+        "title": "Distribute",
+        "description": "Distribution & access",
+        "navOrder": 8,
+        "visible": true,
+        "interaction": null,
+        "icon": {
+          "value": "arrow-box",
+          "size": "DEFAULT"
+        },
+        "iconPosition": "LEFT",
+        "style": null
+      },
+      {
+        "dataAppId": 1508249624,
+        "entity": "MORE",
+        "entityId": "more",
+        "title": "More",
+        "description": null,
+        "navOrder": 9,
+        "visible": true,
+        "interaction": null,
+        "icon": {
+          "value": "dots-vertical",
+          "size": "DEFAULT"
+        },
+        "iconPosition": "LEFT",
+        "style": null
+      }
+    ],
+    "persistSettings": {
+      "dataAppId": 1508249624,
+      "persistFiltersEnabled": false,
+      "persistInteractionsEnabled": false,
+      "persistDateEnabled": false,
+      "persistVariablesEnabled": false,
+      "persistedColumns": []
+    },
+    "conversationalAgentContextId": null,
+    "conversationalAgentContext": null,
+    "type": "app",
+    "dataSourceId": null,
+    "dataSourceType": null
+  }
+}
