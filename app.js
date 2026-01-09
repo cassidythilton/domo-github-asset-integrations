@@ -1450,6 +1450,13 @@ function loadSavedSettings() {
     try {
       const parsed = JSON.parse(saved);
       state.settings = { ...state.settings, ...parsed };
+      
+      // Migration: fix old path name
+      if (state.settings.githubPath === 'app-definitions/' || state.settings.githubPath === 'app-definitions') {
+        state.settings.githubPath = 'asset-definitions/';
+        localStorage.setItem('asset-versioning-settings', JSON.stringify(state.settings));
+        console.log('Migrated githubPath from app-definitions to asset-definitions');
+      }
     } catch (e) {
       console.error('Error loading settings:', e);
     }
