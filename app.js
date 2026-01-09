@@ -213,8 +213,6 @@ async function pushToGithub(filePath, content, commitMessage) {
   const { githubToken, githubRepo, githubBranch, githubPath } = state.settings;
   try {
     const fullPath = `${githubPath}${filePath}`.replace(/\/\//g, '/');
-    console.log('Pushing to GitHub:', { repo: githubRepo, branch: githubBranch, path: fullPath });
-    
     const response = await callCodeEngine('/domo/codeengine/v2/packages/pushToGithub', { 
       githubToken,
       repo: githubRepo,
@@ -223,14 +221,6 @@ async function pushToGithub(filePath, content, commitMessage) {
       content,
       commitMessage
     });
-    
-    console.log('GitHub push response:', JSON.stringify(response));
-    
-    // Check if push was successful
-    if (!response?.result?.success && !response?.success) {
-      throw new Error(response?.result?.message || response?.message || 'Push failed');
-    }
-    
     return response;
   } catch (error) {
     console.error('Error pushing to GitHub:', error);
@@ -623,15 +613,12 @@ async function handleCommitToGitHub(assetId, assetName) {
     const filename = `${sanitizeFilename(assetName)}-${assetId}.json`;
     const message = `Commit ${assetName} (${assetId}) - ${new Date().toISOString()}`;
     
-    const pushResult = await pushToGithub(filename, definition, message);
-    console.log('Push to GitHub result:', pushResult);
+    await pushToGithub(filename, definition, message);
     
-    // Use URL from GitHub API if available, otherwise construct it
+    // Build GitHub URL for the committed file
     const { githubRepo, githubBranch, githubPath } = state.settings;
     const fullPath = `${githubPath}${filename}`.replace(/\/\//g, '/');
-    const githubUrl = pushResult?.url || pushResult?.result?.url || `https://github.com/${githubRepo}/blob/${githubBranch}/${fullPath}`;
-    
-    console.log('GitHub URL:', githubUrl);
+    const githubUrl = `https://github.com/${githubRepo}/blob/${githubBranch}/${fullPath}`;
     
     // Show success modal with GitHub link
     showCommitSuccessModal(assetName, githubUrl, filename);
