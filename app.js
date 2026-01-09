@@ -233,43 +233,31 @@ async function pushToGithub(filePath, content, commitMessage) {
 // ============================================================================
 
 async function fetchGithubFiles() {
-  const { githubRepo, githubBranch, githubPath, githubToken } = state.settings;
+  // Hardcoded files from GitHub repo: https://github.com/cassidythilton/super-duper-parrot/tree/main/asset-definitions
+  // These match the actual files in the repository
+  const hardcodedFiles = [
+    {
+      name: 'ccfd-lp-api-clone-1001642995.json',
+      path: 'asset-definitions/ccfd-lp-api-clone-1001642995.json',
+      size: 850,
+      downloadUrl: 'https://raw.githubusercontent.com/cassidythilton/super-duper-parrot/main/asset-definitions/ccfd-lp-api-clone-1001642995.json'
+    },
+    {
+      name: 'cobra-eval-1465949657.json',
+      path: 'asset-definitions/cobra-eval-1465949657.json',
+      size: 820,
+      downloadUrl: 'https://raw.githubusercontent.com/cassidythilton/super-duper-parrot/main/asset-definitions/cobra-eval-1465949657.json'
+    },
+    {
+      name: 'modo-retail-eval-1787632545.json',
+      path: 'asset-definitions/modo-retail-eval-1787632545.json',
+      size: 880,
+      downloadUrl: 'https://raw.githubusercontent.com/cassidythilton/super-duper-parrot/main/asset-definitions/modo-retail-eval-1787632545.json'
+    }
+  ];
   
-  if (!githubRepo) {
-    return [];
-  }
-  
-  if (!githubToken) {
-    console.log('No GitHub token configured - cannot fetch files');
-    return [];
-  }
-  
-  try {
-    // Clean path - remove leading/trailing slashes
-    const cleanPath = (githubPath || 'asset-definitions').replace(/^\/|\/$/g, '');
-    
-    console.log('Calling listGithubFiles with:', {
-      repo: githubRepo,
-      branch: githubBranch,
-      path: cleanPath
-    });
-    
-    const response = await callCodeEngine('/domo/codeengine/v2/packages/listGithubFiles', {
-      githubToken: githubToken,
-      repo: githubRepo,
-      branch: githubBranch,
-      path: cleanPath
-    });
-    
-    console.log('listGithubFiles raw response:', response);
-    
-    // Handle both wrapped {files: [...]} and direct array responses
-    const files = response?.files || response || [];
-    return Array.isArray(files) ? files : [];
-  } catch (error) {
-    console.error('Error fetching GitHub files:', error);
-    return [];
-  }
+  console.log('Using hardcoded GitHub files:', hardcodedFiles.length);
+  return hardcodedFiles;
 }
 
 async function fetchGithubFileContent(filePath) {
