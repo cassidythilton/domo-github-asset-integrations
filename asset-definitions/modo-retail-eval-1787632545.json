@@ -1,0 +1,25 @@
+{
+    "id":"208c44f7-172b-489c-8b28-456405dafa79",
+    "datastoreId":"e29240fc-c585-4945-b739-19f12463854d",
+    "collectionId":"668500fb-4c87-4fc3-88b2-0bfecf91f9a4",
+    "syncRequired":true,
+    "owner":"767612617",
+    "createdBy":"767612617",
+    "createdOn":"2026-01-08T20:43:39.375Z",
+    "updatedOn":"2026-01-08T20:43:39.375Z",
+    "updatedBy":"767612617",
+    "content":{
+        "solutionId":"05133ecb-3c14-41f8-a42a-f4f049b20355",
+        "version":1,
+        "name":"modo-retail-eval-1787632545.json",
+        "description":"",
+        "imageUrl":"",
+        "workflows":"[]",
+        "codeEnginePackages":"[]",
+        "customApps":"[]",
+        "appStudioApps":"{\"id\":\"6f885cb6-8df1-4435-a3bd-9a3c3c091d71\",\"domain\":\"modocorp.domo.com\",\"name\":\"Riley Cassidy Testing - App Studio Apps\",\"accessCount\":0,\"type\":\"dataApp\",\"repositoryContent\":{\"pageIds\":[],\"viewIds\":[],\"dataflowIds\":[],\"streamIds\":[],\"cardIds\":[],\"dataAppIds\":[\"1850512679\"]},\"userId\":767612617,\"created\":\"2026-01-08T20:43:38.961Z\",\"updated\":\"2026-01-08T20:43:38.961Z\",\"seeded\":false,\"lastCommit\":{\"id\":\"b73f582f-d279-476f-82e5-7e51ef371385\",\"repositoryId\":\"6f885cb6-8df1-4435-a3bd-9a3c3c091d71\",\"hidden\":false,\"summary\":\"\",\"started\":\"2026-01-08T20:43:39.110Z\",\"status\":\"QUEUED\"},\"deployments\":[],\"permission\":\"OWNER\"}",
+        "dataflows":"[]",
+        "collections":"[]",
+        "transfers":0
+    }
+}
