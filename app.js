@@ -213,6 +213,8 @@ async function pushToGithub(filePath, content, commitMessage) {
   const { githubToken, githubRepo, githubBranch, githubPath } = state.settings;
   try {
     const fullPath = `${githubPath}${filePath}`.replace(/\/\//g, '/');
+    console.log('Pushing to GitHub:', { repo: githubRepo, branch: githubBranch, path: fullPath });
+    
     const response = await callCodeEngine('/domo/codeengine/v2/packages/pushToGithub', { 
       githubToken,
       repo: githubRepo,
@@ -221,6 +223,14 @@ async function pushToGithub(filePath, content, commitMessage) {
       content,
       commitMessage
     });
+    
+    console.log('GitHub push response:', JSON.stringify(response));
+    
+    // Check if push was successful
+    if (!response?.result?.success && !response?.success) {
+      throw new Error(response?.result?.message || response?.message || 'Push failed');
+    }
+    
     return response;
   } catch (error) {
     console.error('Error pushing to GitHub:', error);
