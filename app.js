@@ -114,7 +114,7 @@ async function callCodeEngine(functionPath, body = {}) {
   console.log('Calling Code Engine:', functionPath, body);
   try {
     const response = await domo.post(functionPath, body);
-    console.log('Code Engine response:', response);
+    console.log('Code Engine response:', JSON.stringify(response));
     return response;
   } catch (error) {
     console.error('Code Engine error:', error);
