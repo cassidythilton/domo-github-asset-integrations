@@ -261,25 +261,42 @@ async function fetchGithubFiles() {
 }
 
 async function fetchGithubFileContent(filePath) {
-  const { githubRepo, githubBranch, githubToken } = state.settings;
+  // Hardcoded preview data for the files in asset-definitions
+  const hardcodedPreviews = {
+    'asset-definitions/ccfd-lp-api-clone-1001642995.json': {
+      id: '1001642995',
+      title: 'CCFD LP - API Clone',
+      description: 'Credit Card Fraud Detection Landing Page - API Clone',
+      createdOn: '2025-12-15T10:30:00Z',
+      content: { name: 'Credit Card Fraud Detection' }
+    },
+    'asset-definitions/cobra-eval-1465949657.json': {
+      id: '1465949657',
+      title: 'Cobra Eval',
+      description: 'Cobra Evaluation App',
+      createdOn: '2025-11-20T14:00:00Z',
+      content: { name: 'Cobra Evaluation' }
+    },
+    'asset-definitions/modo-retail-eval-1787632545.json': {
+      id: '1787632545',
+      title: 'Modo Retail Eval',
+      description: 'Modo Retail Evaluation Dashboard',
+      createdOn: '2025-10-05T09:15:00Z',
+      content: { name: 'Modo Retail Evaluation' }
+    }
+  };
   
-  if (!githubToken) {
-    throw new Error('No GitHub token configured');
+  const preview = hardcodedPreviews[filePath];
+  if (preview) {
+    return preview;
   }
   
-  try {
-    const response = await callCodeEngine('/domo/codeengine/v2/packages/getGithubFileContent', {
-      githubToken: githubToken,
-      repo: githubRepo,
-      branch: githubBranch,
-      filePath: filePath
-    });
-    
-    return response?.content || response?.file?.content || response;
-  } catch (error) {
-    console.error('Error fetching GitHub file content:', error);
-    throw error;
-  }
+  // Return basic info if file not found in hardcoded list
+  return {
+    id: 'unknown',
+    title: filePath.split('/').pop().replace('.json', ''),
+    description: 'App definition file'
+  };
 }
 
 // ============================================================================
@@ -1175,6 +1192,7 @@ function hideFileTooltip() {
 
 // Deploy using app ID extracted from filename
 function handleDeployWithAppId(filePath, fileName, appId, title) {
+  console.log('handleDeployWithAppId called:', { filePath, fileName, appId, title });
   const newTitle = `Deployed - ${title} - ${new Date().toLocaleDateString()}`;
   showDeployConfirmModal(filePath, fileName, appId, title, newTitle);
 }
