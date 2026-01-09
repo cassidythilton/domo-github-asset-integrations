@@ -254,66 +254,80 @@ async function pushToGithub(githubToken, repo, branch, filePath, content, commit
  * @param {string} path - Directory path within the repo
  * @returns {Array} List of files in the directory
  */
-function listGithubFiles(githubToken, repo, branch, path) {
+async function listGithubFiles(githubToken, repo, branch, path) {
   const https = require('https');
   
+  const githubApiHost = 'api.github.com';
   const cleanPath = (path || '').replace(/^\/|\/$/g, '');
-  const apiPath = `/repos/${repo}/contents/${cleanPath}?ref=${branch}`;
+  const contentPath = `/repos/${repo}/contents/${cleanPath}?ref=${branch}`;
   
-  return new Promise((resolve, reject) => {
-    const options = {
-      hostname: 'api.github.com',
-      port: 443,
-      path: apiPath,
-      method: 'GET',
-      headers: {
-        'Authorization': `token ${githubToken}`,
-        'Accept': 'application/vnd.github.v3+json',
-        'User-Agent': 'Domo-AppStudio-GitHub-Sync'
-      }
-    };
-    
-    const req = https.request(options, (res) => {
-      let data = '';
-      res.on('data', chunk => { data += chunk; });
-      res.on('end', () => {
-        try {
-          if (res.statusCode === 404) {
-            resolve([]);
-            return;
-          }
-          
-          if (res.statusCode < 200 || res.statusCode >= 300) {
-            reject(new Error(`GitHub API returned ${res.statusCode}`));
-            return;
-          }
-          
-          const parsed = JSON.parse(data);
-          const files = Array.isArray(parsed) ? parsed.filter(f => 
-            f.type === 'file' && f.name.endsWith('.json')
-          ) : [];
-          
-          const result = files.map(f => ({
-            name: f.name,
-            path: f.path,
-            sha: f.sha,
-            size: f.size,
-            downloadUrl: f.download_url
-          }));
-          
-          resolve(result);
-        } catch (e) {
-          reject(new Error('Failed to parse GitHub response: ' + e.message));
+  console.log('listGithubFiles called:', { repo, branch, path: cleanPath });
+  
+  // Helper to make GitHub API requests (same pattern as pushToGithub)
+  const githubRequest = (method, apiPath) => {
+    return new Promise((resolve, reject) => {
+      const options = {
+        hostname: githubApiHost,
+        path: apiPath,
+        method: method,
+        headers: {
+          'Authorization': `Bearer ${githubToken}`,
+          'Accept': 'application/vnd.github.v3+json',
+          'User-Agent': 'Domo-AppStudio-GitHub-Sync'
         }
+      };
+      
+      const req = https.request(options, (res) => {
+        let data = '';
+        res.on('data', chunk => data += chunk);
+        res.on('end', () => {
+          console.log('GitHub API response status:', res.statusCode);
+          try {
+            const parsed = data ? JSON.parse(data) : {};
+            if (res.statusCode >= 200 && res.statusCode < 300) {
+              resolve(parsed);
+            } else if (res.statusCode === 404) {
+              resolve([]); // Directory doesn't exist
+            } else {
+              reject({ status: res.statusCode, message: parsed.message || 'GitHub API error' });
+            }
+          } catch (e) {
+            reject({ message: 'Failed to parse response' });
+          }
+        });
       });
+      
+      req.on('error', reject);
+      req.end();
     });
+  };
+  
+  try {
+    const response = await githubRequest('GET', contentPath);
     
-    req.on('error', (e) => {
-      reject(new Error('GitHub request failed: ' + e.message));
-    });
+    // If response is empty array (404 case), return it
+    if (Array.isArray(response) && response.length === 0) {
+      return [];
+    }
     
-    req.end();
-  });
+    // Filter to only JSON files
+    const files = Array.isArray(response) ? response.filter(f => 
+      f.type === 'file' && f.name.endsWith('.json')
+    ) : [];
+    
+    console.log('Found', files.length, 'JSON files');
+    
+    return files.map(f => ({
+      name: f.name,
+      path: f.path,
+      sha: f.sha,
+      size: f.size,
+      downloadUrl: f.download_url
+    }));
+  } catch (error) {
+    console.error('Error in listGithubFiles:', error);
+    throw error;
+  }
 }
 
 /**
@@ -324,55 +338,64 @@ function listGithubFiles(githubToken, repo, branch, path) {
  * @param {string} filePath - File path within the repo
  * @returns {Object} File content (decoded from base64)
  */
-function getGithubFileContent(githubToken, repo, branch, filePath) {
+async function getGithubFileContent(githubToken, repo, branch, filePath) {
   const https = require('https');
   
-  const apiPath = `/repos/${repo}/contents/${filePath}?ref=${branch}`;
+  const githubApiHost = 'api.github.com';
+  const contentPath = `/repos/${repo}/contents/${filePath}?ref=${branch}`;
   
-  return new Promise((resolve, reject) => {
-    const options = {
-      hostname: 'api.github.com',
-      port: 443,
-      path: apiPath,
-      method: 'GET',
-      headers: {
-        'Authorization': `token ${githubToken}`,
-        'Accept': 'application/vnd.github.v3+json',
-        'User-Agent': 'Domo-AppStudio-GitHub-Sync'
-      }
-    };
-    
-    const req = https.request(options, (res) => {
-      let data = '';
-      res.on('data', chunk => { data += chunk; });
-      res.on('end', () => {
-        try {
-          if (res.statusCode < 200 || res.statusCode >= 300) {
-            reject(new Error(`GitHub API returned ${res.statusCode}`));
-            return;
-          }
-          
-          const parsed = JSON.parse(data);
-          // Decode base64 content
-          const content = Buffer.from(parsed.content, 'base64').toString('utf8');
-          resolve({
-            name: parsed.name,
-            path: parsed.path,
-            sha: parsed.sha,
-            content: JSON.parse(content)
-          });
-        } catch (e) {
-          reject(new Error('Failed to parse GitHub response: ' + e.message));
+  // Helper to make GitHub API requests (same pattern as pushToGithub)
+  const githubRequest = (method, apiPath) => {
+    return new Promise((resolve, reject) => {
+      const options = {
+        hostname: githubApiHost,
+        path: apiPath,
+        method: method,
+        headers: {
+          'Authorization': `Bearer ${githubToken}`,
+          'Accept': 'application/vnd.github.v3+json',
+          'User-Agent': 'Domo-AppStudio-GitHub-Sync'
         }
+      };
+      
+      const req = https.request(options, (res) => {
+        let data = '';
+        res.on('data', chunk => data += chunk);
+        res.on('end', () => {
+          try {
+            const parsed = data ? JSON.parse(data) : {};
+            if (res.statusCode >= 200 && res.statusCode < 300) {
+              resolve(parsed);
+            } else {
+              reject({ status: res.statusCode, message: parsed.message || 'GitHub API error' });
+            }
+          } catch (e) {
+            reject({ message: 'Failed to parse response' });
+          }
+        });
       });
+      
+      req.on('error', reject);
+      req.end();
     });
+  };
+  
+  try {
+    const response = await githubRequest('GET', contentPath);
     
-    req.on('error', (e) => {
-      reject(new Error('GitHub request failed: ' + e.message));
-    });
+    // Decode base64 content
+    const content = Buffer.from(response.content, 'base64').toString('utf8');
     
-    req.end();
-  });
+    return {
+      name: response.name,
+      path: response.path,
+      sha: response.sha,
+      content: JSON.parse(content)
+    };
+  } catch (error) {
+    console.error('Error in getGithubFileContent:', error);
+    throw error;
+  }
 }
 
 // ============================================================================
