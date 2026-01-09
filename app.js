@@ -252,7 +252,11 @@ async function fetchGithubFiles() {
       path: githubPath
     });
     
-    return response || [];
+    console.log('listGithubFiles raw response:', response);
+    
+    // Handle both wrapped {files: [...]} and direct array responses
+    const files = response?.files || response || [];
+    return Array.isArray(files) ? files : [];
   } catch (error) {
     console.error('Error fetching GitHub files:', error);
     return [];
@@ -916,9 +920,10 @@ async function loadGithubPanel() {
   
   // Fetch real files from GitHub
   const files = await fetchGithubFiles();
+  console.log('Loaded', files.length, 'files from GitHub:', files);
   
   // Process files to extract app IDs from filenames
-  const processedFiles = files.map(file => {
+  const processedFiles = (files || []).map(file => {
     // Extract app ID from filename (e.g., "modo-retail-eval-1787632545.json" -> 1787632545)
     const match = file.name.match(/-(\d+)\.json$/);
     const appId = match ? parseInt(match[1]) : null;
