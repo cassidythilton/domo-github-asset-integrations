@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asset Versioning</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img src="domo.svg" alt="Domo" class="sidebar-logo">
+        <span class="sidebar-title">Asset Versioning</span>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <span class="nav-section-label">Navigation</span>
+          <a href="#" class="nav-item active" data-page="overview">
+            <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            <span>Overview</span>
+          </a>
+          <a href="#" class="nav-item" data-page="assets">
+            <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+            </svg>
+            <span>Assets</span>
+          </a>
+          <a href="#" class="nav-item" data-page="runs">
+            <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+            <span>Runs / Logs</span>
+          </a>
+          <a href="#" class="nav-item" data-page="settings">
+            <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+            <span>Settings</span>
+          </a>
+        </div>
+        
+        <div class="nav-section">
+          <span class="nav-section-label">Asset Types</span>
+          <a href="#" class="nav-item type-item" data-filter="appstudio">
+            <span class="type-indicator type-appstudio"></span>
+            <span>App Studio</span>
+          </a>
+          <a href="#" class="nav-item type-item" data-filter="dataflows">
+            <span class="type-indicator type-dataflow"></span>
+            <span>DataFlows</span>
+          </a>
+          <a href="#" class="nav-item type-item" data-filter="workflows">
+            <span class="type-indicator type-workflow"></span>
+            <span>Workflows</span>
+          </a>
+        </div>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <div class="connection-status">
+          <span class="status-dot connected"></span>
+          <div class="connection-info">
+            <span class="connection-label">Connected Instance</span>
+            <span class="connection-url" id="instanceUrl">databricks-demo.domo.com</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="main-header">
+        <div class="search-container">
+          <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="globalSearch" class="search-input" placeholder="Search assets by name or ID...">
+        </div>
+        <div class="header-actions">
+          <button id="notificationsBtn" class="header-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+          </button>
+          <button id="syncAllBtn" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="23 4 23 10 17 10"></polyline>
+              <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+            </svg>
+            Sync All
+          </button>
+          <div class="user-avatar" id="userAvatar">JD</div>
+        </div>
+      </header>
+
+      <!-- Page: Overview -->
+      <div id="page-overview" class="page active">
+        <div class="page-header">
+          <div>
+            <h1>Overview</h1>
+            <p class="page-subtitle">Monitor your asset versioning and GitHub sync status</p>
+          </div>
+          <button class="btn btn-secondary" id="refreshOverview">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="23 4 23 10 17 10"></polyline>
+              <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+            </svg>
+            Refresh
+          </button>
+        </div>
+        
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-content">
+              <span class="stat-value" id="statTotalAssets">0</span>
+              <span class="stat-label">Total Assets</span>
+            </div>
+            <div class="stat-icon stat-icon-assets">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="stat-card stat-card-synced">
+            <div class="stat-content">
+              <span class="stat-value" id="statSynced">0</span>
+              <span class="stat-label">Synced to GitHub</span>
+            </div>
+            <div class="stat-icon stat-icon-synced">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-content">
+              <span class="stat-value" id="statDeployments">0</span>
+              <span class="stat-label">Deployments (7d)</span>
+              <span class="stat-change positive" id="deploymentChange">↑ 0% from last week</span>
+            </div>
+            <div class="stat-icon stat-icon-deploy">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" y1="3" x2="12" y2="15"></line>
+              </svg>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-content">
+              <span class="stat-value" id="statFailures">0</span>
+              <span class="stat-label">Failures (7d)</span>
+              <span class="stat-change negative" id="failureChange">↓ 0% from last week</span>
+            </div>
+            <div class="stat-icon stat-icon-failure">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="activity-section">
+          <div class="section-header">
+            <h2>Recent Activity</h2>
+            <a href="#" class="view-all-link" data-page="runs">View all runs →</a>
+          </div>
+          <div class="activity-list">
+            <div class="activity-header">
+              <span class="activity-col col-time">Time</span>
+              <span class="activity-col col-asset">Asset</span>
+              <span class="activity-col col-action">Action</span>
+              <span class="activity-col col-status">Status</span>
+              <span class="activity-col col-duration">Duration</span>
+            </div>
+            <div id="recentActivityList">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page: Assets -->
+      <div id="page-assets" class="page">
+        <div class="page-header">
+          <div>
+            <h1>Assets</h1>
+            <p class="page-subtitle">Manage App Studio, DataFlow, and Workflow assets</p>
+          </div>
+          <button class="btn btn-secondary" id="refreshAssets">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="23 4 23 10 17 10"></polyline>
+              <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+            </svg>
+            Refresh
+          </button>
+        </div>
+
+        <div class="table-controls">
+          <div class="search-filter">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="assetSearch" class="filter-input" placeholder="Search by name or ID...">
+          </div>
+          <div class="filter-group">
+            <select id="typeFilter" class="filter-select">
+              <option value="">All Types</option>
+              <option value="appstudio">App Studio</option>
+              <option value="dataflow">DataFlow</option>
+              <option value="workflow">Workflow</option>
+            </select>
+            <select id="statusFilter" class="filter-select">
+              <option value="">All Status</option>
+              <option value="synced">Synced</option>
+              <option value="not-synced">Not synced</option>
+              <option value="error">Error</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="assets-table-container">
+          <table class="data-table assets-table">
+            <thead>
+              <tr>
+                <th class="col-checkbox"><input type="checkbox" id="selectAll"></th>
+                <th class="col-name">Name</th>
+                <th class="col-id">Asset ID</th>
+                <th class="col-exported">Last Exported</th>
+                <th class="col-commit">Last Commit</th>
+                <th class="col-status">Status</th>
+                <th class="col-actions">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="assetsTableBody">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Page: Runs / Logs -->
+      <div id="page-runs" class="page">
+        <div class="page-header">
+          <div>
+            <h1>Runs / Logs</h1>
+            <p class="page-subtitle">View execution history and logs for all actions</p>
+          </div>
+        </div>
+
+        <div class="table-controls">
+          <div class="search-filter">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="runSearch" class="filter-input" placeholder="Search by asset or run ID...">
+          </div>
+          <div class="filter-group">
+            <select id="runStatusFilter" class="filter-select">
+              <option value="">All Status</option>
+              <option value="success">Success</option>
+              <option value="failed">Failed</option>
+              <option value="running">Running</option>
+            </select>
+            <select id="actionFilter" class="filter-select">
+              <option value="">All Actions</option>
+              <option value="export">Export</option>
+              <option value="commit">Commit</option>
+              <option value="deploy">Deploy</option>
+            </select>
+            <select id="runTypeFilter" class="filter-select">
+              <option value="">All Types</option>
+              <option value="appstudio">App Studio</option>
+              <option value="dataflow">DataFlow</option>
+              <option value="workflow">Workflow</option>
+            </select>
+          </div>
+        </div>
+
+        <table class="data-table runs-table">
+          <thead>
+            <tr>
+              <th>Run ID</th>
+              <th>Timestamp</th>
+              <th>Asset</th>
+              <th>Action</th>
+              <th>Status</th>
+              <th>Duration</th>
+              <th>Triggered By</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="runsTableBody">
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Page: Settings -->
+      <div id="page-settings" class="page">
+        <div class="page-header">
+          <div>
+            <h1>Settings</h1>
+            <p class="page-subtitle">Configure GitHub integration and sync preferences</p>
+          </div>
+        </div>
+
+        <div class="settings-container">
+          <div class="settings-section">
+            <h3>GitHub Repository</h3>
+            <div class="form-group">
+              <label for="githubRepo">Repository</label>
+              <input type="text" id="githubRepo" placeholder="owner/repo" value="cassidythilton/super-duper-parrot">
+              <span class="form-hint">Format: owner/repository-name</span>
+            </div>
+            <div class="form-group">
+              <label for="githubToken">Personal Access Token</label>
+              <input type="password" id="githubToken" placeholder="ghp_xxxxxxxxxxxx">
+              <span class="form-hint">Needs repo scope for read/write access</span>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="githubBranch">Branch</label>
+                <input type="text" id="githubBranch" placeholder="main" value="main">
+              </div>
+              <div class="form-group">
+                <label for="githubPath">Path for definitions</label>
+                <input type="text" id="githubPath" placeholder="asset-definitions/" value="asset-definitions/">
+              </div>
+            </div>
+            <button id="saveSettingsBtn" class="btn btn-primary">Save Settings</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Right Sidebar: GitHub Panel -->
+    <aside class="right-sidebar">
+      <div class="right-sidebar-header">
+        <h3>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+          Deploy from GitHub
+        </h3>
+        <button id="refreshGithubBtn" class="btn-icon-only" title="Refresh">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="23 4 23 10 17 10"></polyline>
+            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="github-info">
+        <div class="github-repo-info">
+          <span class="label">Repository:</span>
+          <span class="value" id="githubRepoDisplay">Not configured</span>
+        </div>
+        <div class="github-repo-info">
+          <span class="label">Branch:</span>
+          <span class="value" id="githubBranchDisplay">main</span>
+        </div>
+      </div>
+      
+      <div class="github-files-section">
+        <div class="section-subheader">
+          <span>Available Definitions</span>
+          <span class="file-count" id="githubFileCount">0 files</span>
+        </div>
+        <div id="githubFilesList" class="github-files-list">
+          <div class="empty-state">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+            </svg>
+            <p>No definitions found</p>
+            <span class="hint">Commit assets to GitHub to see them here</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Toast Notifications -->
+    <div id="toastContainer" class="toast-container"></div>
+  </div>
+
+  <!-- Load ryuu.js -->
+  <script src="https://unpkg.com/ryuu.js@4.6.0/dist/domo.js" 
+          integrity="sha384-YYsd9wQ+wDlUWhvpfGdptxmNYIqBC+52oJtWgPKJadbs3sSFTY/+ZotPbEHTTRWz" 
+          crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+</html>
