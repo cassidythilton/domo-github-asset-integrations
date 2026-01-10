@@ -1,21 +1,16 @@
 {
   "definition": {
-    "dataAppId": 2145100343,
-    "title": "Credit Card Fraud",
-    "description": "credit card fraud dashboard",
-    "iconDataFileId": 81,
-    "navIconDataFileId": 66,
-    "landingViewId": 2049370911,
+    "dataAppId": 1465949657,
+    "title": "Agentic Fleet Ops",
+    "description": null,
+    "iconDataFileId": 95,
+    "navIconDataFileId": null,
+    "landingViewId": 844321791,
     "enabled": true,
     "isVirtualized": false,
     "locked": false,
-    "lastUpdated": 1767903101000,
+    "lastUpdated": 1764036325000,
     "owners": [
-      {
-        "id": 1362917802,
-        "type": "USER",
-        "displayName": "Brian Orloff"
-      },
       {
         "id": 1433178023,
         "type": "USER",
@@ -32,8 +27,8 @@
     "navOrientation": "LEFT",
     "views": [
       {
-        "viewId": 1097185940,
-        "title": "Fraud Review",
+        "viewId": 1409331836,
+        "title": "Fleet Maintenance Inbox",
         "parentViewId": 0,
         "viewOrder": 1,
         "visible": true,
@@ -42,50 +37,10 @@
         "children": []
       },
       {
-        "viewId": 2049370911,
-        "title": "Transactions",
+        "viewId": 844321791,
+        "title": "Vehicle Dashboard",
         "parentViewId": 0,
         "viewOrder": 2,
-        "visible": true,
-        "view": null,
-        "layout": null,
-        "children": []
-      },
-      {
-        "viewId": 1123249407,
-        "title": "Geography",
-        "parentViewId": 0,
-        "viewOrder": 3,
-        "visible": true,
-        "view": null,
-        "layout": null,
-        "children": []
-      },
-      {
-        "viewId": 1840842103,
-        "title": "TopK Analysis",
-        "parentViewId": 0,
-        "viewOrder": 4,
-        "visible": true,
-        "view": null,
-        "layout": null,
-        "children": []
-      },
-      {
-        "viewId": 141993832,
-        "title": "UC → Domo",
-        "parentViewId": 0,
-        "viewOrder": 5,
-        "visible": true,
-        "view": null,
-        "layout": null,
-        "children": []
-      },
-      {
-        "viewId": 841354173,
-        "title": "Fraud Mitigation",
-        "parentViewId": 0,
-        "viewOrder": 6,
         "visible": true,
         "view": null,
         "layout": null,
@@ -95,96 +50,88 @@
     "userAccess": {
       "users": [
         {
-          "id": 1665649708,
-          "displayName": "Andreina Toledo Men",
-          "avatarKey": null,
-          "role": "Admin"
-        },
-        {
-          "id": 917497875,
-          "displayName": "Andrew Gu",
-          "avatarKey": null,
-          "role": "Admin"
-        },
-        {
-          "id": 164801471,
-          "displayName": "Andy Haaf",
-          "avatarKey": null,
-          "role": "Admin"
-        },
-        {
           "id": 573880690,
           "displayName": "Braxton Fullenkamp",
           "avatarKey": null,
           "role": "Admin"
         },
         {
-          "id": 1362917802,
-          "displayName": "Brian Orloff",
+          "id": 1433178023,
+          "displayName": "Cassidy Hilton",
+          "avatarKey": null,
+          "role": "Admin"
+        },
+        {
+          "id": 648274922,
+          "displayName": "Scott Pulley",
           "avatarKey": null,
           "role": "Admin"
         }
       ],
-      "totalCount": 28
+      "totalCount": 3
     },
     "theme": {
-      "name": "Custom Theme - BC UX",
+      "name": "Obsidian",
       "chartColorPalette": {
-        "id": "5",
-        "type": "APP"
+        "id": "Domo Default Palette",
+        "type": "DOMO"
       },
       "cards": [
         {
           "id": "ca1",
           "fontColor": {
-            "value": "c22",
+            "value": "c60",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "titleFont": {
-            "value": "f4",
+            "value": "f3",
             "type": "FONT_REFERENCE"
           },
           "descriptionFont": {
-            "value": "f7",
+            "value": "f6",
             "type": "FONT_REFERENCE"
           },
           "chartFont": {
-            "value": "f7",
+            "value": "f6",
             "type": "FONT_REFERENCE"
           },
           "backgroundColor": {
-            "value": "c69",
+            "value": "c1",
+            "opacity": "60",
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 24,
+          "borderWidth": 2,
+          "borderColor": {
+            "value": "c2",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
-          "borderRadius": 4,
-          "borderWidth": 0,
-          "borderColor": null,
           "dropShadow": "NONE",
           "dropShadowColor": null,
           "elementSpacing": {
-            "isCustom": true,
+            "isCustom": null,
             "title": null,
             "summaryNumber": null,
             "timeframeLabel": null,
             "description": null,
             "header": {
-              "bottomMargin": 0
+              "bottomMargin": 8
             }
           },
           "padding": {
-            "left": 0,
-            "right": 0,
-            "top": 0,
-            "bottom": 0
+            "left": 12,
+            "right": 12,
+            "top": 12,
+            "bottom": 12
           },
           "timeFrameFont": {
             "value": "f7",
             "type": "FONT_REFERENCE"
           },
           "summaryNumberFont": {
-            "value": "f3",
+            "value": "f4",
             "type": "FONT_REFERENCE"
           },
           "summaryNumberLabelFont": {
@@ -205,23 +152,23 @@
             "type": "COLOR_REFERENCE"
           },
           "titleFont": {
-            "value": "f4",
+            "value": "f3",
             "type": "FONT_REFERENCE"
           },
           "descriptionFont": {
-            "value": "f7",
+            "value": "f6",
             "type": "FONT_REFERENCE"
           },
           "chartFont": {
-            "value": "f7",
+            "value": "f6",
             "type": "FONT_REFERENCE"
           },
           "backgroundColor": {
-            "value": "c55",
-            "opacity": "20",
+            "value": "c1",
+            "opacity": null,
             "type": "COLOR_REFERENCE"
           },
-          "borderRadius": 4,
+          "borderRadius": 24,
           "borderWidth": 0,
           "borderColor": null,
           "dropShadow": "NONE",
@@ -237,88 +184,17 @@
             }
           },
           "padding": {
-            "left": 16,
-            "right": 16,
-            "top": 16,
-            "bottom": 16
+            "left": 12,
+            "right": 12,
+            "top": 12,
+            "bottom": 12
           },
           "timeFrameFont": {
             "value": "f7",
             "type": "FONT_REFERENCE"
           },
           "summaryNumberFont": {
-            "value": "f3",
-            "type": "FONT_REFERENCE"
-          },
-          "summaryNumberLabelFont": {
-            "value": "f7",
-            "type": "FONT_REFERENCE"
-          },
-          "accentColor": {
-            "value": "c37",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          }
-        },
-        {
-          "id": "ca3",
-          "fontColor": {
-            "value": "c60",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
-          "titleFont": {
             "value": "f4",
-            "type": "FONT_REFERENCE"
-          },
-          "descriptionFont": {
-            "value": "f7",
-            "type": "FONT_REFERENCE"
-          },
-          "chartFont": {
-            "value": "f7",
-            "type": "FONT_REFERENCE"
-          },
-          "backgroundColor": {
-            "value": "c56",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
-          "borderRadius": 4,
-          "borderWidth": 0,
-          "borderColor": null,
-          "dropShadow": "NONE",
-          "dropShadowColor": null,
-          "elementSpacing": {
-            "isCustom": true,
-            "title": {
-              "bottomMargin": 2
-            },
-            "summaryNumber": {
-              "bottomMargin": 0
-            },
-            "timeframeLabel": {
-              "bottomMargin": 0
-            },
-            "description": {
-              "bottomMargin": 0
-            },
-            "header": {
-              "bottomMargin": 8
-            }
-          },
-          "padding": {
-            "left": 4,
-            "right": 4,
-            "top": 4,
-            "bottom": 4
-          },
-          "timeFrameFont": {
-            "value": "f7",
-            "type": "FONT_REFERENCE"
-          },
-          "summaryNumberFont": {
-            "value": "f3",
             "type": "FONT_REFERENCE"
           },
           "summaryNumberLabelFont": {
@@ -332,6 +208,69 @@
           }
         },
         {
+          "id": "ca3",
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "titleFont": {
+            "value": "f3",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "chartFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "backgroundColor": {
+            "value": "c17",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 24,
+          "borderWidth": 0,
+          "borderColor": null,
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
+          "elementSpacing": {
+            "isCustom": null,
+            "title": null,
+            "summaryNumber": null,
+            "timeframeLabel": null,
+            "description": null,
+            "header": {
+              "bottomMargin": 8
+            }
+          },
+          "padding": {
+            "left": 12,
+            "right": 12,
+            "top": 12,
+            "bottom": 12
+          },
+          "timeFrameFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberLabelFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "accentColor": {
+            "value": "c56",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        },
+        {
           "id": "ca4",
           "fontColor": {
             "value": "c60",
@@ -339,53 +278,49 @@
             "type": "COLOR_REFERENCE"
           },
           "titleFont": {
-            "value": "f4",
+            "value": "f3",
             "type": "FONT_REFERENCE"
           },
           "descriptionFont": {
-            "value": "f7",
+            "value": "f6",
             "type": "FONT_REFERENCE"
           },
           "chartFont": {
-            "value": "f7",
+            "value": "f6",
             "type": "FONT_REFERENCE"
           },
           "backgroundColor": {
             "value": "c56",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
-          "borderRadius": 4,
-          "borderWidth": 2,
-          "borderColor": {
-            "value": "c55",
             "opacity": "00",
             "type": "COLOR_REFERENCE"
           },
+          "borderRadius": 24,
+          "borderWidth": 0,
+          "borderColor": null,
           "dropShadow": "NONE",
           "dropShadowColor": null,
           "elementSpacing": {
-            "isCustom": false,
+            "isCustom": null,
             "title": null,
             "summaryNumber": null,
             "timeframeLabel": null,
             "description": null,
             "header": {
-              "bottomMargin": 16
+              "bottomMargin": 8
             }
           },
           "padding": {
-            "left": 16,
-            "right": 16,
-            "top": 16,
-            "bottom": 16
+            "left": 12,
+            "right": 12,
+            "top": 12,
+            "bottom": 12
           },
           "timeFrameFont": {
             "value": "f7",
             "type": "FONT_REFERENCE"
           },
           "summaryNumberFont": {
-            "value": "f3",
+            "value": "f4",
             "type": "FONT_REFERENCE"
           },
           "summaryNumberLabelFont": {
@@ -401,83 +336,20 @@
         {
           "id": "ca5",
           "fontColor": {
-            "value": "c43",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
-          "titleFont": {
-            "value": "f7",
-            "type": "FONT_REFERENCE"
-          },
-          "descriptionFont": {
-            "value": "f6",
-            "type": "FONT_REFERENCE"
-          },
-          "chartFont": {
-            "value": "f7",
-            "type": "FONT_REFERENCE"
-          },
-          "backgroundColor": {
-            "value": "c56",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
-          "borderRadius": 4,
-          "borderWidth": 0,
-          "borderColor": null,
-          "dropShadow": "NONE",
-          "dropShadowColor": null,
-          "elementSpacing": {
-            "isCustom": true,
-            "title": null,
-            "summaryNumber": null,
-            "timeframeLabel": null,
-            "description": null,
-            "header": {
-              "bottomMargin": 0
-            }
-          },
-          "padding": {
-            "left": 4,
-            "right": 4,
-            "top": 4,
-            "bottom": 4
-          },
-          "timeFrameFont": {
-            "value": "f6",
-            "type": "FONT_REFERENCE"
-          },
-          "summaryNumberFont": {
-            "value": "f2",
-            "type": "FONT_REFERENCE"
-          },
-          "summaryNumberLabelFont": {
-            "value": "f4",
-            "type": "FONT_REFERENCE"
-          },
-          "accentColor": {
-            "value": "c8",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          }
-        },
-        {
-          "id": "ca6",
-          "fontColor": {
             "value": "c60",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "titleFont": {
-            "value": "f4",
+            "value": "f3",
             "type": "FONT_REFERENCE"
           },
           "descriptionFont": {
-            "value": "f7",
+            "value": "f6",
             "type": "FONT_REFERENCE"
           },
           "chartFont": {
-            "value": "f7",
+            "value": "f6",
             "type": "FONT_REFERENCE"
           },
           "backgroundColor": {
@@ -485,7 +357,7 @@
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
-          "borderRadius": 4,
+          "borderRadius": 24,
           "borderWidth": 0,
           "borderColor": null,
           "dropShadow": "NONE",
@@ -501,17 +373,17 @@
             }
           },
           "padding": {
-            "left": 16,
-            "right": 16,
-            "top": 16,
-            "bottom": 16
+            "left": 12,
+            "right": 12,
+            "top": 12,
+            "bottom": 12
           },
           "timeFrameFont": {
             "value": "f7",
             "type": "FONT_REFERENCE"
           },
           "summaryNumberFont": {
-            "value": "f3",
+            "value": "f4",
             "type": "FONT_REFERENCE"
           },
           "summaryNumberLabelFont": {
@@ -519,7 +391,70 @@
             "type": "FONT_REFERENCE"
           },
           "accentColor": {
-            "value": "c8",
+            "value": "c56",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        },
+        {
+          "id": "ca6",
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "titleFont": {
+            "value": "f3",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "chartFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "backgroundColor": {
+            "value": "c22",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 24,
+          "borderWidth": 0,
+          "borderColor": null,
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
+          "elementSpacing": {
+            "isCustom": null,
+            "title": null,
+            "summaryNumber": null,
+            "timeframeLabel": null,
+            "description": null,
+            "header": {
+              "bottomMargin": 8
+            }
+          },
+          "padding": {
+            "left": 12,
+            "right": 12,
+            "top": 12,
+            "bottom": 12
+          },
+          "timeFrameFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "summaryNumberLabelFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "accentColor": {
+            "value": "c56",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           }
@@ -532,49 +467,49 @@
             "type": "COLOR_REFERENCE"
           },
           "titleFont": {
-            "value": "f6",
+            "value": "f3",
             "type": "FONT_REFERENCE"
           },
           "descriptionFont": {
-            "value": "f7",
+            "value": "f6",
             "type": "FONT_REFERENCE"
           },
           "chartFont": {
-            "value": "f7",
+            "value": "f6",
             "type": "FONT_REFERENCE"
           },
           "backgroundColor": {
-            "value": "c14",
+            "value": "c4",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
-          "borderRadius": 4,
+          "borderRadius": 24,
           "borderWidth": 0,
           "borderColor": null,
           "dropShadow": "NONE",
           "dropShadowColor": null,
           "elementSpacing": {
-            "isCustom": true,
+            "isCustom": null,
             "title": null,
             "summaryNumber": null,
             "timeframeLabel": null,
             "description": null,
             "header": {
-              "bottomMargin": 0
+              "bottomMargin": 8
             }
           },
           "padding": {
-            "left": 4,
-            "right": 4,
-            "top": 4,
-            "bottom": 4
+            "left": 12,
+            "right": 12,
+            "top": 12,
+            "bottom": 12
           },
           "timeFrameFont": {
             "value": "f7",
             "type": "FONT_REFERENCE"
           },
           "summaryNumberFont": {
-            "value": "f3",
+            "value": "f4",
             "type": "FONT_REFERENCE"
           },
           "summaryNumberLabelFont": {
@@ -595,29 +530,29 @@
             "type": "COLOR_REFERENCE"
           },
           "titleFont": {
-            "value": "f4",
+            "value": "f3",
             "type": "FONT_REFERENCE"
           },
           "descriptionFont": {
-            "value": "f7",
+            "value": "f6",
             "type": "FONT_REFERENCE"
           },
           "chartFont": {
-            "value": "f7",
+            "value": "f6",
             "type": "FONT_REFERENCE"
           },
           "backgroundColor": {
-            "value": "c20",
+            "value": "c56",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
-          "borderRadius": 4,
+          "borderRadius": 24,
           "borderWidth": 0,
           "borderColor": null,
           "dropShadow": "NONE",
           "dropShadowColor": null,
           "elementSpacing": {
-            "isCustom": false,
+            "isCustom": null,
             "title": null,
             "summaryNumber": null,
             "timeframeLabel": null,
@@ -627,17 +562,17 @@
             }
           },
           "padding": {
-            "left": 8,
-            "right": 8,
-            "top": 8,
-            "bottom": 8
+            "left": 12,
+            "right": 12,
+            "top": 12,
+            "bottom": 12
           },
           "timeFrameFont": {
             "value": "f7",
             "type": "FONT_REFERENCE"
           },
           "summaryNumberFont": {
-            "value": "f3",
+            "value": "f4",
             "type": "FONT_REFERENCE"
           },
           "summaryNumberLabelFont": {
@@ -645,7 +580,7 @@
             "type": "FONT_REFERENCE"
           },
           "accentColor": {
-            "value": "c8",
+            "value": "c56",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           }
@@ -655,7 +590,7 @@
         {
           "id": "t1",
           "fontColor": {
-            "value": "c10",
+            "value": "c60",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
@@ -672,19 +607,19 @@
             "type": "FONT_REFERENCE"
           },
           "backgroundColor": {
-            "value": "c56",
+            "value": "c1",
+            "opacity": "60",
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 24,
+          "borderWidth": 2,
+          "borderColor": {
+            "value": "c2",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
-          "borderRadius": 4,
-          "borderWidth": 0,
-          "borderColor": null,
-          "dropShadow": "RAISED",
-          "dropShadowColor": {
-            "value": "c5",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
           "elementSpacing": {
             "isCustom": null,
             "title": null,
@@ -696,17 +631,17 @@
             }
           },
           "padding": {
-            "left": 16,
-            "right": 16,
-            "top": 16,
-            "bottom": 16
+            "left": 12,
+            "right": 12,
+            "top": 12,
+            "bottom": 12
           },
           "timeFrameFont": {
             "value": "f7",
             "type": "FONT_REFERENCE"
           },
           "summaryNumberFont": {
-            "value": "f3",
+            "value": "f4",
             "type": "FONT_REFERENCE"
           },
           "summaryNumberLabelFont": {
@@ -715,22 +650,22 @@
           },
           "accentColor": null,
           "tableBorderType": "ALL",
-          "tableBorderWeight": 0,
+          "tableBorderWeight": 1,
           "tableBorderColor": {
-            "value": "c55",
+            "value": "c2",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "rowHeight": "DEFAULT",
           "rowColor": {
-            "value": "c55",
-            "opacity": null,
+            "value": "c56",
+            "opacity": "00",
             "type": "COLOR_REFERENCE"
           },
           "alternatingRowColorEnabled": false,
           "alternatingRowColor": {
-            "value": "c7",
-            "opacity": "50",
+            "value": "c43",
+            "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "headerFont": {
@@ -743,7 +678,7 @@
             "type": "COLOR_REFERENCE"
           },
           "headerBackgroundColor": {
-            "value": "c37",
+            "value": "c43",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
@@ -757,7 +692,7 @@
             "type": "COLOR_REFERENCE"
           },
           "totalRowBackgroundColor": {
-            "value": "c6",
+            "value": "c18",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
@@ -771,12 +706,12 @@
             "type": "COLOR_REFERENCE"
           },
           "subtotalRowBackgroundColor": {
-            "value": "c7",
+            "value": "c20",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "urlFontColor": {
-            "value": "c19",
+            "value": "c9",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           }
@@ -801,19 +736,19 @@
             "type": "FONT_REFERENCE"
           },
           "backgroundColor": {
-            "value": "c56",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
-          "borderRadius": 4,
-          "borderWidth": 0,
-          "borderColor": null,
-          "dropShadow": "LIFTED",
-          "dropShadowColor": {
             "value": "c43",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
+          "borderRadius": 24,
+          "borderWidth": 2,
+          "borderColor": {
+            "value": "c2",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
           "elementSpacing": {
             "isCustom": null,
             "title": null,
@@ -825,17 +760,17 @@
             }
           },
           "padding": {
-            "left": 16,
-            "right": 16,
-            "top": 16,
-            "bottom": 16
+            "left": 12,
+            "right": 12,
+            "top": 12,
+            "bottom": 12
           },
           "timeFrameFont": {
             "value": "f7",
             "type": "FONT_REFERENCE"
           },
           "summaryNumberFont": {
-            "value": "f3",
+            "value": "f4",
             "type": "FONT_REFERENCE"
           },
           "summaryNumberLabelFont": {
@@ -848,13 +783,13 @@
           "tableBorderColor": null,
           "rowHeight": "DEFAULT",
           "rowColor": {
-            "value": "c56",
+            "value": "c43",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "alternatingRowColorEnabled": true,
           "alternatingRowColor": {
-            "value": "c34",
+            "value": "c19",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
@@ -868,7 +803,7 @@
             "type": "COLOR_REFERENCE"
           },
           "headerBackgroundColor": {
-            "value": "c15",
+            "value": "c43",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
@@ -887,7 +822,7 @@
             "type": "COLOR_REFERENCE"
           },
           "subtotalRowFont": {
-            "value": "f8",
+            "value": "f7",
             "type": "FONT_REFERENCE"
           },
           "subtotalRowFontColor": {
@@ -896,12 +831,12 @@
             "type": "COLOR_REFERENCE"
           },
           "subtotalRowBackgroundColor": {
-            "value": "c55",
+            "value": "c18",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "urlFontColor": {
-            "value": "c19",
+            "value": "c9",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           }
@@ -926,19 +861,15 @@
             "type": "FONT_REFERENCE"
           },
           "backgroundColor": {
-            "value": "c14",
+            "value": "c56",
             "opacity": "00",
             "type": "COLOR_REFERENCE"
           },
-          "borderRadius": 4,
+          "borderRadius": 24,
           "borderWidth": 0,
           "borderColor": null,
-          "dropShadow": "LIFTED",
-          "dropShadowColor": {
-            "value": "c43",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
           "elementSpacing": {
             "isCustom": null,
             "title": null,
@@ -950,17 +881,17 @@
             }
           },
           "padding": {
-            "left": 16,
-            "right": 16,
-            "top": 16,
-            "bottom": 16
+            "left": 12,
+            "right": 12,
+            "top": 12,
+            "bottom": 12
           },
           "timeFrameFont": {
             "value": "f7",
             "type": "FONT_REFERENCE"
           },
           "summaryNumberFont": {
-            "value": "f3",
+            "value": "f4",
             "type": "FONT_REFERENCE"
           },
           "summaryNumberLabelFont": {
@@ -968,23 +899,23 @@
             "type": "FONT_REFERENCE"
           },
           "accentColor": null,
-          "tableBorderType": "NONE",
-          "tableBorderWeight": 0,
+          "tableBorderType": "BELOW_HEADER",
+          "tableBorderWeight": 1,
           "tableBorderColor": {
-            "value": "c43",
+            "value": "c56",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "rowHeight": "COMFORTABLE",
           "rowColor": {
-            "value": "c55",
-            "opacity": null,
+            "value": "c56",
+            "opacity": "00",
             "type": "COLOR_REFERENCE"
           },
-          "alternatingRowColorEnabled": true,
+          "alternatingRowColorEnabled": false,
           "alternatingRowColor": {
-            "value": "c57",
-            "opacity": null,
+            "value": "c1",
+            "opacity": "60",
             "type": "COLOR_REFERENCE"
           },
           "headerFont": {
@@ -997,8 +928,8 @@
             "type": "COLOR_REFERENCE"
           },
           "headerBackgroundColor": {
-            "value": "c16",
-            "opacity": null,
+            "value": "c56",
+            "opacity": "00",
             "type": "COLOR_REFERENCE"
           },
           "totalRowFont": {
@@ -1011,7 +942,7 @@
             "type": "COLOR_REFERENCE"
           },
           "totalRowBackgroundColor": {
-            "value": "c6",
+            "value": "c17",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
@@ -1025,12 +956,12 @@
             "type": "COLOR_REFERENCE"
           },
           "subtotalRowBackgroundColor": {
-            "value": "c7",
+            "value": "c20",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "urlFontColor": {
-            "value": "c19",
+            "value": "c9",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           }
@@ -1038,26 +969,26 @@
       ],
       "mappings": {
         "button": "b1",
-        "singleValue": "ca5",
+        "singleValue": "ca3",
         "chart": "ca1",
         "table": "t1",
         "control": "ca2",
         "form": "fo1",
-        "image": "ca3",
-        "document": "ca3",
-        "brick": "ca3",
-        "notebook": "no3",
-        "header": "h2",
+        "image": "ca4",
+        "document": "ca4",
+        "brick": "ca4",
+        "notebook": "no1",
+        "header": "h1",
         "tab": "ta1",
         "component": "co1",
         "pill": "p1",
-        "ai": null
+        "ai": "ca1"
       },
       "colors": [
         {
           "id": "c1",
           "value": {
-            "value": "#121714",
+            "value": "#333333",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1069,7 +1000,7 @@
         {
           "id": "c2",
           "value": {
-            "value": "#2E3430",
+            "value": "#474747",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1081,7 +1012,7 @@
         {
           "id": "c3",
           "value": {
-            "value": "#4C524F",
+            "value": "#888888",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1093,7 +1024,7 @@
         {
           "id": "c4",
           "value": {
-            "value": "#6D736F",
+            "value": "#D4D4D4",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1105,7 +1036,7 @@
         {
           "id": "c5",
           "value": {
-            "value": "#8F9692",
+            "value": "#EEEEEE",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1117,7 +1048,7 @@
         {
           "id": "c6",
           "value": {
-            "value": "#B3BAB6",
+            "value": "#F6F6F6",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1129,7 +1060,7 @@
         {
           "id": "c7",
           "value": {
-            "value": "#AFEFD3",
+            "value": "#FAFAFA",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1141,7 +1072,7 @@
         {
           "id": "c8",
           "value": {
-            "value": "#146240",
+            "value": "#2B6B95",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1153,7 +1084,7 @@
         {
           "id": "c9",
           "value": {
-            "value": "#368460",
+            "value": "#3077A6",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1164,7 +1095,7 @@
         {
           "id": "c10",
           "value": {
-            "value": "#4D9A75",
+            "value": "#538EB5",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1175,7 +1106,7 @@
         {
           "id": "c11",
           "value": {
-            "value": "#64B18A",
+            "value": "#75A4C4",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1186,7 +1117,7 @@
         {
           "id": "c12",
           "value": {
-            "value": "#7BC79F",
+            "value": "#97BBD3",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1197,7 +1128,7 @@
         {
           "id": "c13",
           "value": {
-            "value": "#92DEB5",
+            "value": "#BAD2E1",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1208,7 +1139,7 @@
         {
           "id": "c14",
           "value": {
-            "value": "#A8F4CA",
+            "value": "#DCE8F0",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1219,7 +1150,7 @@
         {
           "id": "c15",
           "value": {
-            "value": "#125A3B",
+            "value": "#265E82",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1230,7 +1161,7 @@
         {
           "id": "c16",
           "value": {
-            "value": "#0F4B31",
+            "value": "#205070",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1241,7 +1172,7 @@
         {
           "id": "c17",
           "value": {
-            "value": "#0C3C27",
+            "value": "#1B435D",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1252,7 +1183,7 @@
         {
           "id": "c18",
           "value": {
-            "value": "#092D1E",
+            "value": "#16364B",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1263,7 +1194,7 @@
         {
           "id": "c19",
           "value": {
-            "value": "#061E14",
+            "value": "#102838",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1274,7 +1205,7 @@
         {
           "id": "c20",
           "value": {
-            "value": "#030F0A",
+            "value": "#0B1B25",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1285,7 +1216,7 @@
         {
           "id": "c21",
           "value": {
-            "value": "#000000",
+            "value": "#050D13",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1296,7 +1227,7 @@
         {
           "id": "c22",
           "value": {
-            "value": "#0B150F",
+            "value": "#5BB139",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1308,7 +1239,7 @@
         {
           "id": "c23",
           "value": {
-            "value": "#202A24",
+            "value": "#54A735",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1319,7 +1250,7 @@
         {
           "id": "c24",
           "value": {
-            "value": "#353F39",
+            "value": "#46922C",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1330,7 +1261,7 @@
         {
           "id": "c25",
           "value": {
-            "value": "#4A544E",
+            "value": "#387D23",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1341,7 +1272,7 @@
         {
           "id": "c26",
           "value": {
-            "value": "#5F6962",
+            "value": "#2A681A",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1352,7 +1283,7 @@
         {
           "id": "c27",
           "value": {
-            "value": "#747E77",
+            "value": "#1C5312",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1363,7 +1294,7 @@
         {
           "id": "c28",
           "value": {
-            "value": "#89938C",
+            "value": "#0E3E09",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1374,7 +1305,7 @@
         {
           "id": "c29",
           "value": {
-            "value": "#71B798",
+            "value": "#D9A814",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1386,7 +1317,7 @@
         {
           "id": "c30",
           "value": {
-            "value": "#89C3A9",
+            "value": "#CE9E12",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1397,7 +1328,7 @@
         {
           "id": "c31",
           "value": {
-            "value": "#A0CFBA",
+            "value": "#B78A0F",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1408,7 +1339,7 @@
         {
           "id": "c32",
           "value": {
-            "value": "#B8DBCB",
+            "value": "#A1760C",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1419,7 +1350,7 @@
         {
           "id": "c33",
           "value": {
-            "value": "#D0E7DD",
+            "value": "#8A6209",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1430,7 +1361,7 @@
         {
           "id": "c34",
           "value": {
-            "value": "#E7F3EE",
+            "value": "#734D06",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1441,7 +1372,7 @@
         {
           "id": "c35",
           "value": {
-            "value": "#FFFFFF",
+            "value": "#5D3903",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1452,7 +1383,7 @@
         {
           "id": "c36",
           "value": {
-            "value": "#08271A",
+            "value": "#FF6E66",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1464,7 +1395,7 @@
         {
           "id": "c37",
           "value": {
-            "value": "#1D3D2F",
+            "value": "#F2665E",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1475,7 +1406,7 @@
         {
           "id": "c38",
           "value": {
-            "value": "#335344",
+            "value": "#D9554E",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1486,7 +1417,7 @@
         {
           "id": "c39",
           "value": {
-            "value": "#48695A",
+            "value": "#C0443F",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1497,7 +1428,7 @@
         {
           "id": "c40",
           "value": {
-            "value": "#5E7F6F",
+            "value": "#A7332F",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1508,7 +1439,7 @@
         {
           "id": "c41",
           "value": {
-            "value": "#739584",
+            "value": "#8E221F",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1519,7 +1450,7 @@
         {
           "id": "c42",
           "value": {
-            "value": "#89AB99",
+            "value": "#741110",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1734,7 +1665,7 @@
         {
           "id": "c61",
           "value": {
-            "value": "#337E5D",
+            "value": "#0D0D0D",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1744,7 +1675,7 @@
         {
           "id": "c62",
           "value": {
-            "value": "#F7F7F7",
+            "value": "#28826A",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1754,67 +1685,7 @@
         {
           "id": "c63",
           "value": {
-            "value": "#101010",
-            "type": "RGB_HEX"
-          },
-          "tags": [
-            "CUSTOM"
-          ]
-        },
-        {
-          "id": "c64",
-          "value": {
-            "value": "#0F1318",
-            "type": "RGB_HEX"
-          },
-          "tags": [
-            "CUSTOM"
-          ]
-        },
-        {
-          "id": "c65",
-          "value": {
-            "value": "#801C17",
-            "type": "RGB_HEX"
-          },
-          "tags": [
-            "CUSTOM"
-          ]
-        },
-        {
-          "id": "c66",
-          "value": {
-            "value": "#1B2126",
-            "type": "RGB_HEX"
-          },
-          "tags": [
-            "CUSTOM"
-          ]
-        },
-        {
-          "id": "c67",
-          "value": {
-            "value": "#D63626",
-            "type": "RGB_HEX"
-          },
-          "tags": [
-            "CUSTOM"
-          ]
-        },
-        {
-          "id": "c68",
-          "value": {
-            "value": "#21272E",
-            "type": "RGB_HEX"
-          },
-          "tags": [
-            "CUSTOM"
-          ]
-        },
-        {
-          "id": "c69",
-          "value": {
-            "value": "#ACA562",
+            "value": "#143028",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -1827,47 +1698,47 @@
           "id": "f1",
           "family": "Sans",
           "style": "Regular",
-          "weight": 600,
+          "weight": 400,
           "size": 48
         },
         {
           "id": "f2",
           "family": "Sans",
           "style": "Regular",
-          "weight": 700,
+          "weight": 500,
           "size": 32
         },
         {
           "id": "f3",
           "family": "Sans",
           "style": "Regular",
-          "weight": 600,
+          "weight": 500,
           "size": 24
         },
         {
           "id": "f4",
-          "family": "Sans",
+          "family": "Monospace",
           "style": "Regular",
           "weight": 600,
-          "size": 16
+          "size": 18
         },
         {
           "id": "f5",
           "family": "Sans",
           "style": "Regular",
-          "weight": 700,
-          "size": 20
+          "weight": 600,
+          "size": 14
         },
         {
           "id": "f6",
           "family": "Sans",
           "style": "Regular",
-          "weight": 300,
+          "weight": 400,
           "size": 14
         },
         {
           "id": "f7",
-          "family": "Sans",
+          "family": "Monospace",
           "style": "Regular",
           "weight": 400,
           "size": 12
@@ -1877,7 +1748,7 @@
           "family": "Sans",
           "style": "Regular",
           "weight": 600,
-          "size": 16
+          "size": 14
         },
         {
           "id": "f9",
@@ -1895,22 +1766,22 @@
             "type": "FONT_REFERENCE"
           },
           "fontColor": {
-            "value": "c60",
+            "value": "c56",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "backgroundColor": {
-            "value": "c32",
+            "value": "c8",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
-          "borderRadius": 4,
+          "borderRadius": 12,
           "borderWidth": 0,
           "borderColor": null,
-          "contentAlignment": "LEFT",
+          "contentAlignment": "CENTER",
           "hoverColor": {
-            "value": "c14",
-            "opacity": "12",
+            "value": "c8",
+            "opacity": "29",
             "type": "COLOR_REFERENCE"
           },
           "dropShadow": "NONE",
@@ -1923,22 +1794,22 @@
             "type": "FONT_REFERENCE"
           },
           "fontColor": {
-            "value": "c60",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
-          "backgroundColor": {
             "value": "c8",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
-          "borderRadius": 4,
+          "backgroundColor": {
+            "value": "c56",
+            "opacity": "00",
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 12,
           "borderWidth": 0,
           "borderColor": null,
           "contentAlignment": "CENTER",
           "hoverColor": {
             "value": "c43",
-            "opacity": "12",
+            "opacity": "29",
             "type": "COLOR_REFERENCE"
           },
           "dropShadow": "NONE",
@@ -1951,30 +1822,26 @@
             "type": "FONT_REFERENCE"
           },
           "fontColor": {
-            "value": "c60",
+            "value": "c8",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "backgroundColor": {
-            "value": "c40",
-            "opacity": null,
+            "value": "c8",
+            "opacity": "29",
             "type": "COLOR_REFERENCE"
           },
-          "borderRadius": 4,
+          "borderRadius": 12,
           "borderWidth": 0,
           "borderColor": null,
           "contentAlignment": "CENTER",
           "hoverColor": {
-            "value": "c43",
-            "opacity": "12",
+            "value": "c8",
+            "opacity": "52",
             "type": "COLOR_REFERENCE"
           },
-          "dropShadow": "LIFTED",
-          "dropShadowColor": {
-            "value": "c43",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          }
+          "dropShadow": "NONE",
+          "dropShadowColor": null
         },
         {
           "id": "b4",
@@ -1988,21 +1855,17 @@
             "type": "COLOR_REFERENCE"
           },
           "backgroundColor": {
-            "value": "c14",
-            "opacity": "00",
+            "value": "c56",
+            "opacity": "29",
             "type": "COLOR_REFERENCE"
           },
-          "borderRadius": 4,
-          "borderWidth": 1,
-          "borderColor": {
-            "value": "c1",
-            "opacity": "90",
-            "type": "COLOR_REFERENCE"
-          },
+          "borderRadius": 12,
+          "borderWidth": 0,
+          "borderColor": null,
           "contentAlignment": "CENTER",
           "hoverColor": {
-            "value": "c43",
-            "opacity": "12",
+            "value": "c56",
+            "opacity": "52",
             "type": "COLOR_REFERENCE"
           },
           "dropShadow": "NONE",
@@ -2015,22 +1878,22 @@
             "type": "FONT_REFERENCE"
           },
           "fontColor": {
-            "value": "c19",
+            "value": "c56",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "backgroundColor": {
-            "value": "c55",
-            "opacity": null,
+            "value": "c43",
+            "opacity": "80",
             "type": "COLOR_REFERENCE"
           },
-          "borderRadius": 8,
+          "borderRadius": 12,
           "borderWidth": 0,
           "borderColor": null,
           "contentAlignment": "CENTER",
           "hoverColor": {
             "value": "c43",
-            "opacity": "12",
+            "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "dropShadow": "NONE",
@@ -2041,60 +1904,64 @@
         {
           "id": "n0",
           "background": {
-            "value": "c22",
+            "value": "c61",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "activeBackground": {
-            "value": "c9",
+            "value": "c45",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "hoverBackground": {
-            "value": "c8",
+            "value": "c63",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
-          "showShadow": true,
+          "showShadow": false,
           "titleFontColor": {
             "value": "c60",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "linkFontColor": {
-            "value": "c56",
+            "value": "c62",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "titleFontStyle": {
-            "value": "f1",
+            "value": "f4",
             "type": "FONT_REFERENCE"
           },
           "linkFontStyle": {
             "value": "f8",
             "type": "FONT_REFERENCE"
           },
-          "textHoverColor": null,
-          "buttonStyle": "PILL",
-          "buttonFit": "HUG",
-          "buttonAlignment": "CENTER",
+          "textHoverColor": {
+            "value": "c2",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "buttonStyle": "FILL",
+          "buttonFit": "FILL",
+          "buttonAlignment": "NONE",
           "showBorder": false,
           "showDividers": false
         }
       ],
-      "images": [],
+      "images": null,
       "pages": [
         {
           "id": "p0",
           "background": {
-            "value": "c56",
+            "value": "c43",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
-          "isDynamic": false,
+          "isDynamic": true,
           "density": {
-            "compact": 8,
-            "standard": 8
+            "compact": 6,
+            "standard": 6
           },
           "height": "DYNAMIC",
           "margin": {
@@ -2143,20 +2010,20 @@
         {
           "id": "no1",
           "backgroundColor": {
-            "value": "c14",
+            "value": "c56",
             "opacity": "00",
             "type": "COLOR_REFERENCE"
           },
-          "borderRadius": 4,
+          "borderRadius": 0,
           "borderWidth": 0,
           "borderColor": null,
           "dropShadow": "NONE",
           "dropShadowColor": null,
           "padding": {
-            "left": 16,
-            "right": 16,
-            "top": 16,
-            "bottom": 16
+            "left": 8,
+            "right": 8,
+            "top": 8,
+            "bottom": 8
           },
           "elementSpacing": {
             "isCustom": null,
@@ -2198,12 +2065,12 @@
             "type": "FONT_REFERENCE"
           },
           "smartTextFontColor": {
-            "value": "c19",
+            "value": "c9",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "urlFontColor": {
-            "value": "c19",
+            "value": "c9",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           }
@@ -2211,92 +2078,20 @@
         {
           "id": "no2",
           "backgroundColor": {
-            "value": "c55",
-            "opacity": "20",
+            "value": "c56",
+            "opacity": "00",
             "type": "COLOR_REFERENCE"
           },
-          "borderRadius": 4,
-          "borderWidth": 2,
-          "borderColor": {
-            "value": "c55",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
-          "dropShadow": "NONE",
-          "dropShadowColor": null,
-          "padding": {
-            "left": 16,
-            "right": 16,
-            "top": 16,
-            "bottom": 16
-          },
-          "elementSpacing": {
-            "isCustom": null,
-            "title": null,
-            "summaryNumber": null,
-            "timeframeLabel": null,
-            "description": null,
-            "header": {
-              "bottomMargin": 8
-            }
-          },
-          "fontColor": {
-            "value": "c60",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
-          "titleFont": {
-            "value": "f4",
-            "type": "FONT_REFERENCE"
-          },
-          "descriptionFont": {
-            "value": "f7",
-            "type": "FONT_REFERENCE"
-          },
-          "contentHeaderFont": {
-            "value": "f3",
-            "type": "FONT_REFERENCE"
-          },
-          "contentTitleFont": {
-            "value": "f3",
-            "type": "FONT_REFERENCE"
-          },
-          "contentSubtitleFont": {
-            "value": "f4",
-            "type": "FONT_REFERENCE"
-          },
-          "contentTextFont": {
-            "value": "f6",
-            "type": "FONT_REFERENCE"
-          },
-          "smartTextFontColor": {
-            "value": "c19",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
-          "urlFontColor": {
-            "value": "c19",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          }
-        },
-        {
-          "id": "no3",
-          "backgroundColor": {
-            "value": "c21",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
-          "borderRadius": 4,
+          "borderRadius": 0,
           "borderWidth": 0,
           "borderColor": null,
           "dropShadow": "NONE",
           "dropShadowColor": null,
           "padding": {
-            "left": 16,
-            "right": 16,
-            "top": 16,
-            "bottom": 16
+            "left": 8,
+            "right": 8,
+            "top": 8,
+            "bottom": 8
           },
           "elementSpacing": {
             "isCustom": null,
@@ -2338,12 +2133,80 @@
             "type": "FONT_REFERENCE"
           },
           "smartTextFontColor": {
-            "value": "c8",
+            "value": "c43",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "urlFontColor": {
-            "value": "c8",
+            "value": "c9",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        },
+        {
+          "id": "no3",
+          "backgroundColor": {
+            "value": "c17",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 0,
+          "borderWidth": 0,
+          "borderColor": null,
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
+          "padding": {
+            "left": 8,
+            "right": 8,
+            "top": 8,
+            "bottom": 8
+          },
+          "elementSpacing": {
+            "isCustom": null,
+            "title": null,
+            "summaryNumber": null,
+            "timeframeLabel": null,
+            "description": null,
+            "header": {
+              "bottomMargin": 8
+            }
+          },
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "titleFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "descriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "contentHeaderFont": {
+            "value": "f2",
+            "type": "FONT_REFERENCE"
+          },
+          "contentTitleFont": {
+            "value": "f3",
+            "type": "FONT_REFERENCE"
+          },
+          "contentSubtitleFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "contentTextFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "smartTextFontColor": {
+            "value": "c9",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "urlFontColor": {
+            "value": "c9",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           }
@@ -2353,162 +2216,24 @@
         {
           "id": "fo1",
           "backgroundColor": {
-            "value": "c34",
+            "value": "c1",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
-          "borderRadius": 8,
-          "borderWidth": 0,
-          "borderColor": null,
-          "dropShadow": "RAISED",
-          "dropShadowColor": {
-            "value": "c5",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
-          "padding": {
-            "left": 16,
-            "right": 16,
-            "top": 16,
-            "bottom": 16
-          },
-          "elementSpacing": {
-            "isCustom": null,
-            "title": null,
-            "summaryNumber": null,
-            "timeframeLabel": null,
-            "description": null,
-            "header": {
-              "bottomMargin": 8
-            }
-          },
-          "fontColor": {
-            "value": "c60",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
-          "formTitleFont": {
-            "value": "f4",
-            "type": "FONT_REFERENCE"
-          },
-          "formSectionNumberFont": {
-            "value": "f7",
-            "type": "FONT_REFERENCE"
-          },
-          "formSectionHeaderFont": {
-            "value": "f4",
-            "type": "FONT_REFERENCE"
-          },
-          "formSectionDescriptionFont": {
-            "value": "f7",
-            "type": "FONT_REFERENCE"
-          },
-          "formInputTextFont": {
-            "value": "f7",
-            "type": "FONT_REFERENCE"
-          },
-          "formPrimaryButton": {
-            "value": "b1",
-            "type": "BUTTON_REFERENCE"
-          },
-          "formSecondaryButton": {
-            "value": "b5",
-            "type": "BUTTON_REFERENCE"
-          },
-          "formControlColor": {
-            "value": "c8",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          }
-        },
-        {
-          "id": "fo2",
-          "backgroundColor": {
-            "value": "c7",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
-          "borderRadius": 8,
+          "borderRadius": 0,
           "borderWidth": 2,
           "borderColor": {
-            "value": "c55",
+            "value": "c2",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "dropShadow": "NONE",
           "dropShadowColor": null,
           "padding": {
-            "left": 16,
-            "right": 16,
-            "top": 16,
-            "bottom": 16
-          },
-          "elementSpacing": {
-            "isCustom": null,
-            "title": null,
-            "summaryNumber": null,
-            "timeframeLabel": null,
-            "description": null,
-            "header": {
-              "bottomMargin": 8
-            }
-          },
-          "fontColor": {
-            "value": "c60",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
-          "formTitleFont": {
-            "value": "f4",
-            "type": "FONT_REFERENCE"
-          },
-          "formSectionNumberFont": {
-            "value": "f7",
-            "type": "FONT_REFERENCE"
-          },
-          "formSectionHeaderFont": {
-            "value": "f4",
-            "type": "FONT_REFERENCE"
-          },
-          "formSectionDescriptionFont": {
-            "value": "f7",
-            "type": "FONT_REFERENCE"
-          },
-          "formInputTextFont": {
-            "value": "f7",
-            "type": "FONT_REFERENCE"
-          },
-          "formPrimaryButton": {
-            "value": "b2",
-            "type": "BUTTON_REFERENCE"
-          },
-          "formSecondaryButton": {
-            "value": "b5",
-            "type": "BUTTON_REFERENCE"
-          },
-          "formControlColor": {
-            "value": "c8",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          }
-        },
-        {
-          "id": "fo3",
-          "backgroundColor": {
-            "value": "c55",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
-          "borderRadius": 4,
-          "borderWidth": 0,
-          "borderColor": null,
-          "dropShadow": "NONE",
-          "dropShadowColor": null,
-          "padding": {
-            "left": 7,
-            "right": 7,
-            "top": 7,
-            "bottom": 7
+            "left": 8,
+            "right": 8,
+            "top": 8,
+            "bottom": 8
           },
           "elementSpacing": {
             "isCustom": null,
@@ -2546,15 +2271,149 @@
             "type": "FONT_REFERENCE"
           },
           "formPrimaryButton": {
-            "value": "b3",
+            "value": "b1",
             "type": "BUTTON_REFERENCE"
           },
           "formSecondaryButton": {
-            "value": "b5",
+            "value": "b3",
             "type": "BUTTON_REFERENCE"
           },
           "formControlColor": {
-            "value": "c55",
+            "value": "c9",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        },
+        {
+          "id": "fo2",
+          "backgroundColor": {
+            "value": "c19",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 0,
+          "borderWidth": 0,
+          "borderColor": null,
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
+          "padding": {
+            "left": 8,
+            "right": 8,
+            "top": 8,
+            "bottom": 8
+          },
+          "elementSpacing": {
+            "isCustom": null,
+            "title": null,
+            "summaryNumber": null,
+            "timeframeLabel": null,
+            "description": null,
+            "header": {
+              "bottomMargin": 8
+            }
+          },
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "formTitleFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "formSectionNumberFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "formSectionHeaderFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "formSectionDescriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "formInputTextFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "formPrimaryButton": {
+            "value": "b2",
+            "type": "BUTTON_REFERENCE"
+          },
+          "formSecondaryButton": {
+            "value": "b3",
+            "type": "BUTTON_REFERENCE"
+          },
+          "formControlColor": {
+            "value": "c9",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          }
+        },
+        {
+          "id": "fo3",
+          "backgroundColor": {
+            "value": "c43",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "borderRadius": 0,
+          "borderWidth": 0,
+          "borderColor": null,
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
+          "padding": {
+            "left": 8,
+            "right": 8,
+            "top": 8,
+            "bottom": 8
+          },
+          "elementSpacing": {
+            "isCustom": null,
+            "title": null,
+            "summaryNumber": null,
+            "timeframeLabel": null,
+            "description": null,
+            "header": {
+              "bottomMargin": 8
+            }
+          },
+          "fontColor": {
+            "value": "c60",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
+          "formTitleFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "formSectionNumberFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "formSectionHeaderFont": {
+            "value": "f4",
+            "type": "FONT_REFERENCE"
+          },
+          "formSectionDescriptionFont": {
+            "value": "f7",
+            "type": "FONT_REFERENCE"
+          },
+          "formInputTextFont": {
+            "value": "f6",
+            "type": "FONT_REFERENCE"
+          },
+          "formPrimaryButton": {
+            "value": "b1",
+            "type": "BUTTON_REFERENCE"
+          },
+          "formSecondaryButton": {
+            "value": "b3",
+            "type": "BUTTON_REFERENCE"
+          },
+          "formControlColor": {
+            "value": "c9",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           }
@@ -2564,30 +2423,30 @@
         {
           "id": "ta1",
           "background": {
-            "value": "c14",
+            "value": "c43",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "tabBarBackground": {
-            "value": "c14",
+            "value": "c43",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "borderColor": {
-            "value": "c43",
-            "opacity": "15",
+            "value": "c56",
+            "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "borderWeight": 1,
-          "borderRadius": 4,
+          "borderRadius": 0,
           "activeColor": {
-            "value": "c20",
+            "value": "c5",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "hoverColor": {
-            "value": "c9",
-            "opacity": "50",
+            "value": "c2",
+            "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "linkFontColor": {
@@ -2606,34 +2465,34 @@
         {
           "id": "ta2",
           "background": {
-            "value": "c62",
+            "value": "c43",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "tabBarBackground": {
-            "value": "c62",
+            "value": "c43",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "borderColor": {
-            "value": "c62",
+            "value": "c56",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "borderWeight": 1,
-          "borderRadius": 4,
+          "borderRadius": 0,
           "activeColor": {
-            "value": "c62",
+            "value": "c9",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "hoverColor": {
-            "value": "c62",
+            "value": "c18",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "linkFontColor": {
-            "value": "c62",
+            "value": "c60",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
@@ -2641,7 +2500,7 @@
             "value": "f8",
             "type": "FONT_REFERENCE"
           },
-          "tabVariant": "PILL",
+          "tabVariant": "UNDERLINE",
           "tabFit": "FILL",
           "contentAlignment": "CENTER"
         }
@@ -2650,39 +2509,35 @@
         {
           "id": "co1",
           "button": {
-            "value": "b1",
+            "value": "b4",
             "type": "BUTTON_REFERENCE"
           },
           "secondaryButton": {
-            "value": "b3",
+            "value": "b1",
             "type": "BUTTON_REFERENCE"
           },
           "itemBackgroundColor": {
-            "value": "c35",
-            "opacity": null,
+            "value": "c56",
+            "opacity": "00",
             "type": "COLOR_REFERENCE"
           },
           "itemBorderRadius": 8,
           "itemBorderWidth": 2,
           "itemBorderColor": {
-            "value": "c12",
+            "value": "c3",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "itemDropShadow": "NONE",
           "itemDropShadowColor": null,
           "backgroundColor": {
-            "value": "c12",
-            "opacity": null,
+            "value": "c56",
+            "opacity": "00",
             "type": "COLOR_REFERENCE"
           },
           "borderRadius": 8,
           "borderWidth": 0,
-          "borderColor": {
-            "value": "c12",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
+          "borderColor": null,
           "dropShadow": "NONE",
           "dropShadowColor": null,
           "padding": {
@@ -2754,54 +2609,54 @@
             "type": "FONT_REFERENCE"
           },
           "urlFontColor": {
-            "value": "c15",
+            "value": "c9",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "hover": {
             "colorFill": {
-              "value": "c17",
-              "opacity": null,
+              "value": "c60",
+              "opacity": "05",
               "type": "COLOR_REFERENCE"
             },
             "border": 2,
             "borderColor": {
-              "value": "c15",
+              "value": "c5",
               "opacity": null,
               "type": "COLOR_REFERENCE"
             },
-            "dropShadow": "NONE",
+            "dropShadow": null,
             "dropShadowColor": null
           },
           "active": {
             "colorFill": {
-              "value": "c18",
-              "opacity": null,
+              "value": "c60",
+              "opacity": "10",
               "type": "COLOR_REFERENCE"
             },
             "border": 3,
             "borderColor": {
-              "value": "c15",
+              "value": "c5",
               "opacity": null,
               "type": "COLOR_REFERENCE"
             },
-            "dropShadow": "NONE",
+            "dropShadow": null,
             "dropShadowColor": null
           }
         },
         {
           "id": "co2",
           "button": {
-            "value": "b2",
-            "type": "BUTTON_REFERENCE"
-          },
-          "secondaryButton": {
             "value": "b4",
             "type": "BUTTON_REFERENCE"
           },
+          "secondaryButton": {
+            "value": "b1",
+            "type": "BUTTON_REFERENCE"
+          },
           "itemBackgroundColor": {
-            "value": "c12",
-            "opacity": "10",
+            "value": "c17",
+            "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "itemBorderRadius": 8,
@@ -2810,17 +2665,13 @@
           "itemDropShadow": "NONE",
           "itemDropShadowColor": null,
           "backgroundColor": {
-            "value": "c35",
-            "opacity": null,
+            "value": "c56",
+            "opacity": "00",
             "type": "COLOR_REFERENCE"
           },
           "borderRadius": 8,
           "borderWidth": 0,
-          "borderColor": {
-            "value": "c35",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
+          "borderColor": null,
           "dropShadow": "NONE",
           "dropShadowColor": null,
           "padding": {
@@ -2892,83 +2743,67 @@
             "type": "FONT_REFERENCE"
           },
           "urlFontColor": {
-            "value": "c15",
+            "value": "c9",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "hover": {
             "colorFill": {
-              "value": "c17",
+              "value": "c16",
               "opacity": null,
               "type": "COLOR_REFERENCE"
             },
-            "border": 2,
-            "borderColor": {
-              "value": "c15",
-              "opacity": null,
-              "type": "COLOR_REFERENCE"
-            },
-            "dropShadow": "NONE",
+            "border": 0,
+            "borderColor": null,
+            "dropShadow": null,
             "dropShadowColor": null
           },
           "active": {
             "colorFill": {
-              "value": "c18",
-              "opacity": null,
-              "type": "COLOR_REFERENCE"
-            },
-            "border": 3,
-            "borderColor": {
               "value": "c15",
               "opacity": null,
               "type": "COLOR_REFERENCE"
             },
-            "dropShadow": "NONE",
+            "border": 0,
+            "borderColor": null,
+            "dropShadow": null,
             "dropShadowColor": null
           }
         },
         {
           "id": "co3",
           "button": {
-            "value": "b3",
+            "value": "b2",
             "type": "BUTTON_REFERENCE"
           },
           "secondaryButton": {
-            "value": "b5",
+            "value": "b3",
             "type": "BUTTON_REFERENCE"
           },
           "itemBackgroundColor": {
-            "value": "c35",
+            "value": "c4",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "itemBorderRadius": 8,
           "itemBorderWidth": 0,
-          "itemBorderColor": {
-            "value": "c12",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
-          "itemDropShadow": "LIFTED",
+          "itemBorderColor": null,
+          "itemDropShadow": "FLOATING",
           "itemDropShadowColor": {
-            "value": "c21",
-            "opacity": null,
+            "value": "c43",
+            "opacity": "40",
             "type": "COLOR_REFERENCE"
           },
           "backgroundColor": {
-            "value": "c12",
-            "opacity": null,
+            "value": "c17",
+            "opacity": "00",
             "type": "COLOR_REFERENCE"
           },
           "borderRadius": 8,
           "borderWidth": 0,
           "borderColor": null,
-          "dropShadow": "LIFTED",
-          "dropShadowColor": {
-            "value": "c21",
-            "opacity": "40",
-            "type": "COLOR_REFERENCE"
-          },
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
           "padding": {
             "left": 16,
             "right": 16,
@@ -3038,44 +2873,36 @@
             "type": "FONT_REFERENCE"
           },
           "urlFontColor": {
-            "value": "c15",
+            "value": "c9",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "hover": {
             "colorFill": {
-              "value": "c15",
+              "value": "c5",
               "opacity": null,
               "type": "COLOR_REFERENCE"
             },
-            "border": 2,
-            "borderColor": {
-              "value": "c35",
-              "opacity": null,
-              "type": "COLOR_REFERENCE"
-            },
-            "dropShadow": "FLOATING",
+            "border": 0,
+            "borderColor": null,
+            "dropShadow": "SOARING",
             "dropShadowColor": {
-              "value": "c21",
+              "value": "c43",
               "opacity": null,
               "type": "COLOR_REFERENCE"
             }
           },
           "active": {
             "colorFill": {
-              "value": "c16",
+              "value": "c6",
               "opacity": null,
               "type": "COLOR_REFERENCE"
             },
-            "border": 2,
-            "borderColor": {
-              "value": "c35",
-              "opacity": null,
-              "type": "COLOR_REFERENCE"
-            },
-            "dropShadow": "FLOATING",
+            "border": 0,
+            "borderColor": null,
+            "dropShadow": "SOARING",
             "dropShadowColor": {
-              "value": "c21",
+              "value": "c43",
               "opacity": null,
               "type": "COLOR_REFERENCE"
             }
@@ -3084,16 +2911,16 @@
         {
           "id": "co4",
           "button": {
-            "value": "b2",
-            "type": "BUTTON_REFERENCE"
-          },
-          "secondaryButton": {
             "value": "b4",
             "type": "BUTTON_REFERENCE"
           },
+          "secondaryButton": {
+            "value": "b1",
+            "type": "BUTTON_REFERENCE"
+          },
           "itemBackgroundColor": {
-            "value": "c12",
-            "opacity": "10",
+            "value": "c17",
+            "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "itemBorderRadius": 8,
@@ -3102,17 +2929,13 @@
           "itemDropShadow": "NONE",
           "itemDropShadowColor": null,
           "backgroundColor": {
-            "value": "c35",
-            "opacity": null,
+            "value": "c56",
+            "opacity": "00",
             "type": "COLOR_REFERENCE"
           },
           "borderRadius": 8,
           "borderWidth": 0,
-          "borderColor": {
-            "value": "c35",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
+          "borderColor": null,
           "dropShadow": "NONE",
           "dropShadowColor": null,
           "padding": {
@@ -3184,7 +3007,7 @@
             "type": "FONT_REFERENCE"
           },
           "urlFontColor": {
-            "value": "c15",
+            "value": "c9",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
@@ -3206,39 +3029,35 @@
         {
           "id": "co5",
           "button": {
-            "value": "b1",
+            "value": "b4",
             "type": "BUTTON_REFERENCE"
           },
           "secondaryButton": {
-            "value": "b3",
+            "value": "b1",
             "type": "BUTTON_REFERENCE"
           },
           "itemBackgroundColor": {
-            "value": "c35",
-            "opacity": null,
+            "value": "c56",
+            "opacity": "00",
             "type": "COLOR_REFERENCE"
           },
           "itemBorderRadius": 8,
           "itemBorderWidth": 2,
           "itemBorderColor": {
-            "value": "c12",
+            "value": "c3",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "itemDropShadow": "NONE",
           "itemDropShadowColor": null,
           "backgroundColor": {
-            "value": "c12",
-            "opacity": null,
+            "value": "c56",
+            "opacity": "00",
             "type": "COLOR_REFERENCE"
           },
           "borderRadius": 8,
           "borderWidth": 0,
-          "borderColor": {
-            "value": "c12",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
+          "borderColor": null,
           "dropShadow": "NONE",
           "dropShadowColor": null,
           "padding": {
@@ -3310,7 +3129,7 @@
             "type": "FONT_REFERENCE"
           },
           "urlFontColor": {
-            "value": "c15",
+            "value": "c9",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
@@ -3332,45 +3151,37 @@
         {
           "id": "co6",
           "button": {
-            "value": "b3",
+            "value": "b2",
             "type": "BUTTON_REFERENCE"
           },
           "secondaryButton": {
-            "value": "b5",
+            "value": "b3",
             "type": "BUTTON_REFERENCE"
           },
           "itemBackgroundColor": {
-            "value": "c35",
+            "value": "c4",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "itemBorderRadius": 8,
           "itemBorderWidth": 0,
-          "itemBorderColor": {
-            "value": "c12",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
-          "itemDropShadow": "LIFTED",
+          "itemBorderColor": null,
+          "itemDropShadow": "FLOATING",
           "itemDropShadowColor": {
-            "value": "c21",
-            "opacity": null,
+            "value": "c43",
+            "opacity": "40",
             "type": "COLOR_REFERENCE"
           },
           "backgroundColor": {
-            "value": "c12",
-            "opacity": null,
+            "value": "c17",
+            "opacity": "00",
             "type": "COLOR_REFERENCE"
           },
           "borderRadius": 8,
           "borderWidth": 0,
           "borderColor": null,
-          "dropShadow": "LIFTED",
-          "dropShadowColor": {
-            "value": "c21",
-            "opacity": "40",
-            "type": "COLOR_REFERENCE"
-          },
+          "dropShadow": "NONE",
+          "dropShadowColor": null,
           "padding": {
             "left": 16,
             "right": 16,
@@ -3440,44 +3251,36 @@
             "type": "FONT_REFERENCE"
           },
           "urlFontColor": {
-            "value": "c15",
+            "value": "c9",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "hover": {
             "colorFill": {
-              "value": "c15",
+              "value": "c5",
               "opacity": null,
               "type": "COLOR_REFERENCE"
             },
-            "border": 2,
-            "borderColor": {
-              "value": "c35",
-              "opacity": null,
-              "type": "COLOR_REFERENCE"
-            },
-            "dropShadow": "FLOATING",
+            "border": 0,
+            "borderColor": null,
+            "dropShadow": "SOARING",
             "dropShadowColor": {
-              "value": "c21",
+              "value": "c43",
               "opacity": null,
               "type": "COLOR_REFERENCE"
             }
           },
           "active": {
             "colorFill": {
-              "value": "c16",
+              "value": "c6",
               "opacity": null,
               "type": "COLOR_REFERENCE"
             },
-            "border": 2,
-            "borderColor": {
-              "value": "c35",
-              "opacity": null,
-              "type": "COLOR_REFERENCE"
-            },
-            "dropShadow": "FLOATING",
+            "border": 0,
+            "borderColor": null,
+            "dropShadow": "SOARING",
             "dropShadowColor": {
-              "value": "c21",
+              "value": "c43",
               "opacity": null,
               "type": "COLOR_REFERENCE"
             }
@@ -3486,39 +3289,35 @@
         {
           "id": "co7",
           "button": {
-            "value": "b1",
+            "value": "b4",
             "type": "BUTTON_REFERENCE"
           },
           "secondaryButton": {
-            "value": "b3",
+            "value": "b1",
             "type": "BUTTON_REFERENCE"
           },
           "itemBackgroundColor": {
-            "value": "c35",
-            "opacity": null,
+            "value": "c56",
+            "opacity": "00",
             "type": "COLOR_REFERENCE"
           },
           "itemBorderRadius": 8,
           "itemBorderWidth": 2,
           "itemBorderColor": {
-            "value": "c12",
+            "value": "c3",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "itemDropShadow": "NONE",
           "itemDropShadowColor": null,
           "backgroundColor": {
-            "value": "c12",
-            "opacity": null,
+            "value": "c56",
+            "opacity": "00",
             "type": "COLOR_REFERENCE"
           },
           "borderRadius": 8,
           "borderWidth": 0,
-          "borderColor": {
-            "value": "c12",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
+          "borderColor": null,
           "dropShadow": "NONE",
           "dropShadowColor": null,
           "padding": {
@@ -3590,77 +3389,73 @@
             "type": "FONT_REFERENCE"
           },
           "urlFontColor": {
-            "value": "c15",
+            "value": "c9",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "hover": {
             "colorFill": {
-              "value": "c17",
-              "opacity": null,
+              "value": "c60",
+              "opacity": "05",
               "type": "COLOR_REFERENCE"
             },
             "border": 2,
             "borderColor": {
-              "value": "c15",
+              "value": "c5",
               "opacity": null,
               "type": "COLOR_REFERENCE"
             },
-            "dropShadow": "NONE",
+            "dropShadow": null,
             "dropShadowColor": null
           },
           "active": {
             "colorFill": {
-              "value": "c18",
-              "opacity": null,
+              "value": "c60",
+              "opacity": "10",
               "type": "COLOR_REFERENCE"
             },
             "border": 3,
             "borderColor": {
-              "value": "c15",
+              "value": "c5",
               "opacity": null,
               "type": "COLOR_REFERENCE"
             },
-            "dropShadow": "NONE",
+            "dropShadow": null,
             "dropShadowColor": null
           }
         },
         {
           "id": "co8",
           "button": {
-            "value": "b1",
+            "value": "b4",
             "type": "BUTTON_REFERENCE"
           },
           "secondaryButton": {
-            "value": "b3",
+            "value": "b1",
             "type": "BUTTON_REFERENCE"
           },
           "itemBackgroundColor": {
-            "value": "c35",
-            "opacity": null,
+            "value": "c56",
+            "opacity": "00",
             "type": "COLOR_REFERENCE"
           },
           "itemBorderRadius": 8,
           "itemBorderWidth": 2,
           "itemBorderColor": {
-            "value": "c12",
+            "value": "c3",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "itemDropShadow": "NONE",
           "itemDropShadowColor": null,
           "backgroundColor": {
-            "value": "c12",
-            "opacity": null,
+            "value": "c56",
+            "opacity": "00",
             "type": "COLOR_REFERENCE"
           },
           "borderRadius": 8,
           "borderWidth": 0,
-          "borderColor": {
-            "value": "c12",
-            "opacity": null,
-            "type": "COLOR_REFERENCE"
-          },
+          "borderColor": null,
           "dropShadow": "NONE",
           "dropShadowColor": null,
           "padding": {
@@ -3732,38 +3527,38 @@
             "type": "FONT_REFERENCE"
           },
           "urlFontColor": {
-            "value": "c15",
+            "value": "c9",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "hover": {
             "colorFill": {
-              "value": "c17",
-              "opacity": null,
+              "value": "c60",
+              "opacity": "05",
               "type": "COLOR_REFERENCE"
             },
             "border": 2,
             "borderColor": {
-              "value": "c15",
+              "value": "c5",
               "opacity": null,
               "type": "COLOR_REFERENCE"
             },
-            "dropShadow": "NONE",
+            "dropShadow": null,
             "dropShadowColor": null
           },
           "active": {
             "colorFill": {
-              "value": "c18",
-              "opacity": null,
+              "value": "c60",
+              "opacity": "10",
               "type": "COLOR_REFERENCE"
             },
             "border": 3,
             "borderColor": {
-              "value": "c15",
+              "value": "c5",
               "opacity": null,
               "type": "COLOR_REFERENCE"
             },
-            "dropShadow": "NONE",
+            "dropShadow": null,
             "dropShadowColor": null
           }
         }
@@ -3791,12 +3586,12 @@
         {
           "id": "p2",
           "backgroundColor": {
-            "value": "c35",
-            "opacity": null,
+            "value": "c56",
+            "opacity": "00",
             "type": "COLOR_REFERENCE"
           },
           "borderColor": {
-            "value": "c53",
+            "value": "c56",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
@@ -3815,7 +3610,7 @@
           "id": "p3",
           "backgroundColor": {
             "value": "c8",
-            "opacity": "50",
+            "opacity": "30",
             "type": "COLOR_REFERENCE"
           },
           "borderColor": {
@@ -3837,7 +3632,7 @@
       ],
       "app": {
         "backgroundColor": {
-          "value": "c14",
+          "value": "c43",
           "opacity": null,
           "type": "COLOR_REFERENCE"
         },
@@ -3846,11 +3641,11 @@
     },
     "navigations": [
       {
-        "dataAppId": 2145100343,
+        "dataAppId": 1465949657,
         "entity": "HOME",
         "entityId": "home",
         "title": "Home",
-        "description": "All Domo apps",
+        "description": "App Domo apps",
         "navOrder": 1,
         "visible": true,
         "interaction": null,
@@ -3862,121 +3657,53 @@
         "style": null
       },
       {
-        "dataAppId": 2145100343,
+        "dataAppId": 1465949657,
         "entity": "VIEW",
-        "entityId": "2049370911",
-        "title": "Transactions",
+        "entityId": "844321791",
+        "title": "Vehicle Dashboard",
         "description": null,
         "navOrder": 2,
         "visible": true,
         "interaction": null,
         "icon": {
-          "value": "chart-line",
+          "value": "chart-beta",
           "size": "DEFAULT",
-          "phosphor": "Line"
+          "phosphor": "ChartBeta"
         },
         "iconPosition": "LEFT",
         "style": null
       },
       {
-        "dataAppId": 2145100343,
+        "dataAppId": 1465949657,
         "entity": "VIEW",
-        "entityId": "1840842103",
-        "title": "TopK Analysis",
+        "entityId": "1409331836",
+        "title": "Fleet Maintenance Inbox",
         "description": null,
         "navOrder": 3,
         "visible": true,
         "interaction": null,
         "icon": {
-          "value": "variable",
+          "value": "list-numbered",
           "style": {
             "color": {
-              "value": "c54",
+              "value": "c62",
               "opacity": null,
               "type": "COLOR_REFERENCE"
             }
           },
           "size": "DEFAULT",
-          "phosphor": "Variable"
+          "phosphor": "ListNumbers"
         },
         "iconPosition": "LEFT",
         "style": null
       },
       {
-        "dataAppId": 2145100343,
-        "entity": "VIEW",
-        "entityId": "1123249407",
-        "title": "Geography",
-        "description": null,
-        "navOrder": 4,
-        "visible": true,
-        "interaction": null,
-        "icon": {
-          "value": "map-marker",
-          "size": "DEFAULT",
-          "phosphor": "MapPin"
-        },
-        "iconPosition": "LEFT",
-        "style": null
-      },
-      {
-        "dataAppId": 2145100343,
-        "entity": "VIEW",
-        "entityId": "141993832",
-        "title": "UC → Domo",
-        "description": null,
-        "navOrder": 5,
-        "visible": true,
-        "interaction": null,
-        "icon": {
-          "value": "arrows-up-down",
-          "size": "DEFAULT",
-          "phosphor": "ArrowsDownUp"
-        },
-        "iconPosition": "LEFT",
-        "style": null
-      },
-      {
-        "dataAppId": 2145100343,
-        "entity": "VIEW",
-        "entityId": "841354173",
-        "title": "Fraud Mitigation",
-        "description": null,
-        "navOrder": 6,
-        "visible": true,
-        "interaction": null,
-        "icon": {
-          "value": "approval-center",
-          "size": "DEFAULT",
-          "phosphor": "CheckList"
-        },
-        "iconPosition": "LEFT",
-        "style": null
-      },
-      {
-        "dataAppId": 2145100343,
-        "entity": "VIEW",
-        "entityId": "1097185940",
-        "title": "Fraud Review",
-        "description": null,
-        "navOrder": 7,
-        "visible": false,
-        "interaction": null,
-        "icon": {
-          "value": "approval-center-alt",
-          "size": "DEFAULT",
-          "phosphor": "ApprovalCenterAlt"
-        },
-        "iconPosition": "LEFT",
-        "style": null
-      },
-      {
-        "dataAppId": 2145100343,
+        "dataAppId": 1465949657,
         "entity": "AI_ASSISTANT",
         "entityId": "ai_assistant",
         "title": "Domo.AI",
-        "description": null,
-        "navOrder": 8,
+        "description": "Domo.AI",
+        "navOrder": 4,
         "visible": true,
         "interaction": null,
         "icon": {
@@ -3987,12 +3714,12 @@
         "style": null
       },
       {
-        "dataAppId": 2145100343,
+        "dataAppId": 1465949657,
         "entity": "CONTROLS",
         "entityId": "controls",
         "title": "Controls",
         "description": "Filters, segments & variables",
-        "navOrder": 9,
+        "navOrder": 5,
         "visible": true,
         "interaction": null,
         "icon": {
@@ -4003,12 +3730,12 @@
         "style": null
       },
       {
-        "dataAppId": 2145100343,
+        "dataAppId": 1465949657,
         "entity": "DISTRIBUTE",
         "entityId": "distribute",
         "title": "Distribute",
         "description": "Distribution & access",
-        "navOrder": 10,
+        "navOrder": 6,
         "visible": true,
         "interaction": null,
         "icon": {
@@ -4019,12 +3746,12 @@
         "style": null
       },
       {
-        "dataAppId": 2145100343,
+        "dataAppId": 1465949657,
         "entity": "MORE",
         "entityId": "more",
         "title": "More",
-        "description": null,
-        "navOrder": 11,
+        "description": "More",
+        "navOrder": 7,
         "visible": true,
         "interaction": null,
         "icon": {
@@ -4036,7 +3763,7 @@
       }
     ],
     "persistSettings": {
-      "dataAppId": 2145100343,
+      "dataAppId": 1465949657,
       "persistFiltersEnabled": false,
       "persistInteractionsEnabled": false,
       "persistDateEnabled": false,

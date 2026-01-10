@@ -1,21 +1,16 @@
 {
   "definition": {
-    "dataAppId": 2145100343,
-    "title": "Credit Card Fraud",
-    "description": "credit card fraud dashboard",
-    "iconDataFileId": 81,
-    "navIconDataFileId": 66,
-    "landingViewId": 2049370911,
+    "dataAppId": 1508249624,
+    "title": "Deployed - Modo Retail Eval - 1/9/2026",
+    "description": null,
+    "iconDataFileId": 134,
+    "navIconDataFileId": 135,
+    "landingViewId": 708643848,
     "enabled": true,
     "isVirtualized": false,
     "locked": false,
-    "lastUpdated": 1767903101000,
+    "lastUpdated": 1767971561612,
     "owners": [
-      {
-        "id": 1362917802,
-        "type": "USER",
-        "displayName": "Brian Orloff"
-      },
       {
         "id": 1433178023,
         "type": "USER",
@@ -28,12 +23,12 @@
     "showNavigation": true,
     "showDomoNavigation": false,
     "showTitle": false,
-    "showLogo": false,
+    "showLogo": true,
     "navOrientation": "LEFT",
     "views": [
       {
-        "viewId": 1097185940,
-        "title": "Fraud Review",
+        "viewId": 163411075,
+        "title": "Product Performance",
         "parentViewId": 0,
         "viewOrder": 1,
         "visible": true,
@@ -42,8 +37,8 @@
         "children": []
       },
       {
-        "viewId": 2049370911,
-        "title": "Transactions",
+        "viewId": 1796215973,
+        "title": "Customer Insights",
         "parentViewId": 0,
         "viewOrder": 2,
         "visible": true,
@@ -52,8 +47,8 @@
         "children": []
       },
       {
-        "viewId": 1123249407,
-        "title": "Geography",
+        "viewId": 1912142929,
+        "title": "Inventory Management",
         "parentViewId": 0,
         "viewOrder": 3,
         "visible": true,
@@ -62,30 +57,10 @@
         "children": []
       },
       {
-        "viewId": 1840842103,
-        "title": "TopK Analysis",
+        "viewId": 708643848,
+        "title": "Sales Performance",
         "parentViewId": 0,
         "viewOrder": 4,
-        "visible": true,
-        "view": null,
-        "layout": null,
-        "children": []
-      },
-      {
-        "viewId": 141993832,
-        "title": "UC → Domo",
-        "parentViewId": 0,
-        "viewOrder": 5,
-        "visible": true,
-        "view": null,
-        "layout": null,
-        "children": []
-      },
-      {
-        "viewId": 841354173,
-        "title": "Fraud Mitigation",
-        "parentViewId": 0,
-        "viewOrder": 6,
         "visible": true,
         "view": null,
         "layout": null,
@@ -95,42 +70,18 @@
     "userAccess": {
       "users": [
         {
-          "id": 1665649708,
-          "displayName": "Andreina Toledo Men",
-          "avatarKey": null,
-          "role": "Admin"
-        },
-        {
-          "id": 917497875,
-          "displayName": "Andrew Gu",
-          "avatarKey": null,
-          "role": "Admin"
-        },
-        {
-          "id": 164801471,
-          "displayName": "Andy Haaf",
-          "avatarKey": null,
-          "role": "Admin"
-        },
-        {
-          "id": 573880690,
-          "displayName": "Braxton Fullenkamp",
-          "avatarKey": null,
-          "role": "Admin"
-        },
-        {
-          "id": 1362917802,
-          "displayName": "Brian Orloff",
+          "id": 1433178023,
+          "displayName": "Cassidy Hilton",
           "avatarKey": null,
           "role": "Admin"
         }
       ],
-      "totalCount": 28
+      "totalCount": 1
     },
     "theme": {
-      "name": "Custom Theme - BC UX",
+      "name": "Custom Theme - BC UX - Custom2",
       "chartColorPalette": {
-        "id": "5",
+        "id": "23",
         "type": "APP"
       },
       "cards": [
@@ -154,7 +105,7 @@
             "type": "FONT_REFERENCE"
           },
           "backgroundColor": {
-            "value": "c69",
+            "value": "c7",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
@@ -174,10 +125,10 @@
             }
           },
           "padding": {
-            "left": 0,
-            "right": 0,
-            "top": 0,
-            "bottom": 0
+            "left": 1,
+            "right": 1,
+            "top": 1,
+            "bottom": 1
           },
           "timeFrameFont": {
             "value": "f7",
@@ -401,12 +352,12 @@
         {
           "id": "ca5",
           "fontColor": {
-            "value": "c43",
+            "value": "c58",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "titleFont": {
-            "value": "f7",
+            "value": "f2",
             "type": "FONT_REFERENCE"
           },
           "descriptionFont": {
@@ -422,7 +373,7 @@
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
-          "borderRadius": 4,
+          "borderRadius": 12,
           "borderWidth": 0,
           "borderColor": null,
           "dropShadow": "NONE",
@@ -434,7 +385,7 @@
             "timeframeLabel": null,
             "description": null,
             "header": {
-              "bottomMargin": 0
+              "bottomMargin": 19
             }
           },
           "padding": {
@@ -444,7 +395,7 @@
             "bottom": 4
           },
           "timeFrameFont": {
-            "value": "f6",
+            "value": "f4",
             "type": "FONT_REFERENCE"
           },
           "summaryNumberFont": {
@@ -532,7 +483,7 @@
             "type": "COLOR_REFERENCE"
           },
           "titleFont": {
-            "value": "f6",
+            "value": "f4",
             "type": "FONT_REFERENCE"
           },
           "descriptionFont": {
@@ -551,23 +502,27 @@
           "borderRadius": 4,
           "borderWidth": 0,
           "borderColor": null,
-          "dropShadow": "NONE",
-          "dropShadowColor": null,
+          "dropShadow": "RAISED",
+          "dropShadowColor": {
+            "value": "c5",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
           "elementSpacing": {
-            "isCustom": true,
+            "isCustom": null,
             "title": null,
             "summaryNumber": null,
             "timeframeLabel": null,
             "description": null,
             "header": {
-              "bottomMargin": 0
+              "bottomMargin": 8
             }
           },
           "padding": {
-            "left": 4,
-            "right": 4,
-            "top": 4,
-            "bottom": 4
+            "left": 16,
+            "right": 16,
+            "top": 16,
+            "bottom": 16
           },
           "timeFrameFont": {
             "value": "f7",
@@ -608,7 +563,7 @@
           },
           "backgroundColor": {
             "value": "c20",
-            "opacity": null,
+            "opacity": "00",
             "type": "COLOR_REFERENCE"
           },
           "borderRadius": 4,
@@ -721,7 +676,7 @@
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
-          "rowHeight": "DEFAULT",
+          "rowHeight": "COMFORTABLE",
           "rowColor": {
             "value": "c55",
             "opacity": null,
@@ -846,7 +801,7 @@
           "tableBorderType": "NONE",
           "tableBorderWeight": 0,
           "tableBorderColor": null,
-          "rowHeight": "DEFAULT",
+          "rowHeight": "COMFORTABLE",
           "rowColor": {
             "value": "c56",
             "opacity": null,
@@ -854,7 +809,7 @@
           },
           "alternatingRowColorEnabled": true,
           "alternatingRowColor": {
-            "value": "c34",
+            "value": "c55",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
@@ -868,7 +823,7 @@
             "type": "COLOR_REFERENCE"
           },
           "headerBackgroundColor": {
-            "value": "c15",
+            "value": "c22",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
@@ -887,7 +842,7 @@
             "type": "COLOR_REFERENCE"
           },
           "subtotalRowFont": {
-            "value": "f8",
+            "value": "f7",
             "type": "FONT_REFERENCE"
           },
           "subtotalRowFontColor": {
@@ -896,7 +851,7 @@
             "type": "COLOR_REFERENCE"
           },
           "subtotalRowBackgroundColor": {
-            "value": "c55",
+            "value": "c11",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
@@ -981,10 +936,10 @@
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
-          "alternatingRowColorEnabled": true,
+          "alternatingRowColorEnabled": false,
           "alternatingRowColor": {
-            "value": "c57",
-            "opacity": null,
+            "value": "c7",
+            "opacity": "50",
             "type": "COLOR_REFERENCE"
           },
           "headerFont": {
@@ -997,7 +952,7 @@
             "type": "COLOR_REFERENCE"
           },
           "headerBackgroundColor": {
-            "value": "c16",
+            "value": "c29",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
@@ -1754,67 +1709,7 @@
         {
           "id": "c63",
           "value": {
-            "value": "#101010",
-            "type": "RGB_HEX"
-          },
-          "tags": [
-            "CUSTOM"
-          ]
-        },
-        {
-          "id": "c64",
-          "value": {
-            "value": "#0F1318",
-            "type": "RGB_HEX"
-          },
-          "tags": [
-            "CUSTOM"
-          ]
-        },
-        {
-          "id": "c65",
-          "value": {
-            "value": "#801C17",
-            "type": "RGB_HEX"
-          },
-          "tags": [
-            "CUSTOM"
-          ]
-        },
-        {
-          "id": "c66",
-          "value": {
-            "value": "#1B2126",
-            "type": "RGB_HEX"
-          },
-          "tags": [
-            "CUSTOM"
-          ]
-        },
-        {
-          "id": "c67",
-          "value": {
-            "value": "#D63626",
-            "type": "RGB_HEX"
-          },
-          "tags": [
-            "CUSTOM"
-          ]
-        },
-        {
-          "id": "c68",
-          "value": {
-            "value": "#21272E",
-            "type": "RGB_HEX"
-          },
-          "tags": [
-            "CUSTOM"
-          ]
-        },
-        {
-          "id": "c69",
-          "value": {
-            "value": "#ACA562",
+            "value": "#81A0AA",
             "type": "RGB_HEX"
           },
           "tags": [
@@ -2353,7 +2248,7 @@
         {
           "id": "fo1",
           "backgroundColor": {
-            "value": "c34",
+            "value": "c14",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
@@ -2502,13 +2397,17 @@
           "borderRadius": 4,
           "borderWidth": 0,
           "borderColor": null,
-          "dropShadow": "NONE",
-          "dropShadowColor": null,
+          "dropShadow": "LIFTED",
+          "dropShadowColor": {
+            "value": "c43",
+            "opacity": null,
+            "type": "COLOR_REFERENCE"
+          },
           "padding": {
-            "left": 7,
-            "right": 7,
-            "top": 7,
-            "bottom": 7
+            "left": 16,
+            "right": 16,
+            "top": 16,
+            "bottom": 16
           },
           "elementSpacing": {
             "isCustom": null,
@@ -2606,34 +2505,34 @@
         {
           "id": "ta2",
           "background": {
-            "value": "c62",
+            "value": "c55",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "tabBarBackground": {
-            "value": "c62",
+            "value": "c55",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "borderColor": {
-            "value": "c62",
-            "opacity": null,
+            "value": "c43",
+            "opacity": "15",
             "type": "COLOR_REFERENCE"
           },
           "borderWeight": 1,
           "borderRadius": 4,
           "activeColor": {
-            "value": "c62",
+            "value": "c1",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "hoverColor": {
-            "value": "c62",
+            "value": "c6",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
           "linkFontColor": {
-            "value": "c62",
+            "value": "c60",
             "opacity": null,
             "type": "COLOR_REFERENCE"
           },
@@ -2641,7 +2540,7 @@
             "value": "f8",
             "type": "FONT_REFERENCE"
           },
-          "tabVariant": "PILL",
+          "tabVariant": "UNDERLINE",
           "tabFit": "FILL",
           "contentAlignment": "CENTER"
         }
@@ -3846,7 +3745,7 @@
     },
     "navigations": [
       {
-        "dataAppId": 2145100343,
+        "dataAppId": 1508249624,
         "entity": "HOME",
         "entityId": "home",
         "title": "Home",
@@ -3862,10 +3761,10 @@
         "style": null
       },
       {
-        "dataAppId": 2145100343,
+        "dataAppId": 1508249624,
         "entity": "VIEW",
-        "entityId": "2049370911",
-        "title": "Transactions",
+        "entityId": "708643848",
+        "title": "Sales Performance",
         "description": null,
         "navOrder": 2,
         "visible": true,
@@ -3879,104 +3778,63 @@
         "style": null
       },
       {
-        "dataAppId": 2145100343,
+        "dataAppId": 1508249624,
         "entity": "VIEW",
-        "entityId": "1840842103",
-        "title": "TopK Analysis",
+        "entityId": "1796215973",
+        "title": "Customer Insights",
         "description": null,
         "navOrder": 3,
         "visible": true,
         "interaction": null,
         "icon": {
-          "value": "variable",
-          "style": {
-            "color": {
-              "value": "c54",
-              "opacity": null,
-              "type": "COLOR_REFERENCE"
-            }
-          },
+          "value": "lightbulb",
           "size": "DEFAULT",
-          "phosphor": "Variable"
+          "phosphor": "Lightbulb"
         },
         "iconPosition": "LEFT",
         "style": null
       },
       {
-        "dataAppId": 2145100343,
+        "dataAppId": 1508249624,
         "entity": "VIEW",
-        "entityId": "1123249407",
-        "title": "Geography",
+        "entityId": "163411075",
+        "title": "Product Performance",
         "description": null,
         "navOrder": 4,
         "visible": true,
         "interaction": null,
         "icon": {
-          "value": "map-marker",
+          "value": "badge-layout-small",
           "size": "DEFAULT",
-          "phosphor": "MapPin"
+          "phosphor": "SquaresNine"
         },
         "iconPosition": "LEFT",
         "style": null
       },
       {
-        "dataAppId": 2145100343,
+        "dataAppId": 1508249624,
         "entity": "VIEW",
-        "entityId": "141993832",
-        "title": "UC → Domo",
+        "entityId": "1912142929",
+        "title": "Inventory Management",
         "description": null,
         "navOrder": 5,
         "visible": true,
         "interaction": null,
         "icon": {
-          "value": "arrows-up-down",
+          "value": "cube-filled",
           "size": "DEFAULT",
-          "phosphor": "ArrowsDownUp"
+          "phosphor": "Cube"
         },
         "iconPosition": "LEFT",
         "style": null
       },
       {
-        "dataAppId": 2145100343,
-        "entity": "VIEW",
-        "entityId": "841354173",
-        "title": "Fraud Mitigation",
-        "description": null,
-        "navOrder": 6,
-        "visible": true,
-        "interaction": null,
-        "icon": {
-          "value": "approval-center",
-          "size": "DEFAULT",
-          "phosphor": "CheckList"
-        },
-        "iconPosition": "LEFT",
-        "style": null
-      },
-      {
-        "dataAppId": 2145100343,
-        "entity": "VIEW",
-        "entityId": "1097185940",
-        "title": "Fraud Review",
-        "description": null,
-        "navOrder": 7,
-        "visible": false,
-        "interaction": null,
-        "icon": {
-          "value": "approval-center-alt",
-          "size": "DEFAULT",
-          "phosphor": "ApprovalCenterAlt"
-        },
-        "iconPosition": "LEFT",
-        "style": null
-      },
-      {
-        "dataAppId": 2145100343,
+        "dataAppId": 1508249624,
         "entity": "AI_ASSISTANT",
         "entityId": "ai_assistant",
         "title": "Domo.AI",
         "description": null,
-        "navOrder": 8,
+        "navOrder": 6,
         "visible": true,
         "interaction": null,
         "icon": {
@@ -3987,12 +3845,12 @@
         "style": null
       },
       {
-        "dataAppId": 2145100343,
+        "dataAppId": 1508249624,
         "entity": "CONTROLS",
         "entityId": "controls",
         "title": "Controls",
         "description": "Filters, segments & variables",
-        "navOrder": 9,
+        "navOrder": 7,
         "visible": true,
         "interaction": null,
         "icon": {
@@ -4003,12 +3861,12 @@
         "style": null
       },
       {
-        "dataAppId": 2145100343,
+        "dataAppId": 1508249624,
         "entity": "DISTRIBUTE",
         "entityId": "distribute",
         "title": "Distribute",
         "description": "Distribution & access",
-        "navOrder": 10,
+        "navOrder": 8,
         "visible": true,
         "interaction": null,
         "icon": {
@@ -4019,12 +3877,12 @@
         "style": null
       },
       {
-        "dataAppId": 2145100343,
+        "dataAppId": 1508249624,
         "entity": "MORE",
         "entityId": "more",
         "title": "More",
         "description": null,
-        "navOrder": 11,
+        "navOrder": 9,
         "visible": true,
         "interaction": null,
         "icon": {
@@ -4036,7 +3894,7 @@
       }
     ],
     "persistSettings": {
-      "dataAppId": 2145100343,
+      "dataAppId": 1508249624,
       "persistFiltersEnabled": false,
       "persistInteractionsEnabled": false,
       "persistDateEnabled": false,
