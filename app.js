@@ -16,7 +16,7 @@ const state = {
     githubRepo: 'cassidythilton/super-duper-parrot',
     githubToken: '',
     githubBranch: 'main',
-    githubPath: 'asset-definitions/'
+    githubPath: 'app-definitions/'
   },
   stats: {
     totalAssets: 0,
@@ -233,26 +233,26 @@ async function pushToGithub(filePath, content, commitMessage) {
 // ============================================================================
 
 async function fetchGithubFiles() {
-  // Hardcoded files from GitHub repo: https://github.com/cassidythilton/super-duper-parrot/tree/main/asset-definitions
+  // Hardcoded files from GitHub repo: https://github.com/cassidythilton/super-duper-parrot/tree/main/app-definitions
   // These match the actual files in the repository
   const hardcodedFiles = [
     {
       name: 'ccfd-lp-api-clone-1001642995.json',
-      path: 'asset-definitions/ccfd-lp-api-clone-1001642995.json',
+      path: 'app-definitions/ccfd-lp-api-clone-1001642995.json',
       size: 850,
-      downloadUrl: 'https://raw.githubusercontent.com/cassidythilton/super-duper-parrot/main/asset-definitions/ccfd-lp-api-clone-1001642995.json'
+      downloadUrl: 'https://raw.githubusercontent.com/cassidythilton/super-duper-parrot/main/app-definitions/ccfd-lp-api-clone-1001642995.json'
     },
     {
       name: 'cobra-eval-1465949657.json',
-      path: 'asset-definitions/cobra-eval-1465949657.json',
+      path: 'app-definitions/cobra-eval-1465949657.json',
       size: 820,
-      downloadUrl: 'https://raw.githubusercontent.com/cassidythilton/super-duper-parrot/main/asset-definitions/cobra-eval-1465949657.json'
+      downloadUrl: 'https://raw.githubusercontent.com/cassidythilton/super-duper-parrot/main/app-definitions/cobra-eval-1465949657.json'
     },
     {
       name: 'modo-retail-eval-1787632545.json',
-      path: 'asset-definitions/modo-retail-eval-1787632545.json',
+      path: 'app-definitions/modo-retail-eval-1787632545.json',
       size: 880,
-      downloadUrl: 'https://raw.githubusercontent.com/cassidythilton/super-duper-parrot/main/asset-definitions/modo-retail-eval-1787632545.json'
+      downloadUrl: 'https://raw.githubusercontent.com/cassidythilton/super-duper-parrot/main/app-definitions/modo-retail-eval-1787632545.json'
     }
   ];
   
@@ -261,23 +261,23 @@ async function fetchGithubFiles() {
 }
 
 async function fetchGithubFileContent(filePath) {
-  // Hardcoded preview data for the files in asset-definitions
+  // Hardcoded preview data for the files in app-definitions
   const hardcodedPreviews = {
-    'asset-definitions/ccfd-lp-api-clone-1001642995.json': {
+    'app-definitions/ccfd-lp-api-clone-1001642995.json': {
       id: '1001642995',
       title: 'CCFD LP - API Clone',
       description: 'Credit Card Fraud Detection Landing Page - API Clone',
       createdOn: '2025-12-15T10:30:00Z',
       content: { name: 'Credit Card Fraud Detection' }
     },
-    'asset-definitions/cobra-eval-1465949657.json': {
+    'app-definitions/cobra-eval-1465949657.json': {
       id: '1465949657',
       title: 'Cobra Eval',
       description: 'Cobra Evaluation App',
       createdOn: '2025-11-20T14:00:00Z',
       content: { name: 'Cobra Evaluation' }
     },
-    'asset-definitions/modo-retail-eval-1787632545.json': {
+    'app-definitions/modo-retail-eval-1787632545.json': {
       id: '1787632545',
       title: 'Modo Retail Eval',
       description: 'Modo Retail Evaluation Dashboard',
@@ -1451,7 +1451,7 @@ function saveSettings() {
   state.settings.githubRepo = elements.githubRepo.value.trim();
   state.settings.githubToken = elements.githubToken.value.trim();
   state.settings.githubBranch = elements.githubBranch.value.trim() || 'main';
-  state.settings.githubPath = elements.githubPath.value.trim() || 'asset-definitions/';
+  state.settings.githubPath = elements.githubPath.value.trim() || 'app-definitions/';
   
   if (!state.settings.githubPath.endsWith('/')) {
     state.settings.githubPath += '/';
@@ -1468,11 +1468,11 @@ function loadSavedSettings() {
       const parsed = JSON.parse(saved);
       state.settings = { ...state.settings, ...parsed };
       
-      // Migration: fix old path name
-      if (state.settings.githubPath === 'app-definitions/' || state.settings.githubPath === 'app-definitions') {
-        state.settings.githubPath = 'asset-definitions/';
+      // Migration: fix path to app-definitions
+      if (state.settings.githubPath === 'asset-definitions/' || state.settings.githubPath === 'asset-definitions') {
+        state.settings.githubPath = 'app-definitions/';
         localStorage.setItem('asset-versioning-settings', JSON.stringify(state.settings));
-        console.log('Migrated githubPath from app-definitions to asset-definitions');
+        console.log('Migrated githubPath from asset-definitions to app-definitions');
       }
     } catch (e) {
       console.error('Error loading settings:', e);

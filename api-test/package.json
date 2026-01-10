@@ -1,0 +1,15 @@
+{
+  "name": "domo-app-studio-api-test",
+  "version": "1.0.0",
+  "description": "Test script for Domo App Studio Create/Update API",
+  "main": "test-api.js",
+  "type": "module",
+  "scripts": {
+    "test": "node test-api.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
+
+

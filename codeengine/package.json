@@ -1,0 +1,10 @@
+{
+  "name": "appstudio-github-sync-codeengine",
+  "version": "1.0.1",
+  "description": "Code Engine functions for App Studio GitHub Sync",
+  "main": "functions.js",
+  "dependencies": {
+    "codeengine": "*"
+  }
+}
+
