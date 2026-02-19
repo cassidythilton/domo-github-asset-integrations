@@ -13,7 +13,7 @@ const state = {
   assets: [],
   runs: [],
   settings: {
-    githubRepo: 'cassidythilton/super-duper-parrot',
+    githubRepo: 'cassidythilton/super-duper-parakeet',
     githubToken: '',
     githubBranch: 'main',
     githubPath: 'app-definitions/'
@@ -48,6 +48,9 @@ const mockAssets = [
 
 // Cache for GitHub files (loaded from real repo)
 let githubFilesCache = [];
+
+// Cache for locally committed files (fallback when API listing fails)
+let committedFilesCache = [];
 
 // Track deployed apps during session
 const deployedApps = [];
@@ -221,6 +224,27 @@ async function pushToGithub(filePath, content, commitMessage) {
       content,
       commitMessage
     });
+    
+    // Track the committed file locally (fallback for when listing APIs fail)
+    const result = response.result || response;
+    if (result && result.path) {
+      const fileName = result.path.split('/').pop();
+      const existing = committedFilesCache.findIndex(f => f.path === result.path);
+      const fileEntry = {
+        name: fileName,
+        path: result.path,
+        sha: result.sha || '',
+        size: JSON.stringify(content).length,
+        downloadUrl: result.url || `https://github.com/${githubRepo}/blob/${githubBranch}/${result.path}`
+      };
+      if (existing >= 0) {
+        committedFilesCache[existing] = fileEntry;
+      } else {
+        committedFilesCache.push(fileEntry);
+      }
+      console.log('Tracked committed file locally:', fileEntry.name, '(total cached:', committedFilesCache.length, ')');
+    }
+    
     return response;
   } catch (error) {
     console.error('Error pushing to GitHub:', error);
@@ -233,35 +257,203 @@ async function pushToGithub(filePath, content, commitMessage) {
 // ============================================================================
 
 async function fetchGithubFiles() {
-  // Hardcoded files from GitHub repo: https://github.com/cassidythilton/super-duper-parrot/tree/main/app-definitions
-  // These match the actual files in the repository
-  const hardcodedFiles = [
+  const { githubToken, githubRepo, githubBranch, githubPath } = state.settings;
+  
+  if (!githubRepo) {
+    return [];
+  }
+  
+  const path = githubPath.replace(/^\/|\/$/g, ''); // Remove leading/trailing slashes
+  
+  // Strategy 1: Try Code Engine function (if deployed)
+  try {
+    console.log('Trying Code Engine listGithubFiles...');
+    const response = await callCodeEngine('/domo/codeengine/v2/packages/listGithubFiles', {
+      githubToken,
+      repo: githubRepo,
+      branch: githubBranch,
+      path: path
+    });
+    
+    console.log('Code Engine listGithubFiles raw response:', JSON.stringify(response));
+    const rawFiles = response.files || response;
+    const files = (Array.isArray(rawFiles) ? rawFiles : []).filter(file => 
+      file.type === 'file' && file.name.endsWith('.json')
+    );
+    
+    if (files.length > 0) {
+      console.log('Code Engine listGithubFiles succeeded:', files.length, 'files');
+      return files.map(file => ({
+        name: file.name,
+        path: file.path,
+        sha: file.sha,
+        size: file.size,
+        downloadUrl: file.download_url
+      }));
+    }
+    console.log('Code Engine listGithubFiles returned 0 files, trying next strategy...');
+  } catch (ceError) {
+    console.log('Code Engine listGithubFiles failed, trying next strategy...', ceError);
+  }
+  
+  // Strategy 2: Use pushToGithub with __action: 'list' (reuses working Code Engine endpoint)
+  try {
+    console.log('Trying pushToGithub with list action...');
+    const response = await callCodeEngine('/domo/codeengine/v2/packages/pushToGithub', {
+      githubToken,
+      repo: githubRepo,
+      branch: githubBranch,
+      filePath: path,
+      content: { __action: 'list' },
+      commitMessage: ''
+    });
+    
+    const rawFiles2 = response.files || response.result?.files || response;
+    const files2 = (Array.isArray(rawFiles2) ? rawFiles2 : []).filter(file => 
+      file.type === 'file' && file.name.endsWith('.json')
+    );
+    
+    if (files2.length > 0) {
+      console.log('pushToGithub list action succeeded:', files2.length, 'files');
+      return files2.map(file => ({
+        name: file.name,
+        path: file.path,
+        sha: file.sha,
+        size: file.size,
+        downloadUrl: file.download_url
+      }));
+    }
+    console.log('pushToGithub list action returned 0 files, trying next strategy...');
+  } catch (pushListError) {
+    console.log('pushToGithub list action failed:', pushListError);
+  }
+  
+  // Strategy 3: Fall back to Domo proxy (works for public repos)
+  try {
+    console.log('Trying Domo proxy for GitHub file listing...');
+    const proxyUrl = `/domo/github/repos/${githubRepo}/contents/${path}?ref=${githubBranch}`;
+    const response = await domo.get(proxyUrl);
+    
+    const files3 = (Array.isArray(response) ? response : []).filter(file => 
+      file.type === 'file' && file.name.endsWith('.json')
+    );
+    
+    if (files3.length > 0) {
+      console.log('Domo proxy succeeded:', files3.length, 'files');
+      return files3.map(file => ({
+        name: file.name,
+        path: file.path,
+        sha: file.sha,
+        size: file.size,
+        downloadUrl: file.download_url
+      }));
+    }
+    console.log('Domo proxy returned 0 files, trying next strategy...');
+  } catch (proxyError) {
+    console.log('Domo proxy also failed:', proxyError);
+  }
+  
+  // Strategy 4: Return locally tracked committed files (if any)
+  if (committedFilesCache.length > 0) {
+    console.log('Using locally cached committed files:', committedFilesCache.length);
+    return [...committedFilesCache];
+  }
+  
+  // Strategy 5: Hardcoded fallback files (demo mode)
+  // These match files known to exist in the GitHub repo
+  console.log('Using hardcoded fallback files for demo');
+  const { githubRepo: repo, githubBranch: branch } = state.settings;
+  return [
     {
       name: 'ccfd-lp-api-clone-1001642995.json',
       path: 'app-definitions/ccfd-lp-api-clone-1001642995.json',
       size: 850,
-      downloadUrl: 'https://raw.githubusercontent.com/cassidythilton/super-duper-parrot/main/app-definitions/ccfd-lp-api-clone-1001642995.json'
+      downloadUrl: `https://raw.githubusercontent.com/${repo}/${branch}/app-definitions/ccfd-lp-api-clone-1001642995.json`
     },
     {
       name: 'cobra-eval-1465949657.json',
       path: 'app-definitions/cobra-eval-1465949657.json',
       size: 820,
-      downloadUrl: 'https://raw.githubusercontent.com/cassidythilton/super-duper-parrot/main/app-definitions/cobra-eval-1465949657.json'
+      downloadUrl: `https://raw.githubusercontent.com/${repo}/${branch}/app-definitions/cobra-eval-1465949657.json`
     },
     {
       name: 'modo-retail-eval-1787632545.json',
       path: 'app-definitions/modo-retail-eval-1787632545.json',
       size: 880,
-      downloadUrl: 'https://raw.githubusercontent.com/cassidythilton/super-duper-parrot/main/app-definitions/modo-retail-eval-1787632545.json'
+      downloadUrl: `https://raw.githubusercontent.com/${repo}/${branch}/app-definitions/modo-retail-eval-1787632545.json`
+    },
+    {
+      name: 'credit-card-fraud-2145100343.json',
+      path: 'app-definitions/credit-card-fraud-2145100343.json',
+      size: 900,
+      downloadUrl: `https://raw.githubusercontent.com/${repo}/${branch}/app-definitions/credit-card-fraud-2145100343.json`
     }
   ];
-  
-  console.log('Using hardcoded GitHub files:', hardcodedFiles.length);
-  return hardcodedFiles;
 }
 
 async function fetchGithubFileContent(filePath) {
-  // Hardcoded preview data for the files in app-definitions
+  const { githubToken, githubRepo, githubBranch } = state.settings;
+  
+  // Strategy 1: Try Code Engine function (if deployed)
+  try {
+    console.log('Trying Code Engine getGithubFileContent...');
+    const response = await callCodeEngine('/domo/codeengine/v2/packages/getGithubFileContent', {
+      githubToken,
+      repo: githubRepo,
+      branch: githubBranch,
+      filePath: filePath
+    });
+    
+    const fileData = response.file || response;
+    if (fileData && fileData.content) {
+      const content = atob(fileData.content);
+      console.log('Code Engine getGithubFileContent succeeded');
+      return JSON.parse(content);
+    }
+    console.log('Code Engine getGithubFileContent returned no content, trying next strategy...');
+  } catch (ceError) {
+    console.log('Code Engine getGithubFileContent failed, trying next strategy...', ceError);
+  }
+  
+  // Strategy 2: Use pushToGithub with __action: 'getContent' (reuses working Code Engine endpoint)
+  try {
+    console.log('Trying pushToGithub with getContent action...');
+    const response = await callCodeEngine('/domo/codeengine/v2/packages/pushToGithub', {
+      githubToken,
+      repo: githubRepo,
+      branch: githubBranch,
+      filePath: filePath,
+      content: { __action: 'getContent' },
+      commitMessage: ''
+    });
+    
+    const fileData = response.file || response.result?.file || response;
+    if (fileData && fileData.content) {
+      const content = atob(fileData.content);
+      console.log('pushToGithub getContent action succeeded');
+      return JSON.parse(content);
+    }
+    console.log('pushToGithub getContent returned no content, trying next strategy...');
+  } catch (pushContentError) {
+    console.log('pushToGithub getContent action failed:', pushContentError);
+  }
+  
+  // Strategy 3: Fall back to Domo proxy (works for public repos)
+  try {
+    console.log('Trying Domo proxy for GitHub file content...');
+    const proxyUrl = `/domo/github/repos/${githubRepo}/contents/${filePath}?ref=${githubBranch}`;
+    const response = await domo.get(proxyUrl);
+    
+    // Response from GitHub API includes base64 content
+    const content = atob(response.content);
+    console.log('Domo proxy getGithubFileContent succeeded');
+    return JSON.parse(content);
+  } catch (proxyError) {
+    console.log('Domo proxy getGithubFileContent failed:', proxyError);
+  }
+  
+  // Strategy 4: Hardcoded preview data (demo mode)
+  console.log('Using hardcoded preview data for:', filePath);
   const hardcodedPreviews = {
     'app-definitions/ccfd-lp-api-clone-1001642995.json': {
       id: '1001642995',
@@ -283,6 +475,13 @@ async function fetchGithubFileContent(filePath) {
       description: 'Modo Retail Evaluation Dashboard',
       createdOn: '2025-10-05T09:15:00Z',
       content: { name: 'Modo Retail Evaluation' }
+    },
+    'app-definitions/credit-card-fraud-2145100343.json': {
+      id: '2145100343',
+      title: 'Credit Card Fraud',
+      description: 'Credit Card Fraud Dashboard',
+      createdOn: '2026-01-08T10:00:00Z',
+      content: { name: 'Credit Card Fraud' }
     }
   };
   

@@ -1,0 +1,16 @@
+## Environment variables
+.env
+.env.local
+.env.*.local
+api-test/.env
+
+## Dependencies
+node_modules/
+
+## OS files
+.DS_Store
+Thumbs.db
+
+## Conversation logs
+cursor_app_studio_file_management_with.md
+
