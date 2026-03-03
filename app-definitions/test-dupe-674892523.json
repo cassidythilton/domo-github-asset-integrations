@@ -40,8 +40,8 @@
     "userAccess": {
       "users": [
         {
-          "id": 1433178023,
-          "displayName": "Cassidy Hilton",
+          "id": 100000001,
+          "displayName": "Demo User",
           "avatarKey": null,
           "role": "Admin"
         },

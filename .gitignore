@@ -11,6 +11,9 @@ node_modules/
 .DS_Store
 Thumbs.db
 
+## IDE / Editor
+*.code-workspace
+.cursor/
+
 ## Conversation logs
 cursor_app_studio_file_management_with.md
-

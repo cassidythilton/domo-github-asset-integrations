@@ -13,7 +13,7 @@ const state = {
   assets: [],
   runs: [],
   settings: {
-    githubRepo: 'cassidythilton/super-duper-parakeet',
+    githubRepo: 'your-org/your-repo',
     githubToken: '',
     githubBranch: 'main',
     githubPath: 'app-definitions/'
@@ -1573,7 +1573,7 @@ function getInstanceUrl() {
   if (typeof domo !== 'undefined' && domo.env && domo.env.instanceUrl) {
     return domo.env.instanceUrl;
   }
-  return 'databricks-demo.domo.com';
+  return 'your-instance.domo.com';
 }
 
 function showDeploymentSuccessModal(deployedApp) {

@@ -12,7 +12,7 @@ This folder contains a standalone Node.js script to test the feasibility of crea
 
 2. **Create a `.env` file** in this folder with your credentials:
    ```
-   DOMO_BASE_URL=https://databricks-demo.domo.com
+   DOMO_BASE_URL=https://your-instance.domo.com
    DOMO_DEVELOPER_TOKEN=your_token_here
    ```
 
@@ -46,12 +46,12 @@ npm test
 ╚════════════════════════════════════════════════════════════╝
 
 STEP 1: CREATE NEW APP
-POST https://databricks-demo.domo.com/api/content/v1/dataapps
+POST https://your-instance.domo.com/api/content/v1/dataapps
 ✅ App created successfully!
    dataAppId: 12345678
 
 STEP 2: UPDATE APP WITH FULL DEFINITION  
-PUT https://databricks-demo.domo.com/api/content/v1/dataapps/12345678?includeHiddenViews=true
+PUT https://your-instance.domo.com/api/content/v1/dataapps/12345678?includeHiddenViews=true
 ✅ App updated successfully!
 
 TEST COMPLETE - SUCCESS!

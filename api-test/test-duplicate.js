@@ -14,7 +14,7 @@ import { config } from 'dotenv';
 config();
 
 // Configuration
-const DOMO_BASE_URL = process.env.DOMO_BASE_URL || 'https://databricks-demo.domo.com';
+const DOMO_BASE_URL = process.env.DOMO_BASE_URL || 'https://your-instance.domo.com';
 const DOMO_DEVELOPER_TOKEN = process.env.DOMO_DEVELOPER_TOKEN;
 
 if (!DOMO_DEVELOPER_TOKEN) {
@@ -22,8 +22,8 @@ if (!DOMO_DEVELOPER_TOKEN) {
   process.exit(1);
 }
 
-// Source app to duplicate
-const SOURCE_APP_ID = 1853122909;
+// Source app to duplicate — replace with a valid app ID from your instance
+const SOURCE_APP_ID = process.env.DOMO_SOURCE_APP_ID || 0;
 
 // API endpoint
 const DUPLICATE_URL = `${DOMO_BASE_URL}/api/content/v1/dataapps/${SOURCE_APP_ID}/duplicate`;
@@ -53,7 +53,7 @@ async function duplicateApp() {
   const payload = {
     title: `DUPLICATED API - ${new Date().toISOString()}`,
     duplicateCards: false,
-    beacon: 660547598,
+    beacon: Math.floor(Math.random() * 9000000000) + 1000000000,
     cardPrefix: ""
   };
   

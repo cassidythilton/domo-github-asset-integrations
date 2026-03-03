@@ -23,7 +23,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Configuration
-const DOMO_BASE_URL = process.env.DOMO_BASE_URL || 'https://databricks-demo.domo.com';
+const DOMO_BASE_URL = process.env.DOMO_BASE_URL || 'https://your-instance.domo.com';
 const DOMO_DEVELOPER_TOKEN = process.env.DOMO_DEVELOPER_TOKEN;
 
 if (!DOMO_DEVELOPER_TOKEN) {
